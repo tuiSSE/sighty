@@ -1,0 +1,1 @@
+/* JS declarations go here */
