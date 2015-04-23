@@ -1,1 +1,11 @@
-<!-- HTML declarations go here -->
+<head>
+    <title>Camera Example</title>
+</head>
+<body>
+{{> takePhoto}}
+</body>
+
+<template name="takePhoto">
+    <p><input type="button" class="capture" value="Take Photo"></p>
+    <p><img src ="{{photo}}"></p>
+</template>
