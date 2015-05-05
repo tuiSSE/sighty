@@ -163,4 +163,3 @@ if (Meteor.isClient) {
       }
     })
 }
-
