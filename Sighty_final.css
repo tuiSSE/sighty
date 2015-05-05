@@ -117,7 +117,7 @@ body {
 .input__field--kyo:focus + .input__label--kyo::after {
   opacity: 1;
 }
-form {
+form {
   margin: 2%;
 }
 
@@ -175,6 +175,42 @@ form {
   margin: 5%;
 }
 
+#text_startseite {
+  text-align: center;
+  font-family: serif;
+  font-size: xx-large;
+  font-weight: bold;
+  margin-left: -25%;
+  width: 150%;
+  color: white;
+}
+
+#text2_startseite {
+  text-align: center;
+  font-family: serif;
+  font-size: x-large;
+  font-weight: bold;
+  margin-left: -25%;
+  width: 150%;
+  color: white;
+}
+
+#text_startseite a:hover, #text_startseite a:link, #text_startseite a:visited, #text2_startseite a:hover, #text2_startseite a:link, #text2_startseite a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+#willkommen_startseite {
+  margin-left: -7%;
+}
+
+#login_hauptfenster, #profile_hauptfenster {
+  margin-left: 10%;
+}
+
+#bild_frage {
+  margin-left: 20%;
+}
 
 /* CSS declarations go here */
 /* CSS declarations go here */
