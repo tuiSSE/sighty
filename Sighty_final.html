@@ -12,7 +12,8 @@
   <header>
     <img src="/logo.jpg" alt="logo" width="90%" height="90%">
   </header>
-  <form id="login">
+  <form id="startseite">
+  <div id="login_hauptfenster">
     <span class="input input--kyo">
           <input class="input__field input__field--kyo" type="text" id="input-1" />
           <label class="input__label input__label--kyo" for="input-1">
@@ -34,6 +35,7 @@
         <span class="input input--kyo">
           <input type="button" value="Registrieren Sie Sich Jetzt!" class="input__field input__field--kyo" id="input-7">
         </span>
+      </div>
     </form>
     </div>
 </template>
@@ -135,6 +137,7 @@
         <img src="/logo.jpg" alt="logo" width="90%" height="90%">
   </header>
       <form id="profile">
+      <div id="profile_hauptfenster">
         <span class="input input--kyo">
           <input class="input__field input__field--kyo" type="text" id="output-1" value="{{firstName}}" />
             <label class="input__label input__label--kyo" for="input-5">
@@ -169,6 +172,7 @@
           <input class="input__field input__field--kyo" type="button" value="Änderungen übernehmen" id="output-aendern">
           <input class="input__field input__field--kyo" type="button" value="Zurück" id="output-6">
         </span>
+      </div>
       </form>
     </div>  
 </template>
@@ -184,17 +188,26 @@
   <div class="container">
     <form id="startseite">
       <header>
-      <img src="/logo.jpg" alt="logo" width="90%" height="9a0%">
+      <img src="/logo.jpg" alt="logo" width="90%" height="90%">
       </header>
+      <div id="willkommen_startseite">
       <span class="input input--kyo">
               <input type="button" id="willkommen" value="Herzlich Willkommen {{user}}" class="input__field input__field--kyo">
       </span>
+      </div>
       <span class="input input--kyo">
-      <p id="blinden"><a href="/takePhoto"><img src="/blinden.png" width="130%" height="130%"></a></p>
+      <div id="bild_frage">
+      <p id="blinden"><a href="/takePhoto"><img src="/blinden.png" width="100%" height="100%">
+      <br><p id="text_startseite">
+        LASSEN SIE SICH VON SEHENDEN HELFEN!
+        <p id="text2_startseite">Nimm Fotos auf und stelle eine Frage dazu.</p>
+      </p></a></p>
+      </div>
       </span>
       <span class="input input--kyo">
               <input type="button" id="profil" value="Zum Profil" class="input__field input__field--kyo">
               <input type="button" value="Logout" class="input__field input__field--kyo" id="input-8">
+
       </span>
     </form>
   </div>
