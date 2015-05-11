@@ -6,7 +6,7 @@ if (Meteor.isClient) {
     this.route("takePhoto", {path: "/takePhoto"})
     this.route("profile", {path: "/profile"})
     this.route("startseite", {path: "/startseite"})
-    
+
   })
 
   Template.login.events({
@@ -18,7 +18,7 @@ if (Meteor.isClient) {
      if (Meteor.user()) {
       Router.go("startseite")
      };
-       
+
     },
     "click #input-7":function(event){
       event.preventDefault();
@@ -51,7 +51,7 @@ if (Meteor.isClient) {
         username: userVar,
         email: emailVar,
         password: passwordVar
-        
+
 
       })
       Meteor.loginWithPassword(emailVar, passwordVar);
@@ -68,23 +68,40 @@ if (Meteor.isClient) {
         'click #capture': function(){
             console.log("Button clicked.");
             MeteorCamera.getPicture({}, function(error, data){
-                console.log(data);
-                Session.set('photo', data);
+            console.log(data);
+            Session.set('photo', data);
             });
         },
-      "click #input-8":function(event,template){
-      event.preventDefault();
-      Meteor.logout();
-      Router.go("login")
-    }, 
-    "click #profil":function(event, template){
-      event.preventDefault();
-      Router.go("profile")
-    },
-    "click #home":function(event, template){
-      Router.go("startseite")
-    }
-
+        "click #input-8":function(event,template){
+            event.preventDefault();
+            Meteor.logout();
+            Router.go("login")
+        },
+        "click #profil":function(event, template){
+            event.preventDefault();
+            Router.go("profile")
+        },
+        "click #home":function(event, template){
+            Router.go("startseite")
+        },
+        "submit #takePhoto": function (event) {
+            event.preventDefault();
+            var text = event.target.frage.value;
+            var newQues = {
+              text: text,
+              createdAt: new Date(), // current time
+              userId: Meteor.userId()
+            };
+            Meteor.call("addQuestion",newQues,
+              function (err, result) {
+                if (err) {
+                    alert("Could not add question " + err.reason);
+                }
+            }
+          );
+          // Clear form
+          event.target.frage.value = "";
+      }
     });
 
     Template.takePhoto.helpers({
@@ -128,7 +145,7 @@ if (Meteor.isClient) {
         event.preventDefault();
         Router.go("startseite")
       },
-      
+
       "click #output-7":function(event, template){
         Meteor.users.remove("Meteor.userId()");
         Router.go("login")
