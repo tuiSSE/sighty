@@ -1,108 +1,81 @@
 <head>
-  <title>Sighty-Prototyp</title>
+  <title>Sighty</title>
+  <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+  <meta name="theme-color" content="#ffffff">
 </head>
+
 <body>
 
 </body>
 
-
-
 <template name="login">
-  <div class="container">
-  <header>
-    <img src="/logo.jpg" alt="logo" width="90%" height="90%">
-  </header>
-  <form id="startseite">
-  <div id="login_hauptfenster">
-    <span class="input input--kyo">
-          <input class="input__field input__field--kyo" type="text" id="input-1" />
-          <label class="input__label input__label--kyo" for="input-1">
-                <span class="input__label-content input__label-content--kyo">E-Mail</span>
-            </label>
-        </span>
-        <br>
-        <span class="input input--kyo">
-          <input class="input__field input__field--kyo" type="password" id="input-2" />
-          <label class="input__label input__label--kyo" for="input-2">
-                <span class="input__label-content input__label-content--kyo">Passwort</span>
-            </label>
-        </span>
-        <br>
-        <span class="input input--kyo">
-            <input type="submit" value="Login" class="input__field input__field--kyo" id="input-3">
-        </span>
-        <br>
-        <span class="input input--kyo">
-          <input type="button" value="Registrieren Sie Sich Jetzt!" class="input__field input__field--kyo" id="input-7">
-        </span>
-      </div>
-    </form>
-    </div>
+	<header>
+		<p class="center-align"><img src="/sighty.png" width="40%" height="40%"></p>
+	</header>
+	<div id="login">
+		<div id="login_socialnetworks">
+			<p class="center-align ueberschrift">Login</p>
+			<p class="center-align"><a class="btn waves-effect waves-light" id="btn_facebook"><i class="mdi-social-person right"></i>Facebook</a></p>
+			<p class="center-align"><a class="btn waves-effect waves-light" id="btn_twitter"><i class="mdi-social-person right"></i>Twitter</a></p>
+		</div>
+		<p class="center-align"><div class="divider blue-grey darken-2"></div></p>
+		<div class="row" id="login_email">
+    		<form class="col s12">
+      			<div class="row">
+        			<div class="input-field col s12">
+          			<input id="email" type="email" class="validate">
+          			<label for="email">Email</label>
+        			</div>
+      			</div>
+      			<div class="row">
+        			<div class="input-field col s12">
+          			<input id="password" type="password" class="validate">
+          			<label for="password">Passwort</label>
+          			<p class="center-align"><a class="btn waves-effect waves-light blue darken-1" id="btn_login"><i class="mdi-content-send right"></i>Login</a></p>
+        			</div>
+      			</div>
+      		</form>
+  		</div>
+  		<div class="divider blue-grey darken-2"></div>
+
+  		<div id="login_rest">
+  			<p class="center-align"><a class="btn waves-effect waves-light blue darken-1" id="btn_register" href="/register"><i class="mdi-social-person-add right"></i>Registrieren</a></p>
+  			<p class="center-align"><a class="btn waves-effect waves-light blue darken-1" id="btn_forgotPassword"><i class="mdi-alert-error right"></i>Passwort vergessen</a></p>
+  		</div>
+	</div>
 </template>
-
-
 
 <template name="register">
-  <div class="container">
-    <header>
-    <img src="/logo.jpg" alt="logo" width="90%" height="90%">
-    </header>
-    <form id="register">
-        <span class="input input--kyo">
-                   <input class="input__field input__field--kyo" type="text" id="input-9" />
-                   <label class="input__label input__label--kyo" for="input-9">
-                       <span class="input__label-content input__label-content--kyo">Vorname</span>
-                   </label>
-                </span>
-        <br>
-        <span class="input input--kyo">
-                   <input class="input__field input__field--kyo" type="text" id="input-10" />
-                   <label class="input__label input__label--kyo" for="input-10">
-                       <span class="input__label-content input__label-content--kyo">Nachname</span>
-                   </label>
-                </span>
-        <br>
-        <span class="input input--kyo">
-                   <input class="input__field input__field--kyo" type="date" id="input-11" />
-                   <label class="input__label input__label--kyo" for="input-11">
-                       <span class="input__label-content input__label-content--kyo">Geburtstag</span>
-                   </label>
-                </span>
-                <br>
-                <span class="input input--kyo">
-                   <input class="input__field input__field--kyo" type="text" id="input-15" />
-                   <label class="input__label input__label--kyo" for="input-15">
-                       <span class="input__label-content input__label-content--kyo">Benutzername</span>
-                   </label>
-                </span>
-        <br>
-                <span class="input input--kyo">
-                   <input class="input__field input__field--kyo" type="text" id="input-4" />
-                   <label class="input__label input__label--kyo" for="input-4">
-                       <span class="input__label-content input__label-content--kyo">Email-Adresse</span>
-                   </label>
-                </span>
-            <br>
-                <span class="input input--kyo">
-                   <input class="input__field input__field--kyo" type="password" id="input-5" />
-                   <label class="input__label input__label--kyo" for="input-5">
-                       <span class="input__label-content input__label-content--kyo">Passwort</span>
-                   </label>
-                </span>
-            <br>
-            <br>
-            <span class="input input--kyo">
-              <input type="submit" value="Registrieren" class="input__field input__field--kyo" id="input-6">
-            </span>
-            <br>
-            <span class="input input--kyo">
-              <input type="button" value="Zurück" class="input__field input__field--kyo" id="input-14">
-            </span>
-    </form>
-    </div>
+	<header>
+		<p class="center-align"><img src="/sighty.png" width="40%" height="40%"></p>
+	</header>
+	<div id="register">
+		<p class="center-align">Bitte wählen Sie aus:</p>
+		<p class="center-align"><a href="/registerBlinder01" class="btn waves-effect waves-light blue darken-1" id="btn_blinder">Blinder</a></p>
+		<p class="center-align"><a href="/registerSehender" class="btn waves-effect waves-light blue darken-1" id="btn_sehender">Sehender</a></p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <p class="center-align"><a class="btn waves-effect waves-light blue darken-1" id="gobackto_login" href="/sighty/"><i class="mdi-navigation-chevron-left left"></i>Zurück</a></p>
+	</div>
 </template>
-
-
 
 
 <template name="takePhoto">
@@ -126,89 +99,177 @@
       </span>
       </form>
     </div>
+
+<template name="registerSehender">
+	<header>
+		<p class="center-align"><img src="/sighty.png" width="40%" height="40%"></p>
+	</header>
+	<div id="register_Sehender">
+		<p class="center-align ueberschrift">Registrierung</p>
+		<div class="row">
+    		<form class="col s12">
+    			<div class="row">
+        		<div class="input-field col s6">
+          			<input id="firstNameSehender" type="text" class="validate">
+          			<label for="firstNameSehender">Vorname</label>
+        		</div>
+        		<div class="input-field col s6">
+          			<input id="lastNameSehender" type="text" class="validate">
+          			<label for="lastNameSehender">Nachname</label>
+        		</div>
+      		</div>
+     		<div class="row">
+        		<div class="input-field col s6">
+          			<input id="usernameSehender" type="text" class="validate">
+          			<label for="usernameSehender">Benutzername</label>
+        		</div>
+        		<div class="input-field col s6">
+          			<input type="date" class="datepicker" id="birthdaySehender">
+          			<label for="birthdaySehender" class="active">Geburtsdatum</label>
+        		</div>
+      		</div>
+    			<div class="row">
+    				<div class="input-field col s12">
+						<input type="email" id="emailSehender" class="validate">
+						<label for="emailSehender">E-Mail</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="input-field col s12">
+						<input type="password" id="passwordSehender" class="validate">
+						<label for="passwordSehender">Passwort</label>
+					</div>
+				</div>
+			</form>
+		</div>
+
+		<p><a class="btn waves-effect waves-light blue darken-1" id="register_confirm_1">Registrieren</a></p>
+		<p><a class="btn-floating waves-effect waves-light blue darken-1" id="gobackto_register_1" href="/register"><i class="mdi-navigation-chevron-left"></i></a></p>
+	</div>
 </template>
 
+<template name="registerBlinder01">
+	<header>
+		<p class="center-align"><img src="/sighty.png" width="40%" height="40%"></p>
+	</header>
+	<div id="register_Blinder_01">
+		<p class="center-align ueberschrift">Registrierung</p>
+		<p class="center-align">Bitte geben Sie Vor- und Nachname ein:</p>
 
+		<div class="row">
+    		<form class="col s12">
+      		<div class="row">
+        		<div class="input-field col s12">
+          			<input id="first_name_blinder" type="text" class="validate">
+          			<label for="first_name">Vorname</label>
+        		</div>
+        	</div>
+        	<div class="row">
+        		<div class="input-field col s12">
+          			<input id="last_name" type="text" class="validate">
+          			<label for="last_name">Nachname</label>
+        		</div>
+      		</div>
+      		</form>
+    	</div>
 
+      <p><a href="/register" class="btn-floating waves-effect waves-light blue darken-1" id="gobackto_register_2"><i class="mdi-navigation-chevron-left"></i></a></p>
+      <p><a href="/registerBlinder02" class="btn-floating waves-effect waves-light blue darken-1" id="goonto_registerBlinder02"><i class="mdi-navigation-chevron-right"></i></a></p>
+	</div>
+</template>
 
-<template name="profile">
-  <div class="container">
+<template name="registerBlinder02">
   <header>
-        <img src="/logo.jpg" alt="logo" width="90%" height="90%">
+      <p class="center-align"><img src="/sighty.png" width="40%" height="40%"></p>
   </header>
-      <form id="profile">
-      <div id="profile_hauptfenster">
-        <span class="input input--kyo">
-          <input class="input__field input__field--kyo" type="text" id="output-1" value="{{firstName}}" />
-            <label class="input__label input__label--kyo" for="input-5">
-              <span class="input__label-content input__label-content--kyo">Vorname</span>
-            </label>
-        </span>
-
-
-
-        <span class="input input--kyo">
-          <input class="input__field input__field--kyo" type="text" id="output-2" value="{{lastName}}" />
-            <label class="input__label input__label--kyo" for="output-2">
-              <span class="input__label-content input__label-content--kyo">Nachname</span>
-            </label>
-        </span>
-
-         <span class="input input--kyo">
-          <input class="input__field input__field--kyo" type="date" id="output-3" value="{{geburtstag}}" />
-            <label class="input__label input__label--kyo" for="output-3">
-              <span class="input__label-content input__label-content--kyo">Geburtsdatum</span>
-            </label>
-        </span>
-
-     <span class="input input--kyo">
-          <input class="input__field input__field--kyo" type="text" id="output-4" value="{{user}}" />
-            <label class="input__label input__label--kyo" for="output-4">
-              <span class="input__label-content input__label-content--kyo">Benutzername</span>
-            </label>
-    </span>
-
-        <span class="input input--kyo">
-          <input class="input__field input__field--kyo" type="button" value="Änderungen übernehmen" id="output-aendern">
-          <input class="input__field input__field--kyo" type="button" value="Zurück" id="output-6">
-        </span>
+  <div id="register_Blinder_02">
+    <p class="center-align ueberschrift">Registrierung</p>
+    <p class="center-align">Bitte geben Sie Ihren Benutzernamen ein:</p>
+    <div class="row">
+        <form class="col s12">
+          <div class="row">
+            <div class="input-field col s12">
+                <input id="username" type="text" class="validate">
+                <label for="username">Benutzername</label>
+            </div>
+          </div>
+        </form>
       </div>
-      </form>
-    </div>
+
+      <p><a href="/registerBlinder01" class="btn-floating waves-effect waves-light blue darken-1" id="gobackto_registerBlinder01"><i class="mdi-navigation-chevron-left"></i></a></p>
+      <p><a href="/registerBlinder03" class="btn-floating waves-effect waves-light blue darken-1" id="goonto_registerBlinder03"><i class="mdi-navigation-chevron-right"></i></a></p>
+  </div>
 </template>
 
-
-
-
-
-
-
-<template name="startseite">
-
-  <div class="container">
-    <form id="startseite">
-      <header>
-      <img src="/logo.jpg" alt="logo" width="90%" height="90%">
-      </header>
-      <div id="willkommen_startseite">
-      <span class="input input--kyo">
-              <input type="button" id="willkommen" value="Herzlich Willkommen {{user}}" class="input__field input__field--kyo">
-      </span>
+<template name="registerBlinder03">
+  <header>
+      <p class="center-align"><img src="/sighty.png" width="40%" height="40%"></p>
+  </header>
+  <div id="register_Blinder_03">
+      <p class="center-align ueberschrift">Registrierung</p>
+      <p class="center-align">Bitte wählen Sie Ihr Geburtsdatum:</p>
+      <div class="row">
+        <form class="col s12">
+          <div class="row">
+            <div class="input-field col s12">
+                <input type="date" class="datepicker" id="birthday">
+                <label for="birthday" class="active">Geburtsdatum</label>
+            </div>
+          </div>
+        </form>
       </div>
-      <span class="input input--kyo">
-      <div id="bild_frage">
-      <p id="blinden"><a href="/takePhoto"><img src="/blinden.png" width="100%" height="100%">
-      <br><p id="text_startseite">
-        LASSEN SIE SICH VON SEHENDEN HELFEN!
-        <p id="text2_startseite">Nimm Fotos auf und stelle eine Frage dazu.</p>
-      </p></a></p>
-      </div>
-      </span>
-      <span class="input input--kyo">
-              <input type="button" id="profil" value="Zum Profil" class="input__field input__field--kyo">
-              <input type="button" value="Logout" class="input__field input__field--kyo" id="input-8">
 
-      </span>
-    </form>
+      <p><a href="/registerBlinder02" class="btn-floating waves-effect waves-light blue darken-1" id="gobackto_registerBlinder02"><i class="mdi-navigation-chevron-left"></i></a></p>
+      <p><a href="/registerBlinder04" class="btn-floating waves-effect waves-light blue darken-1" id="goonto_registerBlinder04"><i class="mdi-navigation-chevron-right"></i></a></p>
   </div>
+</template>
+
+<template name="registerBlinder04">
+  <header>
+      <p class="center-align"><img src="/sighty.png" width="40%" height="40%"></p>
+  </header>
+  <div id="register_Blinder_04">
+    <p class="center-align ueberschrift">Registrierung</p>
+    <p class="center-align">Bitte geben Sie Ihre E-Mail Adresse ein:</p>
+    <div class="row">
+        <form class="col s12">
+          <div class="row">
+            <div class="input-field col s12">
+                <input id="email" type="email" class="validate">
+                <label for="email">E-Mail</label>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <p><a href="/registerBlinder03" class="btn-floating waves-effect waves-light blue darken-1" id="gobackto_registerBlinder03"><i class="mdi-navigation-chevron-left"></i></a></p>
+      <p><a href="/registerBlinder05" class="btn-floating waves-effect waves-light blue darken-1" id="goonto_registerBlinder05"><i class="mdi-navigation-chevron-right"></i></a></p>
+  </div>
+</template>
+
+<template name="registerBlinder05">
+  <header>
+      <p class="center-align"><img src="/sighty.png" width="40%" height="40%"></p>
+  </header>
+  <div id="register_Blinder_05">
+    <p class="center-align ueberschrift">Registrierung</p>
+    <p class="center-align">Bitte geben Sie Ihr Passwort ein:</p>
+    <div class="row">
+        <form class="col s12">
+          <div class="row">
+            <div class="input-field col s12">
+                <input id="password" type="password" class="validate">
+                <label for="password">Passwort</label>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <p><a href="" class="btn waves-effect waves-light blue darken-1" id="register_confirm_2">Registrieren</a></p>
+      <p><a href="/registerBlinder04" class="btn-floating waves-effect waves-light blue darken-1" id="gobackto_registerBlinder04"><i class="mdi-navigation-chevron-left"></i></a></p>
+  </div>
+</template>
+
+<template name="startseiteSehender">
+	<p><a href="/sighty/" class="btn waves-effect waves-light blue darken-1" id="btn_logout">Logout</a></p>
 </template>
