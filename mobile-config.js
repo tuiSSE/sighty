@@ -1,35 +1,16 @@
-// This section sets up some basic app metadata,
-// the entire section is optional.
-//TODO
-/*App.info({
-  id: 'com.example.matt.uber',
-  name: 'über',
-  description: 'Get über power in one button click',
-  author: 'Matt Development Group',
-  email: 'contact@example.com',
-  website: 'http://example.com'
+App.info({
+  name: 'Sighty',
+  description: 'An Android app built with Meteor',
+  version: '0.0.1'
 });
- 
-// Set up resources such as icons and launch screens.
+
 App.icons({
-  'iphone': 'icons/icon-60.png',
-  'iphone_2x': 'icons/icon-60@2x.png',
-  // ... more screen sizes and platforms ...
+  'android_ldpi': 'resources/icons/icon-ldpi.png',
+  'android_mdpi': 'resources/icons/icon-mdpi.png',
+  'android_hdpi': 'resources/icons/icon-hdpi.png',
+  'android_xhdpi': 'resources/icons/icon-xhdpi.png',
+  'iphone': 'resources/icons/icon-60.png',
+  'iphone_2x': 'resources/icons/icon-60@2x.png',
+  'ipad': 'resources/icons/icon-72.png',
+  'ipad_2x': 'resources/icons/icon-72@2x.png'
 });
- 
-App.launchScreens({
-  'iphone': 'splash/Default~iphone.png',
-  'iphone_2x': 'splash/Default@2x~iphone.png',
-  // ... more screen sizes and platforms ...
-});
- 
-// Set PhoneGap/Cordova preferences
-App.setPreference('BackgroundColor', '0xff0000ff');
-App.setPreference('HideKeyboardFormAccessoryBar', true);
- 
-// Pass preferences for a particular PhoneGap/Cordova plugin
-App.configurePlugin('com.phonegap.plugins.facebookconnect', {
-  APP_ID: '1234567890',
-  API_KEY: 'supersecretapikey'
-});
-*/
