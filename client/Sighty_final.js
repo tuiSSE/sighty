@@ -1,7 +1,7 @@
 if (Meteor.isClient) {
   
   Router.map(function(){
-    this.route("login", {path: "/"})
+    this.route("login", {path: "/sighty/"})
     this.route("register", {path: "/register"})
     this.route("registerSehender", {path: "/registerSehender"})
     this.route("startseiteSehender", {path: "/startseiteSehender"})
