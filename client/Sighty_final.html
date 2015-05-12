@@ -1,38 +1,38 @@
 <head>
   <title>Sighty</title>
-  <link rel="apple-touch-icon" sizes="57x57" href="apple-touch-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="apple-touch-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="apple-touch-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="apple-touch-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon-180x180.png">
-  <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
-  <link rel="icon" type="image/png" href="android-chrome-192x192.png" sizes="192x192">
-  <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96">
-  <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
-  <link rel="manifest" href="manifest.json">
-  <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="msapplication-TileImage" content="mstile-144x144.png">
-  <meta name="theme-color" content="#ffffff">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="manifest.json">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-TileImage" content="mstile-144x144.png">
+<meta name="theme-color" content="#ffffff">
 </head>
 
 <body>
-
+	
 </body>
 
 <template name="login">
-	<header>
-		<p class="center-align"><img src="sighty.png" width="40%" height="40%"></p>
+	<header id="header_login">
+		<p class="center-align"><img src="Sighty.png" width="40%" height="40%"></p>
 	</header>
 	<div id="login">
 		<div id="login_socialnetworks">
 			<p class="center-align ueberschrift">Login</p>
 			<p class="center-align"><a class="btn waves-effect waves-light" id="btn_facebook"><i class="mdi-social-person right"></i>Facebook</a></p>
 			<p class="center-align"><a class="btn waves-effect waves-light" id="btn_twitter"><i class="mdi-social-person right"></i>Twitter</a></p>
-		</div>
+		</div>	
 		<p class="center-align"><div class="divider blue-grey darken-2"></div></p>
 		<div class="row" id="login_email">
     		<form class="col s12">
@@ -61,8 +61,8 @@
 </template>
 
 <template name="register">
-	<header>
-		<p class="center-align"><img src="sighty.png" width="40%" height="40%"></p>
+	<header id="header_register">
+		<p class="center-align"><img src="Sighty.png" width="40%" height="40%"></p>
 	</header>
 	<div id="register">
 		<p class="center-align">Bitte wählen Sie aus:</p>
@@ -73,37 +73,13 @@
     <br>
     <br>
     <br>
-    <p class="center-align"><a class="btn waves-effect waves-light blue darken-1" id="gobackto_login" href="/sighty/"><i class="mdi-navigation-chevron-left left"></i>Zurück</a></p>
+    <p class="center-align"><a class="btn waves-effect waves-light blue darken-1" id="gobackto_login" href="/"><i class="mdi-navigation-chevron-left left"></i>Zurück</a></p>
 	</div>
 </template>
 
-
-<template name="takePhoto">
-  <div class="container">
-      <header>
-      <img src="/logo.jpg" alt="logo" width="90%" height="90%">
-      </header>
-      <form id="takePhoto">
-      <span class="input input--kyo">
-        <input type="textarea" name ="frage" id="frage" placeholder="Geben Sie Hier Ihre Frage ein" class="input__field input__field--kyo" width="150%">
-        <label class="input__label input__label--kyo" for="input-5">
-          <span class="input__label-content input__label-content--kyo"></span>
-        </label>
-      </span>
-      <span class="input input--kyo">
-              <input type="button" id="capture" value="Take Photo" class="input__field input__field--kyo">
-      </span>
-      <p><img src ="{{photo}}" width="20%" height="20%"></p>
-      <span class="input input--kyo">
-        <input type="button" id="home" value="Zurück Zur Startseite" class="input__field input__field--kyo">
-      </span>
-      </form>
-    </div>
-</template>
-
 <template name="registerSehender">
-	<header>
-		<p class="center-align"><img src="sighty.png" width="40%" height="40%"></p>
+	<header id="header_registerSehender">
+		<p class="center-align"><img src="Sighty.png" width="40%" height="40%"></p>
 	</header>
 	<div id="register_Sehender">
 		<p class="center-align ueberschrift">Registrierung</p>
@@ -150,8 +126,8 @@
 </template>
 
 <template name="registerBlinder01">
-	<header>
-		<p class="center-align"><img src="sighty.png" width="40%" height="40%"></p>
+	<header id="header_registerBlinder01">
+		<p class="center-align"><img src="Sighty.png" width="40%" height="40%"></p>
 	</header>
 	<div id="register_Blinder_01">
 		<p class="center-align ueberschrift">Registrierung</p>
@@ -161,7 +137,7 @@
     		<form class="col s12">
       		<div class="row">
         		<div class="input-field col s12">
-          			<input id="first_name_blinder" type="text" class="validate">
+          			<input id="first_name_blinder" type="text" class="validate" value="{{vorname}}">
           			<label for="first_name">Vorname</label>
         		</div>
         	</div>
@@ -178,10 +154,10 @@
       <p><a href="/registerBlinder02" class="btn-floating waves-effect waves-light blue darken-1" id="goonto_registerBlinder02"><i class="mdi-navigation-chevron-right"></i></a></p>
 	</div>
 </template>
-
+  
 <template name="registerBlinder02">
-  <header>
-      <p class="center-align"><img src="sighty.png" width="40%" height="40%"></p>
+  <header id="header_registerBlinder02">
+      <p class="center-align"><img src="Sighty.png" width="40%" height="40%"></p>
   </header>
   <div id="register_Blinder_02">
     <p class="center-align ueberschrift">Registrierung</p>
@@ -201,14 +177,14 @@
       <p><a href="/registerBlinder03" class="btn-floating waves-effect waves-light blue darken-1" id="goonto_registerBlinder03"><i class="mdi-navigation-chevron-right"></i></a></p>
   </div>
 </template>
-
+  
 <template name="registerBlinder03">
-  <header>
-      <p class="center-align"><img src="sighty.png" width="40%" height="40%"></p>
+  <header id="header_registerBlinder03">
+      <p class="center-align"><img src="Sighty.png" width="40%" height="40%"></p>
   </header>
   <div id="register_Blinder_03">
       <p class="center-align ueberschrift">Registrierung</p>
-      <p class="center-align">Bitte wählen Sie Ihr Geburtsdatum:</p>
+      <p class="center-align">Bitte wählen Sie Ihr Geburtsdatum:</p> 
       <div class="row">
         <form class="col s12">
           <div class="row">
@@ -226,8 +202,8 @@
 </template>
 
 <template name="registerBlinder04">
-  <header>
-      <p class="center-align"><img src="sighty.png" width="40%" height="40%"></p>
+  <header id="header_registerBlinder04">
+      <p class="center-align"><img src="Sighty.png" width="40%" height="40%"></p>
   </header>
   <div id="register_Blinder_04">
     <p class="center-align ueberschrift">Registrierung</p>
@@ -249,8 +225,8 @@
 </template>
 
 <template name="registerBlinder05">
-  <header>
-      <p class="center-align"><img src="sighty.png" width="40%" height="40%"></p>
+  <header id="header_registerBlinder05">
+      <p class="center-align"><img src="Sighty.png" width="40%" height="40%"></p>
   </header>
   <div id="register_Blinder_05">
     <p class="center-align ueberschrift">Registrierung</p>
@@ -272,5 +248,33 @@
 </template>
 
 <template name="startseiteSehender">
-	<p><a href="/" class="btn waves-effect waves-light blue darken-1" id="btn_logout">Logout</a></p>
+  <header id="header_startseiteSehender">
+      
+      <nav>
+      <img src="Sighty_klein.png" class="brand-logo center" id="header_startseiteSehender_logo">
+      <ul class="right hide-on-med-and-down">
+        <li><a href="/profile">Profil</a></li>
+        <li><a href="#!">Offene Fragen</a></li>
+        <li><a href="#!">Deine Antworten</a></li>
+        <li><a href="/" id="btn_logout">Logout</a></li>
+      </ul>
+      <ul id="slide-out" class="side-nav">
+        <br>
+        <li style="{color: black;}"><img src="profilbild.jpg" class="circle center">{{user}}</li>
+        <li><a href="/profile">Profil</a></li>
+        <li><a href="#!">Offene Fragen</a></li>
+        <li><a href="#!">Deine Antworten</a></li>
+        <li><a href="/" id="btn_logout">Logout</a></li>
+      </ul>
+      <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+    </nav>
+  </header>
+  <div id="startseite_Sehender">
+    
+  </div>
+	
+</template>
+
+<template name="profile">
+  <h1>Hier sind Infos zu deinem Profil</h1>
 </template>
