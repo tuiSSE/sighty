@@ -1,5 +1,5 @@
 Router.map(function(){
-    this.route("login", {path: "/sighty/"})
+    this.route("login", {path: "/"})
     this.route("register", {path: "/register"})
     this.route("registerSehender", {path: "/registerSehender"})
     this.route("startseiteSehender", {path: "/startseiteSehender"})
@@ -165,3 +165,4 @@ Router.map(function(){
         Meteor.users.update({_id: Meteor.userId()}, { $set: {"profile.benutzername": template.find("#output-4").value }} );
         Router.go("profile")
       }
+    })
