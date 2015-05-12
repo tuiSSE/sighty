@@ -3,7 +3,7 @@ body {
 	font-weight: bold;
 }
 
-header{
+#header_login,#header_register, #header_registerSehender, #header_registerBlinder01, #header_registerBlinder02, #header_registerBlinder03, #header_registerBlinder04, #header_registerBlinder05{
 	margin-top: 10%;
 }
 
@@ -80,7 +80,7 @@ fieldset{
 }
 
 
-#gobackto_register_1, #gobackto_register_2, #gobackto_registerBlinder01, #gobackto_registerBlinder02, #gobackto_registerBlinder03, #gobackto_registerBlinder04, #btn_logout{
+#gobackto_register_1, #gobackto_register_2, #gobackto_registerBlinder01, #gobackto_registerBlinder02, #gobackto_registerBlinder03, #gobackto_registerBlinder04{
 	float: left;
 	margin-left: 2%;
 
@@ -90,3 +90,12 @@ fieldset{
 	float: right;
 	margin-right: 2%;
 }
+
+nav {
+  background-color: #1e88e5;
+}
+
+#slide-out {
+  background-color: #bbdefb;
+}
+
