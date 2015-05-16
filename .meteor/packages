@@ -15,3 +15,6 @@ mdg:camera
 meteor-platform
 mrt:moment
 materialize:materialize
+insecure
+autopublish
+underscore

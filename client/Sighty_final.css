@@ -1,6 +1,6 @@
 body {
-	background-color: #bbdefb;
-	font-weight: bold;
+	background-color: #e3f2fd;
+	/*font-weight: bold;*/
 }
 
 #header_login,#header_register, #header_registerSehender, #header_registerBlinder01, #header_registerBlinder02, #header_registerBlinder03, #header_registerBlinder04, #header_registerBlinder05{
@@ -98,4 +98,3 @@ nav {
 #slide-out {
   background-color: #bbdefb;
 }
-

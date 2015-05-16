@@ -1,7 +1,8 @@
 if (Meteor.isClient) {
-  
+
   Router.map(function(){
-    this.route("login", {path: "/sighty/"})
+    this.route("mainpage", {path: "/lanparty"})
+    this.route("login", {path: "/"})
     this.route("register", {path: "/register"})
     this.route("registerSehender", {path: "/registerSehender"})
     this.route("startseiteSehender", {path: "/startseiteSehender"})
@@ -12,7 +13,7 @@ if (Meteor.isClient) {
     this.route("registerBlinder05", {path: "/registerBlinder05"})
     this.route("profile", {path: "/profile"})
   })
-  
+
   Template.registerSehender.events({
     "click #register_confirm_1":function(event,template){
       event.preventDefault();
@@ -37,7 +38,7 @@ if (Meteor.isClient) {
         Router.go("startseiteSehender")
       };
       });
-      
+
     }
 
   })
@@ -61,7 +62,7 @@ if (Meteor.isClient) {
       Router.go("startseiteSehender")
     };
     });
-    
+
   }
  })
 
@@ -75,7 +76,7 @@ if (Meteor.isClient) {
  Template.startseiteSehender.helpers({
   vorname:function(){
     return Meteor.user().profile.vorname;
-  }, 
+  },
   user:function(){
     return Meteor.user().profile.benutzername;
   }
@@ -89,7 +90,7 @@ if (Meteor.isClient) {
       Router.go("startseiteSehender")
     }
     });
-    
+
   },
   "click #btn_twitter":function(event, template){
     Meteor.loginWithTwitter({}, function(){
@@ -107,8 +108,7 @@ if (Meteor.isClient) {
       closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
     }
   );
-      
+
  }
 
 }
-
