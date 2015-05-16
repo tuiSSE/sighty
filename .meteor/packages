@@ -18,3 +18,4 @@ materialize:materialize
 insecure
 autopublish
 underscore
+momentjs:moment
