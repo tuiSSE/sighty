@@ -1,3 +1,7 @@
+Router.map(function(){
+    this.route("mainpage", {path: "/mainpage"})
+  })
+
 Template.mainpage.helpers({
   questions: [{
     text: "Wo wohnt Totleben?",

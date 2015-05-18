@@ -1,0 +1,64 @@
+<template name="register">
+	<header id="header_register">
+		<p class="center-align"><img src="sighty.png" width="40%" height="40%"></p>
+	</header>
+	<div id="register">
+		<p class="center-align">Bitte wählen Sie aus:</p>
+		<p class="center-align"><a href="/registerBlinder01" class="btn waves-effect waves-light blue darken-1" id="btn_blinder">Blinder</a></p>
+		<p class="center-align"><a href="/registerSehender" class="btn waves-effect waves-light blue darken-1" id="btn_sehender">Sehender</a></p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <p class="center-align"><a class="btn waves-effect waves-light blue darken-1" id="gobackto_login" href="/"><i class="mdi-navigation-chevron-left left"></i>Zurück</a></p>
+	</div>
+</template>
+
+<template name="registerSehender">
+	<header id="header_registerSehender">
+		<p class="center-align"><img src="sighty.png" width="40%" height="40%"></p>
+	</header>
+	<div id="register_Sehender">
+		<p class="center-align ueberschrift">Registrierung</p>
+		<div class="row">
+    		<form class="col s12">
+    			<div class="row">
+        		<div class="input-field col s6">
+          			<input id="firstNameSehender" type="text" class="validate">
+          			<label for="firstNameSehender">Vorname</label>
+        		</div>
+        		<div class="input-field col s6">
+          			<input id="lastNameSehender" type="text" class="validate">
+          			<label for="lastNameSehender">Nachname</label>
+        		</div>
+      		</div>
+     		<div class="row">
+        		<div class="input-field col s6">
+          			<input id="usernameSehender" type="text" class="validate">
+          			<label for="usernameSehender">Benutzername</label>
+        		</div>
+        		<div class="input-field col s6">
+          			<input type="date" class="datepicker" id="birthdaySehender">
+          			<label for="birthdaySehender" class="active">Geburtsdatum</label>
+        		</div>
+      		</div>
+    			<div class="row">
+    				<div class="input-field col s12">
+						<input type="email" id="emailSehender" class="validate">
+						<label for="emailSehender">E-Mail</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="input-field col s12">
+						<input type="password" id="passwordSehender" class="validate">
+						<label for="passwordSehender">Passwort</label>
+					</div>
+				</div>
+			</form>
+		</div>
+
+		<p><a class="btn waves-effect waves-light blue darken-1" id="register_confirm_1">Registrieren</a></p>
+		<p><a class="btn-floating waves-effect waves-light blue darken-1" id="gobackto_register_1" href="/register"><i class="mdi-navigation-chevron-left"></i></a></p>
+	</div>
+</template>
