@@ -1,8 +1,8 @@
 Router.map(function(){
-    this.route("mainpage", {path: "/mainpage"})
+    this.route("mainpageSehender", {path: "/mainpageS"})
   })
 
-Template.mainpage.helpers({
+Template.mainpageSehender.helpers({
   questions: [{
     text: "Wo wohnt Totleben?",
     createdAt: new Date(),
