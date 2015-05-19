@@ -1,20 +1,19 @@
-//Not yet completed
+$(document).ready(function(){
+   $('.materialboxed').materialbox();
+ });
 
-Template.takePhoto.events({
+Template.mainpageBlinder.events({
   'click #capture': function(){
-      console.log("Button clicked.");
       MeteorCamera.getPicture({}, function(error, data){
-      console.log(data);
-      Session.set('photo', data);
+        Session.set('photo', data);
     });
-},
-
-  'submit #takePhoto': function (event) {
+  },
+  'click #submit-question': function (event) {
       event.preventDefault();
-      var text = event.target.frage.value;
+      var text = event.target.question.value;
       var newQues = {
         text: text,
-        createdAt: new Date(), // current time
+        createdAt: new Date(),
         userId: Meteor.userId()
       };
       Meteor.call("addQuestion",newQues,
@@ -24,13 +23,36 @@ Template.takePhoto.events({
           }
         }
       );
-      // Clear form
-      event.target.frage.value = "";
-    }
+      session.set('question', text);
+    },
+    'click #submit-answer': function (event) {
+        event.preventDefault();
+        var text = event.target.answer.value;
+        var newQues = {
+          text: text,
+          createdAt: new Date(),
+          userId: Meteor.userId()
+        };
+        Meteor.call("addAnswer",newAns,
+          function (err, result) {
+            if (err) {
+              alert("Could not add answer " + err.reason);
+            }
+          }
+        );
+        session.set('answer', text);
+      }
 });
 
-Template.takePhoto.helpers({
+Template.mainpageBlinder.helpers({
     'photo': function(){
-    return Session.get('photo');
-  },
+        return Session.get('photo');
+    },
+    'question': function(){
+        return Session.get('question');
+    },
+    'answer': function(){
+        return Session.get('answer');
+    }
+
 });

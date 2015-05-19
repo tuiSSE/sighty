@@ -9,6 +9,14 @@ Meteor.methods({
         }
         // Insert Ques (simulate on client, do it on server)
         return Questions.insert(newQues);
+    },
+    addAnswer: function (newAns) {
+        // Perform form validation
+        if (newAns.text == "") {
+            throw new Meteor.Error(413, "Missing Answer!");
+        }
+        // Insert Ques (simulate on client, do it on server)
+        return Answers.insert(newAns);
     }
 
 });
