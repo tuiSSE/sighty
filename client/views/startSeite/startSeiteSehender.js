@@ -1,6 +1,5 @@
 Router.map(function(){
     this.route("startseiteSehender", {path: "/startseiteSehender"})
-    this.route("profile", {path: "/profile"})
   })
 
 

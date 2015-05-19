@@ -1,5 +1,6 @@
 //Not yet completed
 
+/* prevents deployment
 Template.takePhoto.events({
   'click #capture': function(){
       console.log("Button clicked.");
@@ -34,3 +35,4 @@ Template.takePhoto.helpers({
     return Session.get('photo');
   },
 });
+*/
