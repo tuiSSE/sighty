@@ -1,0 +1,9 @@
+#btn_chooseBlind_register, #btn_chooseHelper_register, #btn_changeUsername_register {
+	width: 70%;
+}
+
+#chooseUserclass_register {
+	width: 70%;
+	margin-left: 15%;
+	margin-right: 15%;
+}

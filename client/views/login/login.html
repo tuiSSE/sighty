@@ -1,36 +1,63 @@
 <template name="login">
-	<header id="header_login">
-		<p class="center-align"><img src="sighty.png" width="40%" height="40%"></p>
+	
+	<header>
+		<p class="center-align"><img src="/Sighty_mittel.png"></p>
 	</header>
-	<div id="login">
-		<div id="login_socialnetworks">
-			<p class="center-align ueberschrift">Login</p>
-			<p class="center-align"><a class="btn waves-effect waves-light" id="btn_facebook"><i class="mdi-social-person right"></i>Facebook</a></p>
-			<p class="center-align"><a class="btn waves-effect waves-light" id="btn_twitter"><i class="mdi-social-person right"></i>Twitter</a></p>
-		</div>
-		<p class="center-align"><div class="divider blue-grey darken-2"></div></p>
-		<div class="row" id="login_email">
-    		<form class="col s12">
-      			<div class="row">
-        			<div class="input-field col s12">
-          			<input id="email" type="email" class="validate">
-          			<label for="email">Email</label>
-        			</div>
-      			</div>
-      			<div class="row">
-        			<div class="input-field col s12">
-          			<input id="password" type="password" class="validate">
-          			<label for="password">Passwort</label>
-          			<p class="center-align"><a class="btn waves-effect waves-light blue darken-1" id="btn_login"><i class="mdi-content-send right"></i>Login</a></p>
-        			</div>
-      			</div>
-      		</form>
-  		</div>
-  		<div class="divider blue-grey darken-2"></div>
 
-  		<div id="login_rest">
-  			<p class="center-align"><a class="btn waves-effect waves-light blue darken-1" id="btn_register" href="/register"><i class="mdi-social-person-add right"></i>Registrieren</a></p>
-  			<p class="center-align"><a class="btn waves-effect waves-light blue darken-1" id="btn_forgotPassword"><i class="mdi-alert-error right"></i>Passwort vergessen</a></p>
-  		</div>
-	</div>
+	<div class="row">
+    	<div class="col s12 center blue lighten-4">
+      		<ul class="tabs blue lighten-4">
+        		<li class="tab col s6" id="choose_login"><a href="#login" class="active">Login</a></li>
+        		<li class="tab col s6" id="choose_register"><a href="#register">Registrierung</a></li>
+      		</ul>
+    	</div>
+    	
+    	<div id="login" class="col s12 center">
+      		<p class="center-align"><a id="btn_login_facebook" class="btn waves-light waves-effect"><i class="mdi-social-person right"></i>Facebook</a></p>
+      		<p class="center-align"><a id="btn_login_twitter" class="btn waves-light waves-effect"><i class="mdi-social-person right"></i>Twitter</a></p>
+      		<p class="divider blue-grey darken-2"></p>
+
+      		<div class="row" id="login_email">
+        		<form class="col s12">
+            		<div class="row">
+              			<div class="input-field col s12">
+                			<input id="email_login" type="email" class="validate">
+                			<label for="email_login">Email</label>
+              			</div>
+            		</div>
+            		<div class="row">
+              			<div class="input-field col s12">
+                			<input id="password_login" type="password" class="validate">
+                			<label for="password_login">Passwort</label>
+              			</div>
+            		</div>
+           		</form>
+      		</div>
+      		<p class="center-align"><a class="btn waves-effect waves-light blue darken-1" id="btn_login_login"><i class="mdi-content-send right"></i>Login</a></p>
+    	</div>
+    	<div id="register" class="col s12">
+      		<p class="center-align"><a id="btn_register_facebook" class="btn waves-light waves-effect"><i class="mdi-social-person right"></i>Facebook</a></p>
+      		<p class="center-align"><a id="btn_register_twitter" class="btn waves-light waves-effect"><i class="mdi-social-person right"></i>Twitter</a></p>
+      		<p class="divider blue-grey darken-2"></p>
+
+      		<div class="row" id="register_email">
+        		<form class="col s12">
+            		<div class="row">
+              			<div class="input-field col s12">
+                			<input id="email_register" type="email" class="validate">
+                			<label for="email_register">Email</label>
+              			</div>
+            		</div>
+            		<div class="row">
+              			<div class="input-field col s12">
+                			<input id="password_register" type="password" class="validate">
+                			<label for="password_register">Passwort</label>
+              			</div>
+            		</div> 
+          		</form>
+      		</div>
+      		<p class="center-align"><a class="btn waves-effect waves-light blue darken-1" id="btn_register_register"><i class="mdi-content-send right"></i>Registrieren</a></p>
+      	</div>
+  	</div>  
+
 </template>

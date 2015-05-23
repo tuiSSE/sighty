@@ -1,0 +1,16 @@
+#btn_change_profile, #btn_delete_profile, #btn_randomUsername {
+	width: 80%;
+}
+
+.divider {
+	width: 80%;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+h3 {
+	text-decoration: underline;
+	font-family: serif;
+	color: #000;
+}
+

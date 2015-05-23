@@ -1,0 +1,31 @@
+<template name="homeHelper">
+
+	<nav class="blue darken-1">
+    <img src="/Sighty_klein.png" class="brand-logo">
+      <ul class="right hide-on-med-and-down">
+        <li>Herzlich Willkommen {{username}}</li>
+        <li><a id="btn_goto_home1">Startseite</a></li>
+        <li><a href="/profile">Profil</a></li>
+        <li><a href="#!">Einstellungen</a></li>
+        <li><a href="">About</a></li>
+        <li><a id="btn_logout_homeHelper1">Logout</a></li>
+      </ul>
+      <ul id="slide-out" class="side-nav">
+        <li><p class="center-align">Herzlich Willkommen</p><p class="center-align"><img src="/profilbild.png" class="circle"></p><p class="center-align">{{username}}</p></li>
+        <li class="divider black"></li>
+        <li><a id="btn_goto_home2">Startseite</a></li>
+        <li class="divider"></li>
+        <li><a href="/profile">Profil</a></li>
+        <li class="divider"></li>
+        <li><a href="#!">Einstellungen</a></li>
+        <li class="divider"></li>
+        <li><a href="">About</a></li>
+        <li class="divider black"></li>
+        <li><a id="btn_logout_homeHelper2">Logout</a></li>
+      </ul>
+      <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+  </nav>
+
+  <h2>Startseite Helfer</h2>
+
+</template>

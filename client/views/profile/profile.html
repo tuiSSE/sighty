@@ -1,30 +1,57 @@
-<head>
-  <title>Sighty</title>
-  <link rel="apple-touch-icon" sizes="57x57" href="apple-touch-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="apple-touch-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="apple-touch-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="apple-touch-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon-180x180.png">
-  <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
-  <link rel="icon" type="image/png" href="android-chrome-192x192.png" sizes="192x192">
-  <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96">
-  <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
-  <link rel="manifest" href="manifest.json">
-  <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="msapplication-TileImage" content="mstile-144x144.png">
-  <meta name="theme-color" content="#ffffff">
-
-</head>
-
-<body>
-
-</body>
-
-
 <template name="profile">
-  <h1>Hier sind Infos zu deinem Profil</h1>
+	
+	<nav class="blue darken-1">
+		<img src="/Sighty_klein.png" class="brand-logo">
+  		<ul class="right hide-on-med-and-down">
+  			<li>Herzlich Willkommen {{username}}</li>
+  			<li><a id="btn_goto_home1">Startseite</a></li>
+    		<li><a href="/profile">Profil</a></li>
+    		<li><a href="#!">Einstellungen</a></li>
+    		<li><a href="">About</a></li>
+    		<li><a id="btn_logout_profile1">Logout</a></li>
+  		</ul>
+  		<ul id="slide-out" class="side-nav">
+  			<li><p class="center-align">Herzlich Willkommen</p><p class="center-align"><img src="/profilbild.png" class="circle"></p><p class="center-align">{{username}}</p></li>
+  			<li class="divider black"></li>
+  			<li><a id="btn_goto_home2">Startseite</a></li>
+    		<li><a href="/profile">Profil</a></li>
+    		<li class="divider"></li>
+    		<li><a href="#!">Einstellungen</a></li>
+    		<li class="divider"></li>
+    		<li><a href="">About</a></li>
+    		<li class="divider black"></li>
+    		<li><a id="btn_logout_profile2">Logout</a></li>
+  		</ul>
+  		<a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+	</nav>
+
+
+  <div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s12">
+            <p class="center-align"><img src="/profilbild.png" class="circle"></p>
+            <br>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s6">
+          <input type="text" value="{{username}}" id="username_profile">
+          <label for="username_profile" class="active">Benutzername</label>
+        </div>
+        <div class="input-field col s6">
+          <input type="text" value="{{email}}" id="email_profile">
+          <label for="email_profile" class="active">E-Mail</label>
+        </div>
+      </div>
+    </form>  
+  </div>
+
+  <p class="center-align"><a id="btn_randomUsername" class="btn waves-effect waves-light blue darken-1">zufälliger Benutzername</a></p>
+  <p class="center-align"><a id="btn_change_profile" class="btn waves-effect waves-light blue darken-1">Änderungen übernehmen</a></p>
+  <p class="divider black"></p>
+  <br>
+  <br>
+  <p class="center-align"><a id="btn_delete_profile" class="btn waves-effect waves-light blue darken-1">Profil löschen</a></p>
+
 </template>

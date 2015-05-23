@@ -1,7 +1,9 @@
-//Needs Optimization
+Router.map(function(){
+	this.route("newQuestion", {path: "/newQuestion"})
+})
 
-Template.mainpageBlinder.events({
-  'click #capture': function(){
+Template.newQuestion.events({
+	'click #capture': function(){
       MeteorCamera.getPicture({}, function(error, data){
         for (var i=1; i<5; i++)
         {
@@ -74,39 +76,4 @@ Template.mainpageBlinder.events({
         Session.set('photo4', null);
     }
   }
-});
-
-Template.mainpageBlinder.helpers({
-    'photo1': function(){
-        return Session.get('photo1');
-    },
-    'photo2': function(){
-        return Session.get('photo2');
-    },
-    'photo3': function(){
-        return Session.get('photo3');
-    },
-    'photo4': function(){
-        return Session.get('photo4');
-    },
-    'question': function(){
-        return Session.get('question');
-    },
-    'answer': function(){
-        return Session.get('answer');
-    },
-    myCallbacks: function() {
-    return {
-        finished: function(index, fileInfo, context) {
-          for (var i=1; i<5; i++)
-          {
-            if (Session.get('photo' + i) == null)
-            {
-              Session.set('photo' + i, fileInfo.url);
-              break;
-            }
-          }
-        }
-    }
-  }
-});
+})
