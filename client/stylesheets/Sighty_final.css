@@ -98,3 +98,11 @@ nav {
 #slide-out {
   background-color: #bbdefb;
 }
+
+#capture {
+	margin-right: 50px;
+}
+
+#takePhotoContainer {
+	margin-top: 50px;
+}

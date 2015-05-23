@@ -15,7 +15,8 @@ mdg:camera
 meteor-platform
 mrt:moment
 materialize:materialize
-insecure
-autopublish
 underscore
 momentjs:moment
+imsky:holder
+tomi:upload-server
+tomi:upload-jquery

@@ -1,16 +1,12 @@
-$(document).ready(function(){
-   $('.materialboxed').materialbox();
- });
-
 Template.mainpageBlinder.events({
   'click #capture': function(){
       MeteorCamera.getPicture({}, function(error, data){
         Session.set('photo', data);
     });
   },
-  'click #submit-question': function (event) {
+  'click #submit-question': function (event,template) {
       event.preventDefault();
-      var text = event.target.question.value;
+      var text = template.find("#question").value;
       var newQues = {
         text: text,
         createdAt: new Date(),
@@ -23,12 +19,12 @@ Template.mainpageBlinder.events({
           }
         }
       );
-      session.set('question', text);
+      Session.set('question', text);
     },
-    'click #submit-answer': function (event) {
+    'click #submit-answer': function (event,template) {
         event.preventDefault();
-        var text = event.target.answer.value;
-        var newQues = {
+        var text = template.find("#answer").value;
+        var newAns = {
           text: text,
           createdAt: new Date(),
           userId: Meteor.userId()
@@ -40,7 +36,7 @@ Template.mainpageBlinder.events({
             }
           }
         );
-        session.set('answer', text);
+        Session.set('answer', text);
       }
 });
 
@@ -53,6 +49,12 @@ Template.mainpageBlinder.helpers({
     },
     'answer': function(){
         return Session.get('answer');
+    },
+    myCallbacks: function() {
+    return {
+        finished: function(index, fileInfo, context) {
+            Session.set('photo', fileInfo);
+        }
     }
-
+  }
 });

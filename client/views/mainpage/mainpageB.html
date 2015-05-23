@@ -4,27 +4,31 @@
     <p class="center-align">Lade bis zu vier Bilder hoch und stelle eine Frage <br/>
     unsere Nutzer werden versuchen dir so schnell wie möglich zu helfen!</p>
   </header>
-  <div class="container">
+  <div class="container" id="takePhotoContainer">
     <div class="valign-wrapper">
       <a class="waves-effect waves-light btn" id="capture">
         <i class="mdi-image-photo-camera"></i>
       </a>
+      {{> upload_bootstrap contentType='images' callbacks=myCallbacks}}
     </div>
       <div class="card-panel teal">
           <div class="card-image">
               <div class="valign-wrapper">
-                  <img class="materialboxed" src="{{photo}}" width="40%">
+                  <img src="{{photo}}" data-src="holder.js/78x78?theme=Vine">
+                  <img src="{{photo}}" data-src="holder.js/78x78?theme=Vine">
+                  <img src="{{photo}}" data-src="holder.js/78x78?theme=Vine">
+                  <img src="{{photo}}" data-src="holder.js/78x78?theme=Vine">
             </div>
           </div>
       </div>
       <div class="input-field col s12">
-        <textarea id="question-area" class="materialize-textarea" value="{{question}}"></textarea>
+        <textarea name="question" id="question" class="materialize-textarea" value="{{question}}"></textarea>
       </div>
       <button class="btn waves-effect waves-light" type="submit" name="question" id="submit-question">Submit
           <i class="mdi-content-send right"></i>
       </button>
       <div class="input-field col s12">
-        <textarea id="question-area" class="materialize-textarea" value="{{answer}}"></textarea>
+        <textarea name="answer" id="answer" class="materialize-textarea" value="{{answer}}"></textarea>
       </div>
       <button class="btn waves-effect waves-light" type="submit" name="answer" id="submit-answer">Comment
           <i class="mdi-content-send right"></i>
