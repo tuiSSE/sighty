@@ -73,7 +73,7 @@ Template.mainpageBlinder.helpers({
           {
             if (Session.get('photo' + i) == null)
             {
-              Session.set('photo' + i, fileInfo);
+              Session.set('photo' + i, fileInfo.url);
               break;
             }
           }

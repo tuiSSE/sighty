@@ -17,6 +17,5 @@ mrt:moment
 materialize:materialize
 underscore
 momentjs:moment
-imsky:holder
 tomi:upload-server
 tomi:upload-jquery
