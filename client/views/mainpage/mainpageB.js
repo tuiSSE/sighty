@@ -1,3 +1,5 @@
+//Needs Optimization
+
 Template.mainpageBlinder.events({
   'click #capture': function(){
       MeteorCamera.getPicture({}, function(error, data){
@@ -22,29 +24,56 @@ Template.mainpageBlinder.events({
       Meteor.call("addQuestion",newQues,
         function (err, result) {
           if (err) {
-            alert("Could not add question " + err.reason);
+            alert("Error " + err.reason);
           }
         }
       );
       Session.set('question', text);
-    },
-    'click #submit-answer': function (event,template) {
-        event.preventDefault();
-        var text = template.find("#answer").value;
-        var newAns = {
-          text: text,
-          createdAt: new Date(),
-          userId: Meteor.userId()
-        };
-        Meteor.call("addAnswer",newAns,
-          function (err, result) {
-            if (err) {
-              alert("Could not add answer " + err.reason);
-            }
-          }
-        );
-        Session.set('answer', text);
-      }
+  },
+  'click #submit-answer': function (event,template) {
+    event.preventDefault();
+    var text = template.find("#answer").value;
+    var newAns = {
+      text: text,
+      createdAt: new Date(),
+      userId: Meteor.userId()
+    };
+    Meteor.call("addAnswer",newAns,
+    function (err, result) {
+        if (err) {
+            alert("Error " + err.reason);
+        }
+    });
+    Session.set('answer', text);
+  },
+  'click #deletePic1': function (event,template) {
+    event.preventDefault();
+    if(Session.get('photo1'))
+    {
+        Session.set('photo1', null);
+    }
+  },
+  'click #deletePic2': function (event,template) {
+    event.preventDefault();
+    if(Session.get('photo2'))
+    {
+        Session.set('photo2', null);
+    }
+  },
+  'click #deletePic3': function (event,template) {
+    event.preventDefault();
+    if(Session.get('photo3'))
+    {
+        Session.set('photo3', null);
+    }
+  },
+  'click #deletePic4': function (event,template) {
+    event.preventDefault();
+    if(Session.get('photo4'))
+    {
+        Session.set('photo4', null);
+    }
+  }
 });
 
 Template.mainpageBlinder.helpers({

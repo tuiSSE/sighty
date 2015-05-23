@@ -12,15 +12,31 @@
       {{> upload_bootstrap contentType='images' callbacks=myCallbacks}}
     </div>
       <div class="card-panel teal">
-          <div class="card-image card small">
+          <div class="card-image card medium">
               <div class="valign-wrapper">
                   <img src="{{photo1}}" height="300px" width="250px">
                   <img src="{{photo2}}" height="300px" width="250px">
                   <img src="{{photo3}}" height="300px" width="250px">
                   <img src="{{photo4}}" height="300px" width="250px">
             </div>
+            <div class="card-content delete-photo">
+              <div class="valign-wrapper">
+                <a class="waves-effect waves-light btn deletePicButtom" id="deletePic1">
+                  <i class="mdi-action-delete"></i>
+                </a>
+                <a class="waves-effect waves-light btn deletePicButtom" id="deletePic2">
+                  <i class="mdi-action-delete"></i>
+                </a>
+                <a class="waves-effect waves-light btn deletePicButtom" id="deletePic3">
+                  <i class="mdi-action-delete"></i>
+                </a>
+                <a class="waves-effect waves-light btn" id="deletePic4">
+                  <i class="mdi-action-delete"></i>
+                </a>
+            </div>
           </div>
       </div>
+    </div>
       <div class="input-field col s12">
         <textarea name="question" id="question" class="materialize-textarea" value="{{question}}"></textarea>
       </div>

@@ -5,7 +5,7 @@ Meteor.methods({
     addQuestion: function (newQues) {
         // Perform form validation
         if (newQues.text == "") {
-            throw new Meteor.Error(413, "Missing Question!");
+            throw new Meteor.Error(413, "Empty field!");
         }
         // Insert Ques (simulate on client, do it on server)
         return Questions.insert(newQues);
@@ -13,7 +13,7 @@ Meteor.methods({
     addAnswer: function (newAns) {
         // Perform form validation
         if (newAns.text == "") {
-            throw new Meteor.Error(413, "Missing Answer!");
+            throw new Meteor.Error(413, "Empty field!");
         }
         // Insert Ques (simulate on client, do it on server)
         return Answers.insert(newAns);
