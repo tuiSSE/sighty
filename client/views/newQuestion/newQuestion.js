@@ -78,7 +78,7 @@ Template.newQuestion.events({
   }
 });
 
-Template.mainpageBlinder.helpers({
+Template.newQuestion.helpers({
     'photo1': function(){
         return Session.get('photo1');
     },
