@@ -1,7 +1,14 @@
 Template.mainpageBlinder.events({
   'click #capture': function(){
       MeteorCamera.getPicture({}, function(error, data){
-        Session.set('photo', data);
+        for (var i=1; i<5; i++)
+        {
+          if (Session.get('photo' + i) == null)
+          {
+            Session.set('photo' + i, data);
+            break;
+          }
+        }
     });
   },
   'click #submit-question': function (event,template) {
@@ -41,8 +48,17 @@ Template.mainpageBlinder.events({
 });
 
 Template.mainpageBlinder.helpers({
-    'photo': function(){
-        return Session.get('photo');
+    'photo1': function(){
+        return Session.get('photo1');
+    },
+    'photo2': function(){
+        return Session.get('photo2');
+    },
+    'photo3': function(){
+        return Session.get('photo3');
+    },
+    'photo4': function(){
+        return Session.get('photo4');
     },
     'question': function(){
         return Session.get('question');
@@ -53,7 +69,14 @@ Template.mainpageBlinder.helpers({
     myCallbacks: function() {
     return {
         finished: function(index, fileInfo, context) {
-            Session.set('photo', fileInfo);
+          for (var i=1; i<5; i++)
+          {
+            if (Session.get('photo' + i) == null)
+            {
+              Session.set('photo' + i, fileInfo);
+              break;
+            }
+          }
         }
     }
   }
