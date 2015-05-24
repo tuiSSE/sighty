@@ -44,17 +44,39 @@
           	</div>
         </div>
 
-        <div class="input-field col s12">
-        		<textarea name="question" id="question" class="materialize-textarea" value="{{question}}"></textarea>
-      	</div>
+				<div class="row">
+					<div class="col s8">
+						<ul class="collection question-area">
+        			<a href="#!" class="collection-item">{{question}}</a>
+      			</ul>
+					</div>
+				</div>
+
+				<div class="row">
+        	<div class="input-field col s6">
+						<input name="question" id="question" type="text">
+      		</div>
+				</div>
 
       	<button class="waves-effect waves-light btn" type="submit" name="question" id="submit-question">Submit
           	<i class="mdi-content-send right"></i>
       	</button>
+				<div class="row">
+					<div class="col s8">
+							<ul class="collection answers-area">
+        				<a href="#!" class="collection-item">{{answer1}}</a>
+								<a href="#!" class="collection-item">{{answer2}}</a>
+								<a href="#!" class="collection-item">{{answer3}}</a>
+								<a href="#!" class="collection-item">{{answer4}}</a>
+      				</ul>
+					</div>
+				</div>
 
-      	<div class="input-field col s12">
-        		<textarea name="answer" id="answer" class="materialize-textarea" value="{{answer}}"></textarea>
-      	</div>
+				<div class="row">
+        	<div class="input-field col s6">
+						<input name="answer" id="answer" type="text">
+      		</div>
+				</div>
 
       	<button class="waves-effect waves-light btn" type="submit" name="answer" id="submit-answer">Comment
           	<i class="mdi-content-send right"></i>

@@ -18,10 +18,18 @@ Template.newQuestion.events({
   'click #submit-question': function (event,template) {
       event.preventDefault();
       var text = template.find("#question").value;
+			var photo1Id = Session.get('photo1');
+			var photo2Id = Session.get('photo2');
+			var photo3Id = Session.get('photo3');
+			var photo4Id = Session.get('photo4');
       var newQues = {
         text: text,
         createdAt: new Date(),
-        userId: Meteor.userId()
+        userId: Meteor.userId(),
+				pic1Id: photo1Id,
+				pic2Id: photo2Id,
+				pic3Id: photo3Id,
+				pic4Id: photo4Id
       };
       Meteor.call("addQuestion",newQues,
         function (err, result) {
@@ -46,7 +54,15 @@ Template.newQuestion.events({
             alert("Error " + err.reason);
         }
     });
-    Session.set('answer', text);
+		for (var i=1; i<5; i++)
+		{
+			if (Session.get('answer' + i) == null)
+			{
+				Session.set('answer' + i, text);
+				break;
+			}
+		}
+		event.target.answer.value = "";
   },
   'click #deletePic1': function (event,template) {
     event.preventDefault();
@@ -94,8 +110,17 @@ Template.newQuestion.helpers({
     'question': function(){
         return Session.get('question');
     },
-    'answer': function(){
-        return Session.get('answer');
+    'answer1': function(){
+        return Session.get('answer1');
+    },
+		'answer2': function(){
+        return Session.get('answer2');
+    },
+		'answer3': function(){
+        return Session.get('answer3');
+    },
+		'answer4': function(){
+        return Session.get('answer4');
     },
     myCallbacks: function() {
     return {
