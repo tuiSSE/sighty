@@ -6,10 +6,10 @@
 	margin-right: 2%;
 }
 
-ul.answers-area {
+#frageLabel {
 	margin-top: 10%;
 }
 
-ul.question-area {
+#antwortLabel {
 	margin-top: 10%;
 }
