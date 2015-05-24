@@ -39,6 +39,8 @@ Template.newQuestion.events({
         }
       );
       Session.set('question', text);
+			var ques = Questions.findOne({text: text});
+			Session.set('questionId', ques._id);
   },
   'click #submit-answer': function (event,template) {
     event.preventDefault();
@@ -46,7 +48,9 @@ Template.newQuestion.events({
     var newAns = {
       text: text,
       createdAt: new Date(),
-      userId: Meteor.userId()
+      userId: Meteor.userId(),
+			questionId: Session.get('questionId'),
+			ratingPoints: 0
     };
     Meteor.call("addAnswer",newAns,
     function (err, result) {
@@ -62,7 +66,6 @@ Template.newQuestion.events({
 				break;
 			}
 		}
-		event.target.answer.value = "";
   },
   'click #deletePic1': function (event,template) {
     event.preventDefault();
