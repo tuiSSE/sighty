@@ -37,8 +37,7 @@ Template.homeHelper.rendered=function(){
 	$(document).ready(function(){
       $('.slider').slider({
      	height: 600,
-     	interval: 600000000,
-     	indicators: false
+     	interval: 600000000
       });
     });
     $(document).ready(function(){
