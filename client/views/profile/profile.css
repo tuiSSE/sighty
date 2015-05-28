@@ -1,11 +1,11 @@
 #btn_change_profile, #btn_delete_profile, #btn_randomUsername {
-	width: 80%;
+	width: 90%;
 }
 
 .divider {
-	width: 80%;
-	margin-left: 10%;
-	margin-right: 10%;
+	width: 90%;
+	margin-left: 5%;
+	margin-right: 5%;
 }
 
 h3 {

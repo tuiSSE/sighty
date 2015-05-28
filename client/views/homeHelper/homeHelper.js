@@ -34,10 +34,23 @@ Template.homeHelper.rendered=function(){
       closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
     }
   );
+	$(document).ready(function(){
+      $('.slider').slider({
+     	height: 600,
+     	interval: 600000000,
+     	indicators: false
+      });
+    });
+    $(document).ready(function(){
+    $('.materialboxed').materialbox();
+  });
 }
 
 Template.homeHelper.helpers({
 	username:function(){
 		return Meteor.user().username;
+	}, 
+	profilbild:function(){
+		return Meteor.user().profile.profilbild;
 	}
 })

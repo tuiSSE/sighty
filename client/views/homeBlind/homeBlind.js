@@ -42,5 +42,8 @@ Template.homeBlind.rendered=function(){
 Template.homeBlind.helpers({
 	username:function(){
 		return Meteor.user().username;
+	},
+	profilbild:function(){
+		return Meteor.user().profile.profilbild;
 	}
 })

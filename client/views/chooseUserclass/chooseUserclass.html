@@ -8,19 +8,35 @@
 	<div class="row">
 		<form class="col s12">
 			<div class="row">
-				<div class="input-field col s12">
+				<div class="input-field col s4">
+					<p class="left-align"><img src="{{profilbild}}" class="circle" width="64px" height="64px"></p>
+				</div>
+				<div class="input-field col s8">
+					<br>
 					<input type="text" value="{{username}}" id="username_register">
 					<label class="active" for="username_register">Benutzername</label>
 				</div>
 			</div>
+			<div class="row">
+				<div class="input-field col s6">
+					<p class="left-align"><a id="btn_change_profilePic1" class="btn-floating waves-effect waves-light blue darken-1"><i class="mdi-image-camera-alt"></i></a></p>
+				</div>
+				<div class="input-field col s6">
+					<p class="right-align"><a id="btn_random_profilePic" class="btn-floating waves-effect waves-light blue darken-1"><i class="mdi-image-camera"></i></a></p>
+				</div>
+			</div>
+			<div class="row">
+				
+			</div>
 		</form>
 	</div>
 	</div>
-	<p class="center-align"><a class="btn waves-effect waves-light blue darken-1" id="btn_changeUsername_register">Ändern</a></p>
+	<p class="center-align"><a id="btn_upload_profilePic" class="btn waves-effect waves-light blue darken-1"><i class="mdi-file-file-upload right"></i>Upload</a></p>
+	<p class="center-align"><a class="btn waves-effect waves-light blue darken-1" id="btn_changeUsername_register"><i class="mdi-content-create right"></i>Ändern</a></p>
 	<br>
 	<br>
 	<p class="center-align">Bitte wählen Sie aus:</p>
-	<p class="center-align"><a class="btn-large waves-effect waves-light blue darken-1" id="btn_chooseBlind_register"><i class="mdi-navigation-menu right"></i>Blinder</a></p>
-	<p class="center-align"><a class="btn-large waves-effect waves-light blue darken-1" id="btn_chooseHelper_register"><i class="mdi-navigation-menu right"></i>Helfer</a></p>
+	<p class="center-align"><a class="btn-large waves-effect waves-light blue darken-1" id="btn_chooseBlind_register"><i class="right"><img src="/blind.png" class="circle" style="vertical-align: middle"></i>Blinder</a></p>
+	<p class="center-align"><a class="btn-large waves-effect waves-light blue darken-1" id="btn_chooseHelper_register"><i class="right"><img src="/helper.png" class="circle" style="vertical-align: middle"></i>Helfer</a></p>
 
 </template>

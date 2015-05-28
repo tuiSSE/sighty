@@ -1,9 +1,17 @@
-#btn_chooseBlind_register, #btn_chooseHelper_register, #btn_changeUsername_register {
-	width: 70%;
+#btn_chooseBlind_register, #btn_chooseHelper_register, #btn_changeUsername_register, #btn_upload_profilePic {
+	width: 80%;
 }
 
 #chooseUserclass_register {
-	width: 70%;
-	margin-left: 15%;
-	margin-right: 15%;
+	width: 82%;
+	margin-left: 9%;
+	margin-right: 9%;
+}
+
+#btn_change_profilePic1 {
+	
+}
+
+.file-path{
+	color: darkblue;
 }
