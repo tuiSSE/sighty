@@ -7,7 +7,6 @@
 
 raix:push
 accounts-facebook
-accounts-twitter
 accounts-password
 accounts-ui
 alanning:roles
