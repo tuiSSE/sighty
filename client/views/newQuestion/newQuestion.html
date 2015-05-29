@@ -10,13 +10,12 @@
     <br>
     <div class="container" id="takePhotoContainer">
     	<div class="valign-wrapper">
-      		<a class="waves-effect waves-light btn" id="capture">
+      		<a class="btn waves-effect waves-light blue darken-1" id="capture">
         	<i class="mdi-image-photo-camera"></i>
       		</a>
-      		{{> upload_bootstrap contentType='images' callbacks=myCallbacks}}
     	</div>
 
-    	<div class="card-panel teal">
+    	<div class="card-panel blue">
           	<div class="card-image card medium">
               	<div class="valign-wrapper">
                   	<img src="{{photo1}}" height="300px" width="250px">
@@ -27,16 +26,16 @@
 
             	<div class="card-content delete-photo">
               		<div class="valign-wrapper">
-                		<a class="waves-effect waves-light btn deletePicButtom" id="deletePic1">
+                		<a class="btn waves-effect waves-light blue darken-1 deletePicButtom" id="deletePic1">
                  			<i class="mdi-action-delete"></i>
                 		</a>
-                		<a class="waves-effect waves-light btn deletePicButtom" id="deletePic2">
+                		<a class="btn waves-effect waves-light blue darken-1 deletePicButtom" id="deletePic2">
                   		<i class="mdi-action-delete"></i>
                 		</a>
-                		<a class="waves-effect waves-light btn deletePicButtom" id="deletePic3">
+                		<a class="btn waves-effect waves-light blue darken-1 deletePicButtom" id="deletePic3">
                   		<i class="mdi-action-delete"></i>
                 		</a>
-                		<a class="waves-effect waves-light btn" id="deletePic4">
+                		<a class="btn waves-effect waves-light blue darken-1" id="deletePic4">
                   		<i class="mdi-action-delete"></i>
                 		</a>
             		</div>
@@ -45,46 +44,16 @@
         </div>
 
 				<div class="row">
-					<div class="col s8">
-						<p id="frageLabel">Frage:</p>
-						<ul class="collection question-area">
-        			<a href="#!" class="collection-item">{{question}}</a>
-      			</ul>
-					</div>
-				</div>
-
-				<div class="row">
         	<div class="input-field col s6">
-						<input name="question" id="question" type="text">
+						<input name="question" id="question" type="text" value="{{question}}">
       		</div>
 				</div>
 
-      	<button class="waves-effect waves-light btn" type="submit" name="question" id="submit-question">Submit
-          	<i class="mdi-content-send right"></i>
-      	</button>
-				<div class="row">
-					<div class="col s8">
-						<p id="antwortLabel">Antworten:</p>
-							<ul class="collection answers-area">
-        				<a href="#!" class="collection-item" question-id="{{questionId}}">{{answer1}}</a>
-								<a href="#!" class="collection-item" question-id="{{questionId}}">{{answer2}}</a>
-								<a href="#!" class="collection-item" question-id="{{questionId}}">{{answer3}}</a>
-								<a href="#!" class="collection-item" question-id="{{questionId}}">{{answer4}}</a>
-      				</ul>
-					</div>
-				</div>
-
-				<div class="row">
-        	<div class="input-field col s6">
-						<input name="answer" id="answer" type="text">
-      		</div>
-				</div>
-
-      	<button class="waves-effect waves-light btn" type="submit" name="answer" id="submit-answer">Comment
+      	<button class="btn waves-effect waves-light blue darken-1" type="submit" name="question" id="submit-question">Submit
           	<i class="mdi-content-send right"></i>
       	</button>
 
-      	<p class="center-align"><a href="/homeBlind" class="waves-effect waves-light btn" id="btn_gobackto_homeBlind"><i class="mdi-navigation-chevron-left left"></i>Zurück</a></p>
+      	<p class="center-align"><a href="/homeBlind" class="btn waves-effect waves-light blue darken-1" id="btn_gobackto_homeBlind"><i class="mdi-navigation-chevron-left left"></i>Zurück</a></p>
 
     </div>
 

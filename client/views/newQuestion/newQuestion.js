@@ -42,7 +42,7 @@ Template.newQuestion.events({
 			var ques = Questions.findOne({text: text});
 			Session.set('questionId', ques._id);
   },
-  'click #submit-answer': function (event,template) {
+/*  'click #submit-answer': function (event,template) {
     event.preventDefault();
     var text = template.find("#answer").value;
     var newAns = {
@@ -66,7 +66,7 @@ Template.newQuestion.events({
 				break;
 			}
 		}
-  },
+  },*/
   'click #deletePic1': function (event,template) {
     event.preventDefault();
     if(Session.get('photo1'))
@@ -112,31 +112,5 @@ Template.newQuestion.helpers({
     },
     'question': function(){
         return Session.get('question');
-    },
-    'answer1': function(){
-        return Session.get('answer1');
-    },
-		'answer2': function(){
-        return Session.get('answer2');
-    },
-		'answer3': function(){
-        return Session.get('answer3');
-    },
-		'answer4': function(){
-        return Session.get('answer4');
-    },
-    myCallbacks: function() {
-    return {
-        finished: function(index, fileInfo, context) {
-          for (var i=1; i<5; i++)
-          {
-            if (Session.get('photo' + i) == null)
-            {
-              Session.set('photo' + i, fileInfo.url);
-              break;
-            }
-          }
-        }
     }
-  }
 });
