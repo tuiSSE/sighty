@@ -33,4 +33,24 @@
     </a>
   </div>
 
+	<div class="container" id="homeBlinderCont">
+			{{#each questions}}
+			<div class="card-panel blue">
+					<div class="card-image card small">
+							<div class="valign-wrapper">
+									<img src="{{pic1Id}}" height="300px" width="250px">
+									<img src="{{pic2Id}}" height="300px" width="250px">
+									<img src="{{pic3Id}}" height="300px" width="250px">
+									<img src="{{pic4Id}}" height="300px" width="250px">
+							</div>
+					</div>
+					<div class="card-content">
+						{{text}}
+						<br>
+						<p>Asked by:</p>
+					</div>
+			</div>
+			{{/each}}
+	</div>
+
 </template>
