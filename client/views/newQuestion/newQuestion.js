@@ -16,7 +16,7 @@ Template.newQuestion.events({
     });
   },
 	'click #browse': function (event, template) {
-		$('#fileInput').click(); //trigger the fileUpload dialog 
+		$('#fileInput').click(); //trigger the fileUpload dialog
 	},
   'click #submit-question': function (event,template) {
       event.preventDefault();
@@ -43,31 +43,6 @@ Template.newQuestion.events({
       );
       Session.set('question', text);
   },
-/*  'click #submit-answer': function (event,template) {
-    event.preventDefault();
-    var text = template.find("#answer").value;
-    var newAns = {
-      text: text,
-      createdAt: new Date(),
-      userId: Meteor.userId(),
-			questionId: Session.get('questionId'),
-			ratingPoints: 0
-    };
-    Meteor.call("addAnswer",newAns,
-    function (err, result) {
-        if (err) {
-            alert("Error " + err.reason);
-        }
-    });
-		for (var i=1; i<5; i++)
-		{
-			if (Session.get('answer' + i) == null)
-			{
-				Session.set('answer' + i, text);
-				break;
-			}
-		}
-  },*/
   'click #deletePic1': function (event,template) {
     event.preventDefault();
     if(Session.get('photo1'))

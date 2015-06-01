@@ -26,19 +26,48 @@
       <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
   </nav>
 
-  <div class="slider">
-    <ul class="slides">
-      <li>
-        <div class="caption center-align">
-          <h4>Hier stehen dann die offenen Fragen</h4>
-        </div>
-      </li>
-      <li>
-        <div class="caption center-align">
-          <h4>Keine weiteren offenen Fragen.</h4>
-        </div>
-      </li>
-    </ul>
-  </div>
+	<div class="slider">
+			<ul class="slides">
+				{{#each questions}}
+				<li>
+					<div class="container" id="homeHelferCont" quesId="{{_id}}">
+					<div class="card-panel blue">
+							<div class="card-image card small">
+									<div class="valign-wrapper">
+											<img src="{{pic1Id}}" height="300px" width="250px">
+											<img src="{{pic2Id}}" height="300px" width="250px">
+											<img src="{{pic3Id}}" height="300px" width="250px">
+											<img src="{{pic4Id}}" height="300px" width="250px">
+									</div>
+							</div>
+							<div class="card-content">
+								{{text}}
+							</div>
+					</div>
+					</div>
+					<div class="container" id="answersCont">
+							<div class="col s6">
+								<p id="antwortLabel">Antworten:</p>
+								<ul class="collection">
+									{{#each answers}}
+										{{#if isAnswerOf questionId}}
+										<a class="collection-item">{{text}}</a>
+										{{/if}}
+									{{/each}}
+								</ul>
+							</div>
+					<div class="row">
+						<div class="input-field col s6">
+								<input name="answer" id="answer" type="text">
+						</div>
+					</div>
+					<button class="btn waves-effect waves-light blue darken-1" type="submit" id="submit-answer">Comment
+							<i class="mdi-content-send right"></i>
+					</button>
+					</div>
+				</li>
+				{{/each}}
+			</ul>
+	</div>
 
 </template>

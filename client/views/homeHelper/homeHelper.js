@@ -24,7 +24,32 @@ Template.homeHelper.events({
 		} else if (Roles.userIsInRole({_id: Meteor.userId()}, "blind")) {
 			Router.go("homeBlind")
 		};
-	}
+	},
+	'click #submit-answer': function (event,template) {
+		event.preventDefault();
+	  var text = template.find("#answer").value;
+	  var newAns = {
+	  	text: text,
+	    createdAt: new Date(),
+	    userId: Meteor.userId(),
+			questionId: $("#homeHelferCont").attr("quesId"),
+			ratingPoints: 0
+	  };
+	  Meteor.call("addAnswer",newAns,
+	   function (err, result) {
+	   		if (err) {
+	      	alert("Error " + err.reason);
+	      }
+	   });
+			for (var i=1; i<5; i++)
+			{
+				if (Session.get('answer' + i) == null)
+				{
+					Session.set('answer' + i, text);
+					break;
+				}
+			}
+	  }
 })
 
 Template.homeHelper.rendered=function(){
@@ -36,7 +61,7 @@ Template.homeHelper.rendered=function(){
   );
 	$(document).ready(function(){
       $('.slider').slider({
-     	height: 600,
+     	height: 900,
      	interval: 600000000
       });
     });
@@ -46,10 +71,19 @@ Template.homeHelper.rendered=function(){
 }
 
 Template.homeHelper.helpers({
-	username:function(){
-		return Meteor.user().username;
-	}, 
-	profilbild:function(){
-		return Meteor.user().profile.profilbild;
-	}
+//	username:function(){
+//		return Meteor.user().username;
+//	},
+//	profilbild:function(){
+//		return Meteor.user().profile.profilbild;
+//	}
+	questions: function(){
+		return Questions.find();
+	},
+	answers: function(){
+		return Answers.find();
+	},
+	isAnswerOf: function (questionId) {
+    return questionId == $("#homeHelferCont").attr("quesId");
+  }
 })
