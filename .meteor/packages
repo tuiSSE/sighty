@@ -17,8 +17,6 @@ mrt:moment
 materialize:materialize
 underscore
 momentjs:moment
-tomi:upload-server
-tomi:upload-jquery
 service-configuration
 random
 accounts-twitter

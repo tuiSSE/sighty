@@ -37,6 +37,12 @@ Template.homeBlind.rendered=function(){
       closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
     }
   );
+	$(document).ready(function(){
+      $('.slider').slider({
+				height: 800,	
+     	interval: 600000000
+      });
+    });
 }
 
 Template.homeBlind.helpers({

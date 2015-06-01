@@ -2,14 +2,9 @@
 	margin-right: 20%;
 }
 
-#capture {
-	margin-right: 2%;
+#sec1 {
+	margin-top: 2%;
 }
-
-#frageLabel {
-	margin-top: 10%;
-}
-
-#antwortLabel {
-	margin-top: 10%;
+#fileInput{
+	visibility: hidden;
 }

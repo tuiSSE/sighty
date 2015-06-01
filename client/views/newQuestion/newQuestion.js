@@ -15,6 +15,9 @@ Template.newQuestion.events({
         }
     });
   },
+	'click #browse': function (event, template) {
+		$('#fileInput').click(); //trigger the fileUpload dialog 
+	},
   'click #submit-question': function (event,template) {
       event.preventDefault();
       var text = template.find("#question").value;
