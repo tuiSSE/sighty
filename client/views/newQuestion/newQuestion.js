@@ -18,6 +18,25 @@ Template.newQuestion.events({
 	'click #browse': function (event, template) {
 		$('#fileInput').click(); //trigger the fileUpload dialog
 	},
+	'change #fileInput': function(event, template) {
+      FS.Utility.eachFile(event, function(file) {
+        Images.insert(file, function (err, fileObj) {
+          if (err){
+						alert("Error " + err.reason);
+          } else {
+						var url = "/cfs/files/images/" + fileObj._id;
+						for (var i=1; i<5; i++)
+		        {
+		          if (Session.get('photo' + i) == null)
+		          {
+		            Session.set('photo' + i, url);
+		            break;
+		          }
+		        }
+					}
+        });
+     });
+   },
   'click #submit-question': function (event,template) {
       event.preventDefault();
       var text = template.find("#question").value;
