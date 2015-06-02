@@ -23,3 +23,5 @@ accounts-twitter
 imsky:holder
 cfs:standard-packages
 cfs:gridfs
+cfs:graphicsmagick
+cfs:filesystem
