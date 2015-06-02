@@ -60,14 +60,12 @@ Template.homeHelper.rendered=function(){
     }
   );
 	$(document).ready(function(){
-      $('.slider').slider({
-     	height: 900,
-     	interval: 600000000
-      });
+      	$('.slider').slider({
+     		height: 900,
+     		interval: 600000000
+      	});
+		$('.materialboxed').materialbox();
     });
-    $(document).ready(function(){
-    $('.materialboxed').materialbox();
-  });
 }
 
 Template.homeHelper.helpers({
