@@ -1,3 +1,10 @@
+Meteor.startup(function(){
+    if (Version.find().count() > 0){
+        Version.remove({});
+    }
+    Version.insert(JSON.parse(Assets.getText("version.json")));
+})
+
 Meteor.users.allow({
 			remove: function(userId){
 				return true;
@@ -37,5 +44,10 @@ Meteor.publish("allAnswers", function () {
 
 // server: publish all images
 Meteor.publish("images", function() {
-	 return Images.find();
+  return Images.find();
+});
+
+//server: publish githooks version info
+Meteor.publish('version', function () {
+  return Version.find();
 });

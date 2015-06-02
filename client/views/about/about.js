@@ -16,7 +16,10 @@ Template.about.helpers({
 	},
 	username:function(){
 		return Meteor.user().username;
-	}
+	},
+	version:function(){
+    return Version.findOne();
+  }
 })
 
 Template.about.events({
