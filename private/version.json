@@ -1,5 +1,5 @@
 {
-  "timestamp": "01-01-2015 12:34",
+  "timestamp": "2015-01-01 12:34",
   "branch": "master",
-  "commit": "abc"
+  "commit": "abcdefghijklmnopqrstuvwxyz1234567890"
 }

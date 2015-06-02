@@ -35,7 +35,7 @@ function getCommit(){
 }
 
 var result = {
-    timestamp : moment().format("DD-MM-YYYY HH:mm")
+    timestamp : moment().format("YYYY-MM-DD HH:mm")
 };
 console.log("path : "+ __dirname);
 

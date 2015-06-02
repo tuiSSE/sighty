@@ -27,7 +27,7 @@ Meteor.publish("allAnswers", function () {
   return Answers.find(); // everything
 });
 
-//server: publish githooks version info 
+//server: publish githooks version info
 Meteor.publish('version', function () {
   return Version.find();
 });

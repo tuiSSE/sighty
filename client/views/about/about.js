@@ -2,10 +2,6 @@ Router.map(function(){
 	this.route("about", {path:"/about"})
 })
 
-Meteor.startup(function(){
-  Meteor.subscribe("version");
-})
-
 Template.about.rendered=function(){
 	$('.button-collapse').sideNav({
       edge: 'left', // Choose the horizontal origin
@@ -22,7 +18,7 @@ Template.about.helpers({
 		return Meteor.user().username;
 	},
 	version:function(){
-   return Version.findOne();
+    return Version.findOne();
   }
 })
 
