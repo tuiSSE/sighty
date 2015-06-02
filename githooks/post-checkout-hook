@@ -1,0 +1,13 @@
+#!/bin/sh
+
+# http://stackoverflow.com/a/25801605
+# on deployment machine:
+# copy this script to .git/hooks/post-checkout and make it executable
+
+node githooks/git_to_version-json_js
+RETVAL=$?
+
+if [ $RETVAL -ne 0 ]
+then
+  exit 1
+fi
