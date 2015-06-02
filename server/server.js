@@ -1,3 +1,10 @@
+Meteor.startup(function(){
+    if (Version.find().count() > 0){
+        Version.remove({});
+    }
+    Version.insert(JSON.parse(Assets.getText("version.json")));
+})
+
 Meteor.users.allow({
 			remove: function(userId){
 				return true;
@@ -18,4 +25,9 @@ Meteor.publish("allQuestions", function () {
 // server: publish all answers documents
 Meteor.publish("allAnswers", function () {
   return Answers.find(); // everything
+});
+
+//server: publish githooks version info 
+Meteor.publish('version', function () {
+  return Version.find();
 });
