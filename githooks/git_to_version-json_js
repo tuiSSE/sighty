@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-# http://stackoverflow.com/a/25801605
+// http://stackoverflow.com/a/25801605
 
 
 var exec = require('child_process').exec,
