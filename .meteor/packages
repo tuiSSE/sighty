@@ -25,3 +25,4 @@ cfs:standard-packages
 cfs:gridfs
 cfs:graphicsmagick
 cfs:filesystem
+meteorhacks:kadira

@@ -3,6 +3,8 @@
 ##########
 .meteor/local
 .meteor/meteorite
+server/kadira.js
+private/version.json
 
 ############
 # Packages #
