@@ -55,10 +55,9 @@
 						<div class="col s6">
 							<p id="antwortLabel">Antworten:</p>
 							<ul class="collection">
-        				<a class="collection-item">{{answer1}}</a>
-        				<a class="collection-item">{{answer2}}</a>
-        				<a class="collection-item">{{answer3}}</a>
-        				<a class="collection-item">{{answer4}}</a>
+								{{#each answers _id}}
+        						<a class="collection-item">{{text}}</a>
+								{{/each}}
       				</ul>
 						</div>
 					</div>

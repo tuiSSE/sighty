@@ -45,14 +45,12 @@
 							</div>
 					</div>
 					</div>
-					<div class="container" id="answersCont">
+					<div class="container" id="answersCont" qId="{{qId}}">
 							<div class="col s6">
 								<p id="antwortLabel">Antworten:</p>
 								<ul class="collection">
-									{{#each answers}}
-										{{#if isAnswerOf questionId}}
+									{{#each answers _id}}
 										<a class="collection-item">{{text}}</a>
-										{{/if}}
 									{{/each}}
 								</ul>
 							</div>

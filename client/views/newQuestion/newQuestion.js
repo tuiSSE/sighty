@@ -62,6 +62,7 @@ Template.newQuestion.events({
       );
       Session.set('question', text);
 			Session.set('quesId', newQues._id);
+			$('#question').val('');
   },
   'click #deletePic1': function (event,template) {
     event.preventDefault();

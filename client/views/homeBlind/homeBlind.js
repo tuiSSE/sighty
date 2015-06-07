@@ -39,7 +39,7 @@ Template.homeBlind.rendered=function(){
   );
 	$(document).ready(function(){
       $('.slider').slider({
-				height: 800,	
+				height: 800,
      	interval: 600000000
       });
     });
@@ -54,5 +54,8 @@ Template.homeBlind.helpers({
 //	},
 	questions: function(){
 		return Questions.find();
-  }
+  },
+	answers: function(qId){
+		return Answers.find({questionId: qId});
+	}
 });
