@@ -71,12 +71,12 @@ Template.homeHelper.rendered=function(){
 }
 
 Template.homeHelper.helpers({
-//	username:function(){
-//		return Meteor.user().username;
-//	},
-//	profilbild:function(){
-//		return Meteor.user().profile.profilbild;
-//	}
+	username:function(){
+		return Meteor.user().username;
+	},
+	profilbild:function(){
+		return Meteor.user().profile.profilbild;
+	},
 	questions: function(){
 		return Questions.find().fetch();
 	},

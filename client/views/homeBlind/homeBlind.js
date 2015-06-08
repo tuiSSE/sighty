@@ -46,12 +46,12 @@ Template.homeBlind.rendered=function(){
 }
 
 Template.homeBlind.helpers({
-//	username:function(){
-//		return Meteor.user().username;
-//	},
-//	profilbild:function(){
-//		return Meteor.user().profile.profilbild;
-//	},
+	username:function(){
+		return Meteor.user().username;
+	},
+	profilbild:function(){
+		return Meteor.user().profile.profilbild;
+	},
 	questions: function(){
 		return Questions.find();
   },
