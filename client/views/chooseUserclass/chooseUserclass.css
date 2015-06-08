@@ -1,4 +1,4 @@
-#btn_chooseBlind_register, #btn_chooseHelper_register, #btn_changeUsername_register, #btn_upload_profilePic {
+#btn_chooseBlind_register, #btn_chooseHelper_register, #btn_changeUsername_register, #btn_upload_profilePic, #btn_completeRegistration {
 	width: 80%;
 }
 
@@ -15,3 +15,43 @@
 .file-path{
 	color: darkblue;
 }
+
+#chooseUserclass {
+	width: 40%;
+	margin-left: 30%;
+	margin-right: 30%;
+}
+
+label {
+	color: #000000;
+}
+
+.divider {
+	width: 80% !important;
+	margin-right: 10% !important;
+	margin-left: 10% !important;
+}
+
+
+.input-field{
+	display: table;
+	text-align: center;
+}
+
+.input-field p {
+	display: table-row;
+
+}
+
+.input-field input{
+	display: table-cell;
+	text-align: left;
+}
+
+[type=radio]:checked + label:before, [type=radio]:checked + label:after{
+	background-color: #1e88e5;
+	border: transparent;
+}
+
+
+
