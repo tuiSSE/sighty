@@ -62,7 +62,7 @@ Template.profile.events({
 		var usernames1 = ["Grinsender", "Kreischender", "Schöner", "Wachsamer", "Großer", "Weißer", "Starker", "Mutiger", "Tanzender", "Blauer", "Roter", "Listiger", "Kräftiger", "Furchtloser", "Silberner", "Anmutiger", "Mächtiger", "Mystischer", "Potenter", "Wohlriechender", "Launischer", "Lebensfroher", "Geheimnisvoller", "Grimmiger", "Optimistischer", "Pessimistischer", "Respektabler", "Impulsiver", "Dominanter", "Romantischer", "Kaltblütiger", "Schüchterner", "Japsender", "Tauchender", "Rülpsender", "Pfeifender", "Sturer", "Kitzliger", "Flinker", "Kleiner", "Verrückter", "Abgedrehter", "Hyperaktiver", "Trotzender", "Cooler", "Krasser", "Schlauer"];
 		var usernames2 = ["Hummer", "Wolf", "Büffel", "Wurm", "Adler", "Stier", "Hund", "Blutegel", "Hirsch", "Pinguin", "Papagei", "Hamster", "Hase", "Nacktmul", "Zander", "Dachs", "Igel", "Blobfisch", "Flamingo", "Leopard", "Maulwurf", "Elch", "Steinbock", "Esel", "Blauwal", "Gekko", "Käfer", "Salamander", "Grizzly", "Puma", "Gepard", "Elefant", "Luchs", "Uhu", "Waschbär", "Pfau", "Fasan", "Schwan", "Rochen", "Affe", "Schimpanse", "Orang-Utan", "Kabeljau", "Aal", "Thunfisch", "Schmetterling", "Eisbär", "Tiger", "Hai", "Panda", "Mops", "Pavian", "Orka", "Dackel", "Gorilla", "Storch", "Frosch", "Krake", "Pelikan", "Koala"];
 
-		Meteor.users.update({_id: Meteor.userId()}, {$set: {"username": Random.choice(usernames1+" "+Random.choice(usernames2))}} );
+		Meteor.users.update({_id: Meteor.userId()}, {$set: {"username": Random.choice(usernames1)+" "+Random.choice(usernames2)}} );
 		Router.go("profile")
 	},
 	"click #btn_delete_profile":function(event, template){
