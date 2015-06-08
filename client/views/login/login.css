@@ -3,13 +3,13 @@
 }
 
 #btn_login_facebook, #btn_login_twitter, #btn_login_login, #btn_register_facebook, #btn_register_twitter, #btn_register_register, #login_email, #register_email{
-	width: 70%;
+	width: 80%;
 }
 
 .divider {
-	width: 70%;
-	margin-right: 15%;
-	margin-left: 15%;
+	width: 80%;
+	margin-right: 10%;
+	margin-left: 10%;
 }
 
 #btn_login_facebook, #btn_register_facebook {
@@ -18,4 +18,10 @@
 
 #btn_login_twitter, #btn_register_twitter {
   background-color: #00acee;
+}
+
+#tabs{
+	width: 80%;
+	margin-left: 10%;
+	margin-right: 10%;
 }
