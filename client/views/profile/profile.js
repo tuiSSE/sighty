@@ -85,5 +85,21 @@ Template.profile.events({
 					Meteor.users.update({_id: Meteor.userId()}, {$set: {"profile.profilbild": Session.get("img")}} );
 				};
 			})
+	},
+	"click #btn_upload_profilePic":function(event, template){
+		$('#fileInput').click();
+	},
+	"change #fileInput":function(event, template){
+		FS.Utility.eachFile(event, function(file) {
+			Images.insert(file, function (err, fileObj) {
+				if (err){
+					alert("Error " + err.reason);
+				} else {
+					var url = "/cfs/files/images/" + fileObj._id;
+					Session.set('photo6', url);
+					Meteor.users.update({_id:Meteor.userId()}, {$set: {"profile.profilbild":Session.get("photo6")}} );
+				}
+			});
+		});
 	}
 })
