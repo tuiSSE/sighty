@@ -1,4 +1,4 @@
-/*prevents deployment
+
 App.info({
   name: 'Sighty',
   description: 'The Instant Answering App', // app description
@@ -39,4 +39,4 @@ App.launchScreens({
   'android_xhdpi_portrait': 'public/launchscreen/splash-720x1280.png',
   'android_xhdpi_landscape': 'public/launchscreen/splash-1280x720.png'
 });
-*/
+
