@@ -85,5 +85,8 @@ Template.profile.events({
 					Meteor.users.update({_id: Meteor.userId()}, {$set: {"profile.profilbild": Session.get("img")}} );
 				};
 			})
+	},
+	"click #btn_upload_profilePic":function(event, template){
+		console.log("test")
 	}
 })
