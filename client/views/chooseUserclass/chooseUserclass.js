@@ -62,7 +62,7 @@ Template.chooseUserclass.events({
 		Meteor.users.update({_id: Meteor.userId()}, {$set: {"username": Random.choice(usernames1)+" "+Random.choice(usernames2)}} ); 
 	},
 	"click #btn_upload_profilePic":function(event, template){
-		$('#fileInput').click();
+		console.log("Hallo");
 	},
 	"change #fileInput":function(event, template){
 		FS.Utility.eachFile(event, function(file) {
