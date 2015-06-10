@@ -50,6 +50,8 @@
 								<p id="antwortLabel">Antworten:</p>
 								<ul class="collection">
 									{{#each answers _id}}
+									<button class="delete">&times;</button>
+                            						<button class="correct">&radic;</button>
 										<a class="collection-item">{{text}}</a>
 									{{/each}}
 								</ul>
