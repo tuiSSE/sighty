@@ -5,3 +5,21 @@
 #homeHelferCont {
 	margin-top: 10%;
 }
+/*Button zum Editieren und Löschen*/
+ul .delete {
+	float: right;
+	font-weight: bold;
+	background: none;
+	font-size: 1.5em;
+	border: none;
+	position: relative;
+}
+
+ul .correct {
+	float: right;
+	font-weight: bold;
+	background: none;
+	font-size: 1.5em;
+	border: none;
+	position: relative;
+}
