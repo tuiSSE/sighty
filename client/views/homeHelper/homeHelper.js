@@ -51,7 +51,13 @@ Template.homeHelper.events({
 					break;
 				}
 			}
-		}
+		},
+		"click .delete": function () {
+    		alert("delete button");
+},
+"click .correct": function () {
+    alert("correct button");
+},
 })
 
 Template.homeHelper.rendered=function(){
