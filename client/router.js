@@ -6,5 +6,6 @@ Router.map(function(){
     this.route("login", {path:"/"})
     this.route("newQuestion", {path: "/newQuestion"})
     this.route("profile", {path: "/profile"})
+    this.route("settings", {path: "/settings"})
     this.route("userDeleted", {path: "/userDeleted"})
 })
