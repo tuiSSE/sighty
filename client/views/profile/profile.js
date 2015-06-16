@@ -1,7 +1,3 @@
-Router.map(function(){
-	this.route("profile", {path: "/profile"})
-})
-
 Template.profile.rendered=function(){
 	$('.button-collapse').sideNav({
       menuWidth: 200, // Default is 240

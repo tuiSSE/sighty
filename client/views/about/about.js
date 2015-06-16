@@ -1,7 +1,3 @@
-Router.map(function(){
-	this.route("about", {path:"/about"})
-})
-
 Template.about.rendered=function(){
 	$('.button-collapse').sideNav({
       edge: 'left', // Choose the horizontal origin

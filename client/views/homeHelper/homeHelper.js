@@ -1,8 +1,5 @@
 var quesId ="";
 
-Router.map(function(){
-	this.route("homeHelper", {path: "/homeHelper"})
-})
 
 Template.homeHelper.events({
 	"click #btn_logout_homeHelper1":function(event, template){

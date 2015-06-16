@@ -1,7 +1,3 @@
-Router.map(function(){
-	this.route("newQuestion", {path: "/newQuestion"})
-})
-
 Template.newQuestion.events({
 	'click #capture': function(){
       MeteorCamera.getPicture({}, function(error, data){
@@ -36,6 +32,7 @@ Template.newQuestion.events({
 					}
         });
      });
+        Router.go("newQuestion")
    },
   'click #submit-question': function (event,template) {
       event.preventDefault();

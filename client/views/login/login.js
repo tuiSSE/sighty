@@ -1,7 +1,3 @@
-Router.map(function(){
-  this.route("login", {path:"/"})
-})
-
 Template.login.rendered=function(){
 	   $(document).ready(function(){
     $('ul.tabs').tabs();

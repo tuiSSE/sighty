@@ -1,7 +1,3 @@
-Router.map(function(){
-	this.route("chooseUserclass", {path: "/chooseUserclass"})
-})
-
 Template.chooseUserclass.helpers({
 	username:function(){
 		return Meteor.user().username

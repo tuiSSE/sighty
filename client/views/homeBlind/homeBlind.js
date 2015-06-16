@@ -1,7 +1,3 @@
-Router.map(function(){
-	this.route("homeBlind", {path:"/homeBlind"})
-})
-
 Template.homeBlind.events({
 	"click #btn_logout_homeBlind1":function(event, template){
 		Meteor.logout();
