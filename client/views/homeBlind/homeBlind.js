@@ -23,6 +23,9 @@ Template.homeBlind.events({
 	},
 	"click #btn_goto_newQuestion":function(event, template){
 		Router.go("newQuestion")
+	},
+	"click #removeQuestion":function(event, template){
+		Questions.remove(this._id)
 	}
 })
 

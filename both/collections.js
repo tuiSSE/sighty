@@ -2,6 +2,12 @@ Questions = new Mongo.Collection("questions");
 Answers = new Mongo.Collection("answers");
 Version = new Meteor.Collection("version");
 
+Questions.allow({
+    remove:function(){
+        return true;
+    }
+})
+
 var imageStore = new FS.Store.GridFS("images", { transformWrite: createThumb });
 Images = new FS.Collection("images", {
  stores: [imageStore]
