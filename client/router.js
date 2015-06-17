@@ -1,11 +1,35 @@
-Router.map(function(){
-    this.route("about", {path:"/about"})
-    this.route("chooseUserclass", {path: "/chooseUserclass"})
-    this.route("homeBlind", {path:"/homeBlind"})
-    this.route("homeHelper", {path: "/homeHelper"})
-    this.route("login", {path:"/"})
-    this.route("newQuestion", {path: "/newQuestion"})
-    this.route("profile", {path: "/profile"})
-    this.route("settings", {path: "/settings"})
-    this.route("userDeleted", {path: "/userDeleted"})
+Router.route("/", function(){
+    this.render("login")
+})
+
+Router.route("/chooseUserclass", function(){
+    this.render("chooseUserclass")
+})
+
+Router.route("/homeHelper", function(){
+    this.render("homeHelper")
+})
+
+Router.route("/homeBlind", function(){
+    this.render("homeBlind")
+})
+
+Router.route("/profile", function(){
+    this.render("profile")
+})
+
+Router.route("/about", function(){
+    this.render("about")
+})
+
+Router.route("/newQuestion", function(){
+    this.render("newQuestion")
+})
+
+Router.route("/userDeleted", function(){
+    this.render("userDeleted")
+})
+
+Router.route("/settings", function(){
+    this.render("settings")
 })
