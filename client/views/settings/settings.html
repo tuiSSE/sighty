@@ -27,8 +27,55 @@
   		<a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
 	</nav>
   <h3 id="Ueberschrift2">Einstellungen</h3>
-	<p> Farbe ändern <br>
-		Push-Benachrichtigung ein/aus <br>
-		
+	<table>
+	<thead>
+		<tr>
+				<th data-field="id"></th>
+				<th data-field="name"></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Push-Benachrichtigung ein/aus</td>
+			<td>
+				<!-- Switch -->
+				<div class="switch">
+					<label>
+						Off
+						<input type="checkbox">
+						<span class="lever"></span>
+						On
+					</label>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td>Farbe ändern</td>
+			<td>
+				<form action="#">
+	<p>
+		<input name="group1" type="radio" id="test1" class="red" />
+		<label for="test1">Red</label>
 	</p>
+	<p>
+		<input name="group1" type="radio" id="test2" class="yellow"/>
+		<label for="test2">Yellow</label>
+	</p>
+	<p>
+		<input name="group1" type="radio" id="test3"  class="green"/>
+		<label for="test3">Green</label>
+	</p>
+		<p>
+			<input name="group1" type="radio" id="test4" class="brown"/>
+			<label for="test4">Brown</label>
+	</p>
+</form>
+			</td>
+		</tr>
+		<tr>
+			<td>Weitere Einstellungen</td>
+			<td>Weitere Einstellungen</td>
+		</tr>
+	</tbody>
+</table>
 </template>

@@ -6,3 +6,19 @@
   text-align: center;
   font-family: sans-serif;
 }
+.red[type=radio]:checked + label:before, .red[type=radio]:checked + label:after{
+	background-color: #c62828;
+  border: transparent;
+}
+.yellow[type=radio]:checked + label:before, .yellow[type=radio]:checked + label:after{
+	background-color: #ffeb3b;
+	border: transparent;
+}
+.green[type=radio]:checked + label:before, .green[type=radio]:checked + label:after{
+	background-color: #4caf50;
+	border: transparent;
+}
+.brown[type=radio]:checked + label:before, .brown[type=radio]:checked + label:after{
+	background-color: #795548;
+	border: transparent;
+}
