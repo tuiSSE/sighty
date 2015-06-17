@@ -3,12 +3,12 @@
 		<p class="center-align"><img src="/Sighty_mittel.png"></p>
 	</header>
 
-	<h3 class="center-align">Neue Frage Stellen</h3>
-    <p class="center-align">Lade bis zu vier Bilder hoch und stelle eine Frage <br/>
-    unsere Nutzer werden versuchen dir so schnell wie möglich zu helfen!</p>
-    <br>
-    <br>
+
     <div class="container" id="takePhotoContainer">
+			<p class="Platz">Neue Frage Stellen:</p>
+		    <p class="Platz">Lade bis zu vier Bilder hoch und stelle eine Frage <br/>
+		    unsere Nutzer werden versuchen dir so schnell wie möglich zu helfen!</p>
+		    <br>
 			<a class="btn waves-effect waves-light blue darken-1" id="browse">
 				Browse
 			</a>
@@ -48,10 +48,17 @@
         </div>
 
 				<div class="row">
-        	<div class="input-field col s6">
-						<input name="question" id="question" type="text" quesId="{{quesId}}">
-      		</div>
-				</div>
+			    <form class="col s12">
+			      <div class="row">
+			        <div class="input-field col s6">
+			          <i class="mdi-action-account-circle prefix"></i>
+			          <input name="question" id="question" type="text" class="validate" quesId="{{quesId}}">
+			          <label for="question">Stelle hier deine Frage!</label>
+			        </div>
+			      </div>
+			    </form>
+			  </div>
+
 
       	<button class="btn waves-effect waves-light blue darken-1" type="submit" name="question" id="submit-question">Submit
           	<i class="mdi-content-send right"></i>
