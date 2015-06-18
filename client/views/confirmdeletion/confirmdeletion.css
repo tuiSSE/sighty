@@ -1,0 +1,8 @@
+#text_userconfirmDeletion{
+	font-size: x-large;
+	font-family: serif;
+}
+
+#btn_delete_profile, #btn_gobackto_profile{
+	width: 70%;
+}

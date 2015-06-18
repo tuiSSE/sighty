@@ -33,3 +33,7 @@ Router.route("/userDeleted", function(){
 Router.route("/settings", function(){
     this.render("settings")
 })
+
+Router.route("/confirmdeletion", function(){
+    this.render("confirmdeletion")
+})

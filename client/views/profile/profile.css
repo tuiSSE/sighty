@@ -1,4 +1,4 @@
-#btn_change_profile, #btn_delete_profile, #btn_randomUsername {
+#btn_change_profile, #btn_confirmdelete_profile, #btn_randomUsername {
 	width: 90%;
 }
 
@@ -13,4 +13,3 @@ h3 {
 	font-family: serif;
 	color: #000;
 }
-

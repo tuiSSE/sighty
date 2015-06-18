@@ -61,9 +61,8 @@ Template.profile.events({
 		Meteor.users.update({_id: Meteor.userId()}, {$set: {"username": Random.choice(usernames1)+" "+Random.choice(usernames2)}} );
 		Router.go("profile")
 	},
-	"click #btn_delete_profile":function(event, template){
-		Meteor.users.remove({_id: Meteor.userId()});
-		Router.go("userDeleted")
+	"click #btn_confirmdelete_profile":function(event, template){
+		Router.go("confirmdeletion")
 	},
 	"click #btn_random_profilePic":function(event, template){
 		var profilbilder = ["/profilbilder/profilbild1.jpg", "/profilbilder/profilbild2.jpg", "/profilbilder/profilbild3.jpg", "/profilbilder/profilbild4.jpg", "/profilbilder/profilbild5.jpg", "/profilbilder/profilbild6.jpg", "/profilbilder/profilbild7.jpg", "/profilbilder/profilbild8.jpg", "/profilbilder/profilbild9.jpg", "/profilbilder/profilbild10.jpg", "/profilbilder/profilbild11.jpg", "/profilbilder/profilbild12.jpg", "/profilbilder/profilbild13.jpg", "/profilbilder/profilbild14.jpg", "/profilbilder/profilbild15.jpg", "/profilbilder/profilbild16.jpg", "/profilbilder/profilbild17.jpg", "/profilbilder/profilbild18.jpg", "/profilbilder/profilbild19.jpg", "/profilbilder/profilbild20.jpg" ];
