@@ -3,12 +3,10 @@ var quesId ="";
 
 Template.homeHelper.events({
 	"click #btn_logout_homeHelper1":function(event, template){
-		Meteor.logout();
-		Router.go("login")
+		Router.go("confirmLogout")
 	},
 	"click #btn_logout_homeHelper2":function(event, template){
-		Meteor.logout();
-		Router.go("login")
+		Router.go("confirmLogout")
 	},
 	"click #btn_goto_home1":function(event, template){
 		if (Roles.userIsInRole({_id: Meteor.userId()}, "helper")) {

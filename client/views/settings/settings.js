@@ -32,11 +32,9 @@ Template.settings.events({
 		};
 	},
 	"click #btn_logout_about1":function(event, template){
-		Meteor.logout();
-		Router.go("login")
+		Router.go("confirmLogout")
 	},
 	"click #btn_logout_about2":function(event, template){
-		Meteor.logout();
-		Router.go("login")
+		Router.go("confirmLogout")
 	}
 })

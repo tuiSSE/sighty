@@ -1,0 +1,8 @@
+#text_userconfirmLogout{
+	font-size: x-large;
+	font-family: serif;
+}
+
+#btn_confirmLogout, #btn_abortLogout{
+	width: 70%;
+}

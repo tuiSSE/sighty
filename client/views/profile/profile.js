@@ -41,12 +41,10 @@ Template.profile.events({
 		};
 	},
 	"click #btn_logout_profile1":function(event, template){
-		Meteor.logout();
-		Router.go("login")
+		Router.go("confirmLogout")
 	},
 	"click #btn_logout_profile2":function(event, template){
-		Meteor.logout();
-		Router.go("login")
+		Router.go("confirmLogout")
 	},
 	"click #btn_change_profile":function(event, template){
 

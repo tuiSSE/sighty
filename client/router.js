@@ -37,3 +37,7 @@ Router.route("/settings", function(){
 Router.route("/confirmdeletion", function(){
     this.render("confirmdeletion")
 })
+
+Router.route("/confirmLogout", function(){
+    this.render("confirmLogout")
+})

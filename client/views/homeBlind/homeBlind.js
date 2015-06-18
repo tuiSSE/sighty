@@ -1,11 +1,9 @@
 Template.homeBlind.events({
 	"click #btn_logout_homeBlind1":function(event, template){
-		Meteor.logout();
-		Router.go("login")
+		Router.go("confirmLogout")
 	},
 	"click #btn_logout_homeBlind2":function(event, template){
-		Meteor.logout();
-		Router.go("login")
+	  Router.go("confirmLogout")
 	},
 	"click #btn_goto_home1":function(event, template){
 		if (Roles.userIsInRole({_id: Meteor.userId()}, "helper")) {
