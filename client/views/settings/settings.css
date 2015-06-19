@@ -1,5 +1,8 @@
 #Ueberschrift2{
-  margin: 4% 4% 0% 4%;
+  width: 80%;
+  margin-right: 10%;
+  margin-left: 10%;
+  margin-top: 8%;
   background-color: #1e88e5;
   color:white;
   text-decoration: none;
@@ -21,4 +24,17 @@
 .green[type=radio]:checked + label:before, .green[type=radio]:checked + label:after{
 	background-color: #4caf50;
 	border: transparent;
+}
+
+.switch label input[type=checkbox]:first-child:checked + .lever {
+    background-color: #0d2b51;
+}
+.switch label input[type=checkbox]:first-child:checked + .lever:after {
+    background-color: #0d2b51;
+}
+
+#settings_content{
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
 }
