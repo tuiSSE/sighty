@@ -5,19 +5,21 @@
 
 
     <div class="container" id="takePhotoContainer">
-			<p class="Platz">Neue Frage Stellen:</p>
 		    <p class="Platz">Lade bis zu vier Bilder hoch und stelle eine Frage <br/>
 		    unsere Nutzer werden versuchen dir so schnell wie möglich zu helfen!</p>
 		    <br>
-			<a class="btn waves-effect waves-light blue darken-1" id="browse">
-				Browse
+		<p>
+			<a class="btn waves-effect waves-light blue darken-1" id="browse"><i class="mdi-file-file-upload left"></i>
+				Bild hochladen
 			</a>
-			<input type="file" id="fileInput">
-			<div class="valgin-wrapper" id="sec1">
+			<span class="valgin-wrapper" id="sec1">
 				<a class="btn waves-effect waves-light blue darken-1" id="capture">
-					<i class="mdi-image-photo-camera"></i>
+					<i class="mdi-image-photo-camera left"></i> Foto aufnehmen
 				</a>
-			</div>
+			</span>
+	<input type="file" id="fileInput">
+		</p>
+
 
     	<div class="card-panel blue">
           	<div class="card-image card medium">
@@ -51,20 +53,20 @@
 			    <form class="col s12">
 			      <div class="row">
 			        <div class="input-field col s6">
-			          <i class="mdi-action-account-circle prefix"></i>
+			          <i class="mdi-content-create prefix"></i>
 			          <input name="question" id="question" type="text" class="validate" quesId="{{quesId}}">
-			          <label for="question">Stelle hier deine Frage!</label>
+			          <label for="question">Stelle hier deine Frage</label>
 			        </div>
 			      </div>
 			    </form>
 			  </div>
 
 				<p>
-      	<a class="btn waves-effect waves-light blue darken-1" type="submit" name="question" id="submit-question">Submit
+      	<a class="btn waves-effect waves-light blue darken-1" type="submit" name="question" id="submit-question">Frage stellen
           	<i class="mdi-content-send right"></i>
       	</a>
 
-      	<a href="/homeBlind" class="btn waves-effect waves-light blue darken-1" id="btn_gobackto_homeBlind"><i class="mdi-navigation-chevron-left left"></i>Abbrechen</a>
+      	<a href="/homeBlind" class="btn waves-effect waves-light blue darken-1" id="btn_gobackto_homeBlind"><i class="mdi-content-clear left"></i>Abbrechen</a>
 				</p>
 
     </div>
