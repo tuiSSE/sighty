@@ -62,6 +62,11 @@ Template.settings.events({
 			Roles.removeUsersFromRoles({_id: Meteor.userId()}, "yellow")
 			Roles.removeUsersFromRoles({_id: Meteor.userId()}, "green")
 			Roles.addUsersToRoles({_id: Meteor.userId()}, "green")
+		};
+		if(Roles.userIsInRole({_id: Meteor.userId()}, "blind")){
+			Router.go("homeBlind")
+		} else if(Roles.userIsInRole({_id: Meteor.userId()}, "helper")){
+			Router.go("homeHelper")
 		}
 	}
 })
