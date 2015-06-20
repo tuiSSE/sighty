@@ -32,4 +32,15 @@
         <p class="center-align"><a id="btn_delete_profile" class="btn waves-effect waves-light yellow darken-3">Profil löschen</a></p>
         <p class="center-align"><a id="btn_gobackto_profile" class="btn waves-effect waves-light yellow darken-3">Abbrechen</a></p>
     {{/if}}
+    {{#if isInRole "green"}}
+        <br>
+        <br>
+        <br>
+        <br>
+        <p class="center-align" id="text_userconfirmDeletion">Wollen sie wirklich ihr Profil löschen?</p>
+        <br>
+        <br>
+        <p class="center-align"><a id="btn_delete_profile" class="btn waves-effect waves-light green lighten-1">Profil löschen</a></p>
+        <p class="center-align"><a id="btn_gobackto_profile" class="btn waves-effect waves-light green lighten-1">Abbrechen</a></p>
+    {{/if}}
 </template>

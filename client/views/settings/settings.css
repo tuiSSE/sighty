@@ -31,6 +31,18 @@
     text-align: center;
     font-family: sans-serif;
 }
+
+#Ueberschrift2_gruen {
+    width: 80%;
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-top: 8%;
+    background-color: #66bb6a;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-family: sans-serif;
+}
 .standard[type=radio]:checked + label:before, .standard[type=radio]:checked + label:after{
 	background-color: #0d2b51;
 	border: transparent;

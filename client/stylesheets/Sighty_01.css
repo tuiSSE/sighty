@@ -68,12 +68,23 @@ nav{
     background-color: #ffffff;
 }
 
-/*yellow*/
-#yellow #slide-out li a:hover{
-    background-color:#fdd835;
+/*gelb*/
+#gelb #slide-out li a:hover{
+    background-color:#ef6c00;
     color: #ffffff !important;
 }
 
-#yellow #slide-out li:hover{
+#gelb #slide-out li:hover{
     background-color: #ffffff;
+}
+
+/*grün*/
+
+#gruen #slide-out li a:hover{
+    background-color: #1b5e20;
+    color: #ffffff !important;
+}
+
+#gruen #slide-out li:hover{
+    background-color: #FFFFFF;
 }

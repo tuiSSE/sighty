@@ -109,5 +109,19 @@ Template.newQuestion.helpers({
     },
     'question': function(){
         return Session.get('question');
+    },
+    username:function(){
+        return Meteor.user().username;
+    },
+    profilbild:function(){
+        return Meteor.user().profile.profilbild;
     }
 });
+
+Template.newQuestion.rendered=function(){
+    $('.button-collapse').sideNav({
+        menuWidth: 200, // Default is 240
+        edge: 'left', // Choose the horizontal origin
+        closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
+    })
+}
