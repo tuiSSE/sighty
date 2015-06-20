@@ -36,5 +36,32 @@ Template.settings.events({
 	},
 	"click #btn_logout_about2":function(event, template){
 		Router.go("confirmLogout")
+	},
+	"click #btn_changeSettings":function(event, template){
+		if(document.getElementById("test4").checked){
+			Roles.removeUsersFromRoles({_id: Meteor.userId()}, "blue")
+			Roles.removeUsersFromRoles({_id: Meteor.userId()}, "red")
+			Roles.removeUsersFromRoles({_id: Meteor.userId()}, "yellow")
+			Roles.removeUsersFromRoles({_id: Meteor.userId()}, "green")
+			Roles.addUsersToRoles({_id: Meteor.userId()}, "blue")
+		} else if(document.getElementById("test1").checked){
+			Roles.removeUsersFromRoles({_id: Meteor.userId()}, "blue")
+			Roles.removeUsersFromRoles({_id: Meteor.userId()}, "red")
+			Roles.removeUsersFromRoles({_id: Meteor.userId()}, "yellow")
+			Roles.removeUsersFromRoles({_id: Meteor.userId()}, "green")
+			Roles.addUsersToRoles({_id: Meteor.userId()}, "red")
+		} else if(document.getElementById("test2").checked){
+			Roles.removeUsersFromRoles({_id: Meteor.userId()}, "blue")
+			Roles.removeUsersFromRoles({_id: Meteor.userId()}, "red")
+			Roles.removeUsersFromRoles({_id: Meteor.userId()}, "yellow")
+			Roles.removeUsersFromRoles({_id: Meteor.userId()}, "green")
+			Roles.addUsersToRoles({_id: Meteor.userId()}, "yellow")
+		} else if(document.getElementById("test3").checked){
+			Roles.removeUsersFromRoles({_id: Meteor.userId()}, "blue")
+			Roles.removeUsersFromRoles({_id: Meteor.userId()}, "red")
+			Roles.removeUsersFromRoles({_id: Meteor.userId()}, "yellow")
+			Roles.removeUsersFromRoles({_id: Meteor.userId()}, "green")
+			Roles.addUsersToRoles({_id: Meteor.userId()}, "green")
+		}
 	}
 })

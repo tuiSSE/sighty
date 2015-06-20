@@ -38,20 +38,33 @@ body {
      color: #000;
    }
 
-   nav{
-       background-color: #0d2b51;
-   }
 
-.hide-on-med-and-down ul li a:hover {
+/*blau*/
+nav{
+       background-color: #0d2b51;
+}
+
+.hide-on-med-and-down.blau ul li a:hover {
     background-color: #ffffff;
     color: #000000;
 }
 
-#slide-out li a:hover{
+#blau #slide-out li a:hover{
     background-color: #0d2b51;
     color: #ffffff !important;
 }
 
-#slide-out li:hover{
+#blau #slide-out li:hover{
     background-color: #ffffff;
 }
+
+/*rot*/
+#rot #slide-out li a:hover{
+    background-color:#b71c1c;
+    color: #ffffff !important;
+}
+
+#rot #slide-out li:hover{
+    background-color: #ffffff;
+}
+

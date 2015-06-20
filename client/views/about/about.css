@@ -5,9 +5,18 @@ h1{
   margin: 0% 10% 0% 10%;
 
 }
-#Ueberschrift{
+#Ueberschrift_blau{
   margin: 8% 10% 0% 10%;
   background-color: #1e88e5;
+  color:white;
+  text-decoration: none;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+#Ueberschrift_rot{
+  margin: 8% 10% 0% 10%;
+  background-color: #d32f2f;
   color:white;
   text-decoration: none;
   text-align: center;
