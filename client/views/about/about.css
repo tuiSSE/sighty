@@ -23,6 +23,15 @@ h1{
   font-family: sans-serif;
 }
 
+#Ueberschrift_gelb{
+ margin: 8% 10% 0% 10%;
+ background-color: #f9a825;
+ color:white;
+ text-decoration: none;
+ text-align: center;
+ font-family: sans-serif;
+}
+
 .collection .collection-item {
 	height: auto !important;
 }
