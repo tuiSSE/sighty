@@ -41,25 +41,25 @@ Template.settings.events({
 		if(document.getElementById("test4").checked){
 			Roles.removeUsersFromRoles({_id: Meteor.userId()}, "blue")
 			Roles.removeUsersFromRoles({_id: Meteor.userId()}, "red")
-			Roles.removeUsersFromRoles({_id: Meteor.userId()}, "yellow")
+			Roles.removeUsersFromRoles({_id: Meteor.userId()}, "orange")
 			Roles.removeUsersFromRoles({_id: Meteor.userId()}, "green")
 			Roles.addUsersToRoles({_id: Meteor.userId()}, "blue")
 		} else if(document.getElementById("test1").checked){
 			Roles.removeUsersFromRoles({_id: Meteor.userId()}, "blue")
 			Roles.removeUsersFromRoles({_id: Meteor.userId()}, "red")
-			Roles.removeUsersFromRoles({_id: Meteor.userId()}, "yellow")
+			Roles.removeUsersFromRoles({_id: Meteor.userId()}, "orange")
 			Roles.removeUsersFromRoles({_id: Meteor.userId()}, "green")
 			Roles.addUsersToRoles({_id: Meteor.userId()}, "red")
 		} else if(document.getElementById("test2").checked){
 			Roles.removeUsersFromRoles({_id: Meteor.userId()}, "blue")
 			Roles.removeUsersFromRoles({_id: Meteor.userId()}, "red")
-			Roles.removeUsersFromRoles({_id: Meteor.userId()}, "yellow")
+			Roles.removeUsersFromRoles({_id: Meteor.userId()}, "orange")
 			Roles.removeUsersFromRoles({_id: Meteor.userId()}, "green")
-			Roles.addUsersToRoles({_id: Meteor.userId()}, "yellow")
+			Roles.addUsersToRoles({_id: Meteor.userId()}, "orange")
 		} else if(document.getElementById("test3").checked){
 			Roles.removeUsersFromRoles({_id: Meteor.userId()}, "blue")
 			Roles.removeUsersFromRoles({_id: Meteor.userId()}, "red")
-			Roles.removeUsersFromRoles({_id: Meteor.userId()}, "yellow")
+			Roles.removeUsersFromRoles({_id: Meteor.userId()}, "orange")
 			Roles.removeUsersFromRoles({_id: Meteor.userId()}, "green")
 			Roles.addUsersToRoles({_id: Meteor.userId()}, "green")
 		};

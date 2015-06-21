@@ -69,12 +69,12 @@ nav{
 }
 
 /*gelb*/
-#gelb #slide-out li a:hover{
+#orangefarben #slide-out li a:hover{
     background-color:#ef6c00;
     color: #ffffff !important;
 }
 
-#gelb #slide-out li:hover{
+#orangefarben #slide-out li:hover{
     background-color: #ffffff;
 }
 
