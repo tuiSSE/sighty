@@ -14,9 +14,11 @@ Template.chooseUserclass.helpers({
 Template.chooseUserclass.events({
 	"click #btn_completeRegistration":function(event, template){
 		if(document.getElementById("userclass_helper").checked){
+			Roles.removeUsersFromRoles({_id: Meteor.userId()}, ["blue", "green","orange","red"])
 			Roles.addUsersToRoles({_id: Meteor.userId()}, ["helper", "blue"])
 			Router.go("homeHelper")
 		} else if(document.getElementById("userclass_blind").checked){
+			Roles.removeUsersFromRoles({_id: Meteor.userId()}, ["blue", "green","orange","red"])
 			Roles.addUsersToRoles({_id: Meteor.userId()},["blind", "blue"])
 			Router.go("homeBlind")
 		};
