@@ -14,7 +14,7 @@
     margin-right: 10%;
     margin-left: 10%;
     margin-top: 8%;
-    background-color: #d32f2f;
+    background-color: #ff5252;
     color:white;
     text-decoration: none;
     text-align: center;
@@ -51,8 +51,8 @@
 	background-color: #c62828;
   border: transparent;
 }
-.yellow[type=radio]:checked + label:before, .yellow[type=radio]:checked + label:after{
-	background-color: #ffeb3b;
+.orange[type=radio]:checked + label:before, .orange[type=radio]:checked + label:after{
+	background-color: #f57c00;
 	border: transparent;
 }
 .green[type=radio]:checked + label:before, .green[type=radio]:checked + label:after{
