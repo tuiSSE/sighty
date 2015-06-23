@@ -91,7 +91,21 @@ Template.newQuestion.events({
     {
         Session.set('photo4', null);
     }
-  }
+  },
+    "click #btn_goto_home1":function(event, template){
+        if (Roles.userIsInRole({_id: Meteor.userId()}, "helper")) {
+            Router.go("homeHelper")
+        } else if (Roles.userIsInRole({_id: Meteor.userId()}, "blind")) {
+            Router.go("homeBlind")
+        };
+    },
+    "click #btn_goto_home2":function(event, template){
+        if (Roles.userIsInRole({_id: Meteor.userId()}, "helper")) {
+            Router.go("homeHelper")
+        } else if (Roles.userIsInRole({_id: Meteor.userId()}, "blind")) {
+            Router.go("homeBlind")
+        };
+    }
 });
 
 Template.newQuestion.helpers({

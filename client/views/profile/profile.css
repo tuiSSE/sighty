@@ -13,3 +13,49 @@ h3 {
 	font-family: serif;
 	color: #000;
 }
+
+#Ueberschrift_blau{
+	width: 90%;
+	margin-right: 5%;
+	margin-left: 5%;
+	margin-top: 8%;
+	background-color: #1e88e5;
+	color:white;
+	text-decoration: none;
+	text-align: center;
+	font-family: sans-serif;
+}
+#Ueberschrift_rot{
+	width: 90%;
+	margin-right: 5%;
+	margin-left: 5%;
+	margin-top: 8%;
+	background-color: #ff5252;
+	color:white;
+	text-decoration: none;
+	text-align: center;
+	font-family: sans-serif;
+}
+#Ueberschrift_orange{
+	width: 90%;
+	margin-right: 5%;
+	margin-left: 5%;
+	margin-top: 8%;
+	background-color: #f9a825;
+	color:white;
+	text-decoration: none;
+	text-align: center;
+	font-family: sans-serif;
+}
+
+#Ueberschrift_gruen {
+	width: 90%;
+	margin-right: 5%;
+	margin-left: 5%;
+	margin-top: 8%;
+	background-color: #66bb6a;
+	color: white;
+	text-decoration: none;
+	text-align: center;
+	font-family: sans-serif;
+}

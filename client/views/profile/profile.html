@@ -1,8 +1,6 @@
 <template name="profile">
 
-
-    {{#if isInRole "blue"}}
-	<nav>
+	<nav class="{{#if isInRole "blue"}}indigo darken-4{{/if}}{{#if isInRole "red"}}red darken-4{{/if}}{{#if isInRole "orange"}}orange darken-2{{/if}}{{#if isInRole "green"}}green darken-4{{/if}}">
 		<img src="/Sighty_klein_weiss.png" class="brand-logo">
   		<ul class="right hide-on-med-and-down">
   			<li>Herzlich Willkommen {{username}}</li>
@@ -12,7 +10,7 @@
     		<li><a href="/about">About</a></li>
     		<li><a id="btn_logout_profile1" href="/confirmLogout">Logout</a></li>
   		</ul>
-        <div id="blau">
+        <div id="{{#if isInRole "blue"}}blau{{/if}}{{#if isInRole "red"}}rot{{/if}}{{#if isInRole "orange"}}orangefarben{{/if}}{{#if isInRole "green"}}gruen{{/if}}">
   		<ul id="slide-out" class="side-nav">
   			<li><p class="center-align">Herzlich Willkommen</p><p class="center-align"><img src="{{profilbild}}" class="circle" width="64px" height="64px"></p><p class="center-align">{{username}}</p></li>
   			<li class="divider black"></li>
@@ -29,7 +27,7 @@
   		<a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
 	</nav>
 
-
+  <h3 id="{{#if isInRole "blue"}}Ueberschrift_blau{{/if}}{{#if isInRole "red"}}Ueberschrift_rot{{/if}}{{#if isInRole "orange"}}Ueberschrift_orange{{/if}}{{#if isInRole "green"}}Ueberschrift_gruen{{/if}}">Profil</h3>
   <div class="row">
     <form class="col s12">
       <div class="row">
@@ -41,14 +39,14 @@
       </div>
       <div class="row">
         <div class="input-field col s3">
-          <p class="left-align"><a class="btn-floating waves-effect waves-light blue darken-1" id="btn_change_profilePic"><i class="mdi-image-camera-alt"></i></a></p>
+          <p class="left-align"><a class="btn-floating waves-effect waves-light {{#if isInRole "blue"}}blue darken-1{{/if}}{{#if isInRole "red"}}red accent-2{{/if}}{{#if isInRole "orange"}}orange lighten-1{{/if}}{{#if isInRole "green"}}green lighten-1{{/if}}" id="btn_change_profilePic"><i class="mdi-image-camera-alt"></i></a></p>
         </div>
         <div class="input-field col s6">
-          <p class="center-align"><a class="btn waves-effect waves-light blue darken-1" id="btn_upload_profilePic">Upload</a></p>
+          <p class="center-align"><a class="btn waves-effect waves-light {{#if isInRole "blue"}}blue darken-1{{/if}}{{#if isInRole "red"}}red accent-2{{/if}}{{#if isInRole "orange"}}orange lighten-1{{/if}}{{#if isInRole "green"}}green lighten-1{{/if}}" id="btn_upload_profilePic">Upload</a></p>
           <input type="file" id="fileInput">
         </div>
         <div class="input-field col s3">
-          <p class="right-align"><a class="btn-floating waves-effect waves-light blue darken-1" id="btn_random_profilePic"><i class="mdi-image-camera"></i></a></p>
+          <p class="right-align"><a class="btn-floating waves-effect waves-light {{#if isInRole "blue"}}blue darken-1{{/if}}{{#if isInRole "red"}}red accent-2{{/if}}{{#if isInRole "orange"}}orange lighten-1{{/if}}{{#if isInRole "green"}}green lighten-1{{/if}}" id="btn_random_profilePic"><i class="mdi-image-camera"></i></a></p>
         </div>
       </div>
       <div class="divider black"></div>
@@ -69,238 +67,11 @@
     </form>
   </div>
 
-  <p class="center-align"><a id="btn_randomUsername" class="btn waves-effect waves-light blue darken-1">Zufälliger Benutzername</a></p>
-  <p class="center-align"><a id="btn_change_profile" class="btn waves-effect waves-light blue darken-1">Änderungen übernehmen</a></p>
+  <p class="center-align"><a id="btn_randomUsername" class="btn waves-effect waves-light {{#if isInRole "blue"}}blue darken-1{{/if}}{{#if isInRole "red"}}red accent-2{{/if}}{{#if isInRole "orange"}}orange lighten-1{{/if}}{{#if isInRole "green"}}green lighten-1{{/if}}">Zufälliger Benutzername</a></p>
+  <p class="center-align"><a id="btn_change_profile" class="btn waves-effect waves-light {{#if isInRole "blue"}}blue darken-1{{/if}}{{#if isInRole "red"}}red accent-2{{/if}}{{#if isInRole "orange"}}orange lighten-1{{/if}}{{#if isInRole "green"}}green lighten-1{{/if}}">Änderungen übernehmen</a></p>
   <p class="divider black"></p>
   <br>
   <br>
-  <p class="center-align"><a id="btn_confirmdelete_profile" class="btn waves-effect waves-light blue darken-1">Profil löschen</a></p>
-  {{/if}}
+  <p class="center-align"><a id="btn_confirmdelete_profile" class="btn waves-effect waves-light {{#if isInRole "blue"}}blue darken-1{{/if}}{{#if isInRole "red"}}red accent-2{{/if}}{{#if isInRole "orange"}}orange lighten-1{{/if}}{{#if isInRole "green"}}green lighten-1{{/if}}">Profil löschen</a></p>
 
-    {{#if isInRole "red"}}
-        <nav class="red darken-4">
-            <img src="/Sighty_klein_weiss.png" class="brand-logo">
-            <ul class="right hide-on-med-and-down">
-                <li>Herzlich Willkommen {{username}}</li>
-                <li><a id="btn_goto_home1">Startseite</a></li>
-                <li><a href="/profile">Profil</a></li>
-                <li><a href="/settings">Einstellungen</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a id="btn_logout_profile1" href="/confirmLogout">Logout</a></li>
-            </ul>
-            <div id="rot">
-            <ul id="slide-out" class="side-nav">
-                <li><p class="center-align">Herzlich Willkommen</p><p class="center-align"><img src="{{profilbild}}" class="circle" width="64px" height="64px"></p><p class="center-align">{{username}}</p></li>
-                <li class="divider black"></li>
-                <li><a id="btn_goto_home2">Startseite</a></li>
-                <li><a href="/profile">Profil</a></li>
-                <li class="divider"></li>
-                <li><a href="/settings">Einstellungen</a></li>
-                <li class="divider"></li>
-                <li><a href="/about">About</a></li>
-                <li class="divider black"></li>
-                <li><a id="btn_logout_profile2" href="/confirmLogout">Logout</a></li>
-            </ul>
-            </div>
-            <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
-        </nav>
-
-
-        <div class="row">
-            <form class="col s12">
-                <div class="row">
-                    <div class="input-field col s12">
-                        <br>
-                        <br>
-                        <p class="center-align"><img src="{{profilbild}}" class="circle" width="64px" height="64px"></p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="input-field col s3">
-                        <p class="left-align"><a class="btn-floating waves-effect waves-light red accent-2" id="btn_change_profilePic"><i class="mdi-image-camera-alt"></i></a></p>
-                    </div>
-                    <div class="input-field col s6">
-                        <p class="center-align"><a class="btn waves-effect waves-light red accent-2" id="btn_upload_profilePic">Upload</a></p>
-                        <input type="file" id="fileInput">
-                    </div>
-                    <div class="input-field col s3">
-                        <p class="right-align"><a class="btn-floating waves-effect waves-light red accent-2" id="btn_random_profilePic"><i class="mdi-image-camera"></i></a></p>
-                    </div>
-                </div>
-                <div class="divider black"></div>
-            </form>
-        </div>
-        <div class="row">
-            <form class="col s12">
-                <div class="row">
-                    <div class="input-field col s6">
-                        <input type="text" value="{{username}}" id="username_profile">
-                        <label for="username_profile" class="active">Benutzername</label>
-                    </div>
-                    <div class="input-field col s6">
-                        <input type="text" value="{{email}} {{email2}}" id="email_profile">
-                        <label for="email_profile" class="active">E-Mail</label>
-                    </div>
-                </div>
-            </form>
-        </div>
-
-        <p class="center-align"><a id="btn_randomUsername" class="btn waves-effect waves-light red accent-2">Zufälliger Benutzername</a></p>
-        <p class="center-align"><a id="btn_change_profile" class="btn waves-effect waves-light red accent-2">Änderungen übernehmen</a></p>
-        <p class="divider black"></p>
-        <br>
-        <br>
-        <p class="center-align"><a id="btn_confirmdelete_profile" class="btn waves-effect waves-light red accent-2">Profil löschen</a></p>
-    {{/if}}
-
-    {{#if isInRole "orange"}}
-        <nav class="orange darken-2">
-            <img src="/Sighty_klein_weiss.png" class="brand-logo">
-            <ul class="right hide-on-med-and-down">
-                <li>Herzlich Willkommen {{username}}</li>
-                <li><a id="btn_goto_home1">Startseite</a></li>
-                <li><a href="/profile">Profil</a></li>
-                <li><a href="/settings">Einstellungen</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a id="btn_logout_profile1" href="/confirmLogout">Logout</a></li>
-            </ul>
-            <div id="orangefarben">
-            <ul id="slide-out" class="side-nav">
-                <li><p class="center-align">Herzlich Willkommen</p><p class="center-align"><img src="{{profilbild}}" class="circle" width="64px" height="64px"></p><p class="center-align">{{username}}</p></li>
-                <li class="divider black"></li>
-                <li><a id="btn_goto_home2">Startseite</a></li>
-                <li><a href="/profile">Profil</a></li>
-                <li class="divider"></li>
-                <li><a href="/settings">Einstellungen</a></li>
-                <li class="divider"></li>
-                <li><a href="/about">About</a></li>
-                <li class="divider black"></li>
-                <li><a id="btn_logout_profile2" href="/confirmLogout">Logout</a></li>
-            </ul>
-            </div>
-            <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
-        </nav>
-
-
-        <div class="row">
-            <form class="col s12">
-                <div class="row">
-                    <div class="input-field col s12">
-                        <br>
-                        <br>
-                        <p class="center-align"><img src="{{profilbild}}" class="circle" width="64px" height="64px"></p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="input-field col s3">
-                        <p class="left-align"><a class="btn-floating waves-effect waves-light orange lighten-1" id="btn_change_profilePic"><i class="mdi-image-camera-alt"></i></a></p>
-                    </div>
-                    <div class="input-field col s6">
-                        <p class="center-align"><a class="btn waves-effect waves-light orange lighten-1" id="btn_upload_profilePic">Upload</a></p>
-                        <input type="file" id="fileInput">
-                    </div>
-                    <div class="input-field col s3">
-                        <p class="right-align"><a class="btn-floating waves-effect waves-light orange lighten-1" id="btn_random_profilePic"><i class="mdi-image-camera"></i></a></p>
-                    </div>
-                </div>
-                <div class="divider black"></div>
-            </form>
-        </div>
-        <div class="row">
-            <form class="col s12">
-                <div class="row">
-                    <div class="input-field col s6">
-                        <input type="text" value="{{username}}" id="username_profile">
-                        <label for="username_profile" class="active">Benutzername</label>
-                    </div>
-                    <div class="input-field col s6">
-                        <input type="text" value="{{email}} {{email2}}" id="email_profile">
-                        <label for="email_profile" class="active">E-Mail</label>
-                    </div>
-                </div>
-            </form>
-        </div>
-
-        <p class="center-align"><a id="btn_randomUsername" class="btn waves-effect waves-light orange lighten-1">Zufälliger Benutzername</a></p>
-        <p class="center-align"><a id="btn_change_profile" class="btn waves-effect waves-light orange lighten-1">Änderungen übernehmen</a></p>
-        <p class="divider black"></p>
-        <br>
-        <br>
-        <p class="center-align"><a id="btn_confirmdelete_profile" class="btn waves-effect waves-light yellow darken-3">Profil löschen</a></p>
-    {{/if}}
-    {{#if isInRole "green"}}
-        <nav class="green darken-4">
-            <img src="/Sighty_klein_weiss.png" class="brand-logo">
-            <ul class="right hide-on-med-and-down">
-                <li>Herzlich Willkommen {{username}}</li>
-                <li><a id="btn_goto_home1">Startseite</a></li>
-                <li><a href="/profile">Profil</a></li>
-                <li><a href="/settings">Einstellungen</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a id="btn_logout_profile1" href="/confirmLogout">Logout</a></li>
-            </ul>
-            <div id="gruen">
-                <ul id="slide-out" class="side-nav">
-                    <li><p class="center-align">Herzlich Willkommen</p><p class="center-align"><img src="{{profilbild}}" class="circle" width="64px" height="64px"></p><p class="center-align">{{username}}</p></li>
-                    <li class="divider black"></li>
-                    <li><a id="btn_goto_home2">Startseite</a></li>
-                    <li><a href="/profile">Profil</a></li>
-                    <li class="divider"></li>
-                    <li><a href="/settings">Einstellungen</a></li>
-                    <li class="divider"></li>
-                    <li><a href="/about">About</a></li>
-                    <li class="divider black"></li>
-                    <li><a id="btn_logout_profile2" href="/confirmLogout">Logout</a></li>
-                </ul>
-            </div>
-            <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
-        </nav>
-
-        <div class="row">
-            <form class="col s12">
-                <div class="row">
-                    <div class="input-field col s12">
-                        <br>
-                        <br>
-                        <p class="center-align"><img src="{{profilbild}}" class="circle" width="64px" height="64px"></p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="input-field col s3">
-                        <p class="left-align"><a class="btn-floating waves-effect waves-light green lighten-1" id="btn_change_profilePic"><i class="mdi-image-camera-alt"></i></a></p>
-                    </div>
-                    <div class="input-field col s6">
-                        <p class="center-align"><a class="btn waves-effect waves-light green lighten-1" id="btn_upload_profilePic">Upload</a></p>
-                        <input type="file" id="fileInput">
-                    </div>
-                    <div class="input-field col s3">
-                        <p class="right-align"><a class="btn-floating waves-effect waves-light green lighten-1" id="btn_random_profilePic"><i class="mdi-image-camera"></i></a></p>
-                    </div>
-                </div>
-                <div class="divider black"></div>
-            </form>
-        </div>
-        <div class="row">
-            <form class="col s12">
-                <div class="row">
-                    <div class="input-field col s6">
-                        <input type="text" value="{{username}}" id="username_profile">
-                        <label for="username_profile" class="active">Benutzername</label>
-                    </div>
-                    <div class="input-field col s6">
-                        <input type="text" value="{{email}} {{email2}}" id="email_profile">
-                        <label for="email_profile" class="active">E-Mail</label>
-                    </div>
-                </div>
-            </form>
-        </div>
-
-        <p class="center-align"><a id="btn_randomUsername" class="btn waves-effect waves-light green lighten-1">Zufälliger Benutzername</a></p>
-        <p class="center-align"><a id="btn_change_profile" class="btn waves-effect waves-light green lighten-1">Änderungen übernehmen</a></p>
-        <p class="divider black"></p>
-        <br>
-        <br>
-        <p class="center-align"><a id="btn_confirmdelete_profile" class="btn waves-effect waves-light green lighten-1">Profil löschen</a></p>
-
-    {{/if}}
 </template>

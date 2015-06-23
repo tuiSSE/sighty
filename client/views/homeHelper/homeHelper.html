@@ -1,7 +1,7 @@
 <template name="homeHelper">
 
-    {{#if isInRole "blue"}}
-	<nav>
+
+	<nav class="{{#if isInRole "blue"}}indigo darken-4{{/if}}{{#if isInRole "red"}}red darken-4{{/if}}{{#if isInRole "orange"}}orange darken-2{{/if}}{{#if isInRole "green"}}green darken-4{{/if}}">
     <img src="/Sighty_klein_weiss.png" class="brand-logo">
       <ul class="right hide-on-med-and-down">
         <li>Herzlich Willkommen {{username}}</li>
@@ -11,7 +11,7 @@
         <li><a href="/about">About</a></li>
         <li><a id="btn_logout_homeHelper1" href="/confirmLogout">Logout</a></li>
       </ul>
-        <div id="blau">
+        <div id="{{#if isInRole "blue"}}blau{{/if}}{{#if isInRole "red"}}rot{{/if}}{{#if isInRole "orange"}}orangefarben{{/if}}{{#if isInRole "green"}}gruen{{/if}}">
       <ul id="slide-out" class="side-nav">
         <li><p class="center-align">Herzlich Willkommen</p><p class="center-align"><img src="{{profilbild}}" class="circle" width="72px" height="72px"></p><p class="center-align">{{username}}</p></li>
         <li class="divider black"></li>
@@ -34,7 +34,7 @@
 				{{#each questions}}
 				<li>
 					<div class="container" id="homeHelferCont" quesId="{{_id}}">
-					<div class="card-panel blue">
+					<div class="card-panel {{#if isInRole "blue"}}indigo darken-4{{/if}}{{#if isInRole "red"}}red darken-4{{/if}}{{#if isInRole "orange"}}orange darken-2{{/if}}{{#if isInRole "green"}}green darken-4{{/if}}">
 							<div class="card-image card small">
 									<div class="valign-wrapper">
 											<img src="{{pic1Id}}" height="300px" width="250px">
@@ -64,7 +64,7 @@
 								<input name="answer" id="answer" type="text">
 						</div>
 					</div>
-					<button class="btn waves-effect waves-light blue darken-1" type="submit" id="submit-answer">Comment
+					<button class="btn waves-effect waves-light {{#if isInRole "blue"}}blue darken-1{{/if}}{{#if isInRole "red"}}red accent-2{{/if}}{{#if isInRole "orange"}}orange lighten-1{{/if}}{{#if isInRole "green"}}green lighten-1{{/if}}" type="submit" id="submit-answer">Comment
 							<i class="mdi-content-send right"></i>
 					</button>
 					</div>
@@ -72,227 +72,6 @@
 				{{/each}}
 			</ul>
 	</div>
-    {{/if}}
-    {{#if isInRole "red"}}
-        <nav class="red darken-4">
-            <img src="/Sighty_klein_weiss.png" class="brand-logo">
-            <ul class="right hide-on-med-and-down">
-                <li>Herzlich Willkommen {{username}}</li>
-                <li><a id="btn_goto_home1">Startseite</a></li>
-                <li><a href="/profile">Profil</a></li>
-                <li><a href="/settings">Einstellungen</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a id="btn_logout_homeHelper1" href="/confirmLogout">Logout</a></li>
-            </ul>
-            <div id="rot">
-            <ul id="slide-out" class="side-nav">
-                <li><p class="center-align">Herzlich Willkommen</p><p class="center-align"><img src="{{profilbild}}" class="circle" width="72px" height="72px"></p><p class="center-align">{{username}}</p></li>
-                <li class="divider black"></li>
-                <li><a id="btn_goto_home2">Startseite</a></li>
-                <li class="divider"></li>
-                <li><a href="/profile">Profil</a></li>
-                <li class="divider"></li>
-                <li><a href="/settings">Einstellungen</a></li>
-                <li class="divider"></li>
-                <li><a href="/about">About</a></li>
-                <li class="divider black"></li>
-                <li><a id="btn_logout_homeHelper2" href="/confirmLogout">Logout</a></li>
-            </ul>
-            </div>
-            <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
-        </nav>
 
-        <div class="slider standard">
-            <ul class="slides">
-                {{#each questions}}
-                    <li>
-                        <div class="container" id="homeHelferCont" quesId="{{_id}}">
-                            <div class="card-panel red accent-2">
-                                <div class="card-image card small">
-                                    <div class="valign-wrapper">
-                                        <img src="{{pic1Id}}" height="300px" width="250px">
-                                        <img src="{{pic2Id}}" height="300px" width="250px">
-                                        <img src="{{pic3Id}}" height="300px" width="250px">
-                                        <img src="{{pic4Id}}" height="300px" width="250px">
-                                    </div>
-                                </div>
-                                <div class="card-content">
-                                    {{text}}
-                                </div>
-                            </div>
-                        </div>
-                        <div class="container" id="answersCont" qId="{{qId}}">
-                            <div class="col s6">
-                                <p id="antwortLabel">Antworten:</p>
-                                <ul class="collection">
-                                    {{#each answers _id}}
-                                        <button class="delete">&times;</button>
-                                        <button class="correct">&radic;</button>
-                                        <a class="collection-item">{{text}}</a>
-                                    {{/each}}
-                                </ul>
-                            </div>
-                            <div class="row">
-                                <div class="input-field col s6">
-                                    <input name="answer" id="answer" type="text">
-                                </div>
-                            </div>
-                            <button class="btn waves-effect waves-light red accent-2" type="submit" id="submit-answer">Comment
-                                <i class="mdi-content-send right"></i>
-                            </button>
-                        </div>
-                    </li>
-                {{/each}}
-            </ul>
-        </div>
 
-    {{/if}}
-
-    {{#if isInRole "orange"}}
-        <nav class="orange darken-2">
-            <img src="/Sighty_klein_weiss.png" class="brand-logo">
-            <ul class="right hide-on-med-and-down">
-                <li>Herzlich Willkommen {{username}}</li>
-                <li><a id="btn_goto_home1">Startseite</a></li>
-                <li><a href="/profile">Profil</a></li>
-                <li><a href="/settings">Einstellungen</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a id="btn_logout_homeHelper1" href="/confirmLogout">Logout</a></li>
-            </ul>
-            <div id="orangefarben">
-            <ul id="slide-out" class="side-nav">
-                <li><p class="center-align">Herzlich Willkommen</p><p class="center-align"><img src="{{profilbild}}" class="circle" width="72px" height="72px"></p><p class="center-align">{{username}}</p></li>
-                <li class="divider black"></li>
-                <li><a id="btn_goto_home2">Startseite</a></li>
-                <li class="divider"></li>
-                <li><a href="/profile">Profil</a></li>
-                <li class="divider"></li>
-                <li><a href="/settings">Einstellungen</a></li>
-                <li class="divider"></li>
-                <li><a href="/about">About</a></li>
-                <li class="divider black"></li>
-                <li><a id="btn_logout_homeHelper2" href="/confirmLogout">Logout</a></li>
-            </ul>
-            </div>
-            <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
-        </nav>
-
-        <div class="slider standard">
-            <ul class="slides">
-                {{#each questions}}
-                    <li>
-                        <div class="container" id="homeHelferCont" quesId="{{_id}}">
-                            <div class="card-panel orange lighten-1">
-                                <div class="card-image card small">
-                                    <div class="valign-wrapper">
-                                        <img src="{{pic1Id}}" height="300px" width="250px">
-                                        <img src="{{pic2Id}}" height="300px" width="250px">
-                                        <img src="{{pic3Id}}" height="300px" width="250px">
-                                        <img src="{{pic4Id}}" height="300px" width="250px">
-                                    </div>
-                                </div>
-                                <div class="card-content">
-                                    {{text}}
-                                </div>
-                            </div>
-                        </div>
-                        <div class="container" id="answersCont" qId="{{qId}}">
-                            <div class="col s6">
-                                <p id="antwortLabel">Antworten:</p>
-                                <ul class="collection">
-                                    {{#each answers _id}}
-                                        <button class="delete">&times;</button>
-                                        <button class="correct">&radic;</button>
-                                        <a class="collection-item">{{text}}</a>
-                                    {{/each}}
-                                </ul>
-                            </div>
-                            <div class="row">
-                                <div class="input-field col s6">
-                                    <input name="answer" id="answer" type="text">
-                                </div>
-                            </div>
-                            <button class="btn waves-effect waves-light orange lighten-1" type="submit" id="submit-answer">Comment
-                                <i class="mdi-content-send right"></i>
-                            </button>
-                        </div>
-                    </li>
-                {{/each}}
-            </ul>
-        </div>
-
-    {{/if}}
-    {{#if isInRole "green"}}
-        <nav class="green darken-4">
-            <img src="/Sighty_klein_weiss.png" class="brand-logo">
-            <ul class="right hide-on-med-and-down">
-                <li>Herzlich Willkommen {{username}}</li>
-                <li><a id="btn_goto_home1">Startseite</a></li>
-                <li><a href="/profile">Profil</a></li>
-                <li><a href="/settings">Einstellungen</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a id="btn_logout_homeHelper1" href="/confirmLogout">Logout</a></li>
-            </ul>
-            <div id="gruen">
-                <ul id="slide-out" class="side-nav">
-                    <li><p class="center-align">Herzlich Willkommen</p><p class="center-align"><img src="{{profilbild}}" class="circle" width="72px" height="72px"></p><p class="center-align">{{username}}</p></li>
-                    <li class="divider black"></li>
-                    <li><a id="btn_goto_home2">Startseite</a></li>
-                    <li class="divider"></li>
-                    <li><a href="/profile">Profil</a></li>
-                    <li class="divider"></li>
-                    <li><a href="/settings">Einstellungen</a></li>
-                    <li class="divider"></li>
-                    <li><a href="/about">About</a></li>
-                    <li class="divider black"></li>
-                    <li><a id="btn_logout_homeHelper2" href="/confirmLogout">Logout</a></li>
-                </ul>
-            </div>
-            <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
-        </nav>
-
-        <div class="slider standard">
-            <ul class="slides">
-                {{#each questions}}
-                    <li>
-                        <div class="container" id="homeHelferCont" quesId="{{_id}}">
-                            <div class="card-panel green lighten-1">
-                                <div class="card-image card small">
-                                    <div class="valign-wrapper">
-                                        <img src="{{pic1Id}}" height="300px" width="250px">
-                                        <img src="{{pic2Id}}" height="300px" width="250px">
-                                        <img src="{{pic3Id}}" height="300px" width="250px">
-                                        <img src="{{pic4Id}}" height="300px" width="250px">
-                                    </div>
-                                </div>
-                                <div class="card-content">
-                                    {{text}}
-                                </div>
-                            </div>
-                        </div>
-                        <div class="container" id="answersCont" qId="{{qId}}">
-                            <div class="col s6">
-                                <p id="antwortLabel">Antworten:</p>
-                                <ul class="collection">
-                                    {{#each answers _id}}
-                                        <button class="delete">&times;</button>
-                                        <button class="correct">&radic;</button>
-                                        <a class="collection-item">{{text}}</a>
-                                    {{/each}}
-                                </ul>
-                            </div>
-                            <div class="row">
-                                <div class="input-field col s6">
-                                    <input name="answer" id="answer" type="text">
-                                </div>
-                            </div>
-                            <button class="btn waves-effect waves-light green lighten-1" type="submit" id="submit-answer">Comment
-                                <i class="mdi-content-send right"></i>
-                            </button>
-                        </div>
-                    </li>
-                {{/each}}
-            </ul>
-        </div>
-    {{/if}}
 </template>
