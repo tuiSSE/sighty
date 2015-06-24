@@ -2,16 +2,43 @@ h1{
   font-family: cursive;
 }
 #Korrektur{
-  margin: 0% 4% 0% 4%;
+  margin: 0% 10% 0% 10%;
 
 }
-#Ueberschrift{
-  margin: 4% 4% 0% 4%;
+#Ueberschrift_blau{
+  margin: 8% 10% 0% 10%;
   background-color: #1e88e5;
   color:white;
   text-decoration: none;
   text-align: center;
   font-family: sans-serif;
+}
+
+#Ueberschrift_rot{
+  margin: 8% 10% 0% 10%;
+  background-color: #ff5252;
+  color:white;
+  text-decoration: none;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+#Ueberschrift_orangefarben{
+ margin: 8% 10% 0% 10%;
+ background-color: #f9a825;
+ color:white;
+ text-decoration: none;
+ text-align: center;
+ font-family: sans-serif;
+}
+
+#Ueberschrift_gruen{
+    margin: 8% 10% 0% 10%;
+    background-color: #66bb6a;
+    color:white;
+    text-decoration: none;
+    text-align: center;
+    font-family: sans-serif;
 }
 
 .collection .collection-item {

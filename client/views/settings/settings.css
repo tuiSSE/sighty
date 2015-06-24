@@ -1,10 +1,47 @@
-#Ueberschrift2{
-  margin: 4% 4% 0% 4%;
+#Ueberschrift2_blau{
+  width: 80%;
+  margin-right: 10%;
+  margin-left: 10%;
+  margin-top: 8%;
   background-color: #1e88e5;
   color:white;
   text-decoration: none;
   text-align: center;
   font-family: sans-serif;
+}
+#Ueberschrift2_rot{
+    width: 80%;
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-top: 8%;
+    background-color: #ff5252;
+    color:white;
+    text-decoration: none;
+    text-align: center;
+    font-family: sans-serif;
+}
+#Ueberschrift2_orangefarben{
+    width: 80%;
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-top: 8%;
+    background-color: #f9a825;
+    color:white;
+    text-decoration: none;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+#Ueberschrift2_gruen {
+    width: 80%;
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-top: 8%;
+    background-color: #66bb6a;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-family: sans-serif;
 }
 .standard[type=radio]:checked + label:before, .standard[type=radio]:checked + label:after{
 	background-color: #0d2b51;
@@ -14,11 +51,24 @@
 	background-color: #c62828;
   border: transparent;
 }
-.yellow[type=radio]:checked + label:before, .yellow[type=radio]:checked + label:after{
-	background-color: #ffeb3b;
+.orange[type=radio]:checked + label:before, .orange[type=radio]:checked + label:after{
+	background-color: #f57c00;
 	border: transparent;
 }
 .green[type=radio]:checked + label:before, .green[type=radio]:checked + label:after{
 	background-color: #4caf50;
 	border: transparent;
+}
+
+.switch label input[type=checkbox]:first-child:checked + .lever {
+    background-color: #212121;
+}
+.switch label input[type=checkbox]:first-child:checked + .lever:after{
+    background-color: #212121;
+}
+
+#settings_content{
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
 }

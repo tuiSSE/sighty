@@ -8,3 +8,12 @@
 #fileInput{
 	visibility: hidden;
 }
+
+.head{
+	font-size: xx-large;
+	text-decoration: underline;
+}
+
+.subhead{
+	font-size: large;
+}

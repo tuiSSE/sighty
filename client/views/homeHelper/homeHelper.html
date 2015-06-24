@@ -1,6 +1,7 @@
 <template name="homeHelper">
 
-	<nav>
+
+	<nav class="{{#if isInRole "blue"}}indigo darken-4{{/if}}{{#if isInRole "red"}}red darken-4{{/if}}{{#if isInRole "orange"}}orange darken-2{{/if}}{{#if isInRole "green"}}green darken-4{{/if}}">
     <img src="/Sighty_klein_weiss.png" class="brand-logo">
       <ul class="right hide-on-med-and-down">
         <li>Herzlich Willkommen {{username}}</li>
@@ -10,6 +11,7 @@
         <li><a href="/about">About</a></li>
         <li><a id="btn_logout_homeHelper1" href="/confirmLogout">Logout</a></li>
       </ul>
+        <div id="{{#if isInRole "blue"}}blau{{/if}}{{#if isInRole "red"}}rot{{/if}}{{#if isInRole "orange"}}orangefarben{{/if}}{{#if isInRole "green"}}gruen{{/if}}">
       <ul id="slide-out" class="side-nav">
         <li><p class="center-align">Herzlich Willkommen</p><p class="center-align"><img src="{{profilbild}}" class="circle" width="72px" height="72px"></p><p class="center-align">{{username}}</p></li>
         <li class="divider black"></li>
@@ -23,15 +25,16 @@
         <li class="divider black"></li>
         <li><a id="btn_logout_homeHelper2" href="/confirmLogout">Logout</a></li>
       </ul>
+        </div>
       <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
   </nav>
 
-	<div class="slider">
+	<div class="slider standard">
 			<ul class="slides">
 				{{#each questions}}
 				<li>
 					<div class="container" id="homeHelferCont" quesId="{{_id}}">
-					<div class="card-panel blue">
+					<div class="card-panel {{#if isInRole "blue"}}indigo darken-4{{/if}}{{#if isInRole "red"}}red darken-4{{/if}}{{#if isInRole "orange"}}orange darken-2{{/if}}{{#if isInRole "green"}}green darken-4{{/if}}">
 							<div class="card-image card small">
 									<div class="valign-wrapper">
 											<img src="{{pic1Id}}" data-src="holder.js/200x300?outline=yes" height="300px" width="200px">
@@ -61,7 +64,7 @@
 								<input name="answer" id="answer" type="text">
 						</div>
 					</div>
-					<button class="btn waves-effect waves-light blue darken-1" type="submit" id="submit-answer">Comment
+					<button class="btn waves-effect waves-light {{#if isInRole "blue"}}blue darken-1{{/if}}{{#if isInRole "red"}}red accent-2{{/if}}{{#if isInRole "orange"}}orange lighten-1{{/if}}{{#if isInRole "green"}}green lighten-1{{/if}}" type="submit" id="submit-answer">Comment
 							<i class="mdi-content-send right"></i>
 					</button>
 					</div>
@@ -69,5 +72,6 @@
 				{{/each}}
 			</ul>
 	</div>
+
 
 </template>

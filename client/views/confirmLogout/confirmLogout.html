@@ -6,7 +6,6 @@
 	<p class="center-align" id="text_userconfirmLogout">Wollen sie sich wirklich ausloggen?</p>
 	<br>
 	<br>
-	<p class="center-align"><a id="btn_confirmLogout" class="btn waves-effect waves-light blue darken-1" href="/">Ausloggen</a></p>
-  <p class="center-align"><a id="btn_abortLogout" class="btn waves-effect waves-light blue darken-1">Abbrechen</a></p>
-
+	<p class="center-align"><a id="btn_confirmLogout" class="btn waves-effect waves-light {{#if isInRole "blue"}}blue darken-1{{/if}}{{#if isInRole "red"}}red accent-2{{/if}}{{#if isInRole "orange"}}orange lighten-1{{/if}}{{#if isInRole "green"}}green lighten-1{{/if}}" href="/">Ausloggen</a></p>
+  <p class="center-align"><a id="btn_abortLogout" class="btn waves-effect waves-light {{#if isInRole "blue"}}blue darken-1{{/if}}{{#if isInRole "red"}}red accent-2{{/if}}{{#if isInRole "orange"}}orange lighten-1{{/if}}{{#if isInRole "green"}}green lighten-1{{/if}}">Abbrechen</a></p>
 </template>
