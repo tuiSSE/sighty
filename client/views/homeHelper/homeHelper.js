@@ -1,6 +1,3 @@
-var quesId ="";
-
-
 Template.homeHelper.events({
 	"click #btn_logout_homeHelper1":function(event, template){
 		Router.go("confirmLogout")

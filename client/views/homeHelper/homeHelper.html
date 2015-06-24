@@ -34,10 +34,10 @@
 					<div class="card-panel blue">
 							<div class="card-image card small">
 									<div class="valign-wrapper">
-											<img src="{{pic1Id}}" height="300px" width="250px">
-											<img src="{{pic2Id}}" height="300px" width="250px">
-											<img src="{{pic3Id}}" height="300px" width="250px">
-											<img src="{{pic4Id}}" height="300px" width="250px">
+											<img src="{{pic1Id}}" data-src="holder.js/200x300?outline=yes" height="300px" width="200px">
+											<img src="{{pic2Id}}" data-src="holder.js/200x300?outline=yes" height="300px" width="200px">
+											<img src="{{pic3Id}}" data-src="holder.js/200x300?outline=yes" height="300px" width="200px">
+											<img src="{{pic4Id}}" data-src="holder.js/200x300?outline=yes" height="300px" width="200px">
 									</div>
 							</div>
 							<div class="card-content">
@@ -51,8 +51,8 @@
 								<ul class="collection">
 									{{#each answers _id}}
 									<button class="delete">&times;</button>
-                            						<button class="correct">&radic;</button>
-										<a class="collection-item">{{text}}</a>
+                  <button class="correct">&radic;</button>
+									<a class="collection-item">{{text}}</a>
 									{{/each}}
 								</ul>
 							</div>

@@ -23,7 +23,12 @@ Template.homeBlind.events({
 		Router.go("newQuestion")
 	},
 	"click #removeQuestion":function(event, template){
-		Questions.remove(this._id)
+		Questions.remove(this._id);
+		for(var i=1; i<5; i++)
+		{
+			imageUrl = Session.get('pic'+i+'Id');
+			Images.remove({url : imageUrl});
+		}
 	}
 })
 
