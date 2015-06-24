@@ -64,6 +64,12 @@ Template.newQuestion.events({
 			Session.set('photo4', null);
 			$('#question').val('');
 			$('#btn_gobackto_homeBlind').click();
+			Push.send({
+  			from: Meteor.user().username;
+  			title: 'Hello',
+  			text: 'World',
+  			badge: 1,
+			});
   },
   'click #deletePic1': function (event,template) {
     event.preventDefault();
