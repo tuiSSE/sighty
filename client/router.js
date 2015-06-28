@@ -41,3 +41,7 @@ Router.route("/confirmdeletion", function(){
 Router.route("/confirmLogout", function(){
     this.render("confirmLogout")
 })
+
+Router.route("/forgotPassword", function(){
+    this.render("forgotPassword")
+})
