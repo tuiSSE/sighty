@@ -65,10 +65,10 @@ Template.newQuestion.events({
 			$('#question').val('');
 			$('#btn_gobackto_homeBlind').click();
 			Push.send({
-  			from: Meteor.user().username;
+  			from: Meteor.user().username,
   			title: 'Hello',
   			text: 'World',
-  			badge: 1,
+  			badge: 1
 			});
   },
   'click #deletePic1': function (event,template) {
