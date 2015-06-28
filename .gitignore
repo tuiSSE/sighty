@@ -30,3 +30,8 @@
 .DS_Store?
 ehthumbs.db
 Thumbs.db
+
+######################
+#   configurations   #
+######################
+server/smtp.js
