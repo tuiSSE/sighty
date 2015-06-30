@@ -1,4 +1,4 @@
-# sighty - The Instant Answering App
+# Sighty - The Instant Answering App
 
 Sighty helps the blind and visually impaired become more independent in their daily activities.
 
