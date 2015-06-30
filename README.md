@@ -11,7 +11,7 @@ The user has the possibility to post a question with a picture to illustrate his
 
 #Functions
 Sighty:
-- should be a free App which users can download in the Google PlayStore
+- should be a free application which users can download in the Google PlayStore
 - requires TalkBack to be turned on
 - has the opportunity to log in with social media platforms
 - can take max. 4 pictures
