@@ -51,12 +51,12 @@ Template.homeHelper.events({
             button.remove(quesId);
             var button= document.getElementById("Haken");
             button.remove(quesId);
-        }
-},
-"click .correct": function () {
+        },
+
+"click .correct":function(event, template) {
     alert("correct button");
-},
-})
+}
+}),
 
 Template.homeHelper.rendered=function(){
 	$('.button-collapse').sideNav({
