@@ -14,6 +14,7 @@ iron:router
 mdg:camera
 meteor-platform
 mrt:moment
+materialize:materialize
 underscore
 momentjs:moment
 service-configuration
@@ -24,4 +25,3 @@ cfs:standard-packages
 cfs:gridfs
 cfs:graphicsmagick
 email
-materialize:materialize
