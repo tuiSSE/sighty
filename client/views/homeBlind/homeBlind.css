@@ -19,3 +19,12 @@ h3{
 .card-content{
 	color: #fff;
 }
+
+ul .action {
+	float: right;
+	font-weight: bold;
+	background: none;
+	font-size: 2.5em;
+	border: none;
+	position: relative;
+}
