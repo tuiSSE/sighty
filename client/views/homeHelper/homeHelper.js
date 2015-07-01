@@ -44,8 +44,14 @@ Template.homeHelper.events({
 				}
 			}
 		},
-		"click .delete": function () {
-    		alert("delete button");
+		"click .delete":function(event, template){
+            var answer = document.getElementById("answersItem");
+            answer.remove(quesId);
+            var button= document.getElementById("Löschen");
+            button.remove(quesId);
+            var button= document.getElementById("Haken");
+            button.remove(quesId);
+        }
 },
 "click .correct": function () {
     alert("correct button");
