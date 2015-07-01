@@ -22,6 +22,11 @@ Template.forgotPassword.events({
         }
         return false;
     },
+
+
+    'click #btn_gobackto_login2':function(event, template){
+        Router.go("/")
+    }
 });
 
 if (Accounts._resetPasswordToken) {
