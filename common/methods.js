@@ -28,6 +28,25 @@ Meteor.methods({
                        {pic2Id: question.pic2Id},
                        {pic3Id: question.pic3Id},
                        {pic4Id: question.pic4Id});
-    }
-
+    },
+    serverNotification: function () {
+      BlindNotification.insert({
+			badge: 1,
+			addedAt: new Date()
+		}, function (error, result) {
+			if (!error) {
+				Push.send({
+					from: 'push',
+					title: 'Hello World',
+					text: 'This notification has been sent from the SERVER',
+					badge: 1,
+          payload: {
+						title: 'Hello World',
+						historyId: result
+					},
+					query: {}
+				});
+			}
+		});
+	}
 });

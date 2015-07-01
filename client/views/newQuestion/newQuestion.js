@@ -63,19 +63,15 @@ Template.newQuestion.events({
 			Session.set('photo3', null);
 			Session.set('photo4', null);
 			$('#question').val('');
+			Meteor.call("serverNotification");
 			$('#btn_gobackto_homeBlind').click();
-			Push.send({
-  			from: Meteor.user().username,
-  			title: 'Hello',
-  			text: 'World',
-  			badge: 1
-			});
   },
   'click #deletePic1': function (event,template) {
     event.preventDefault();
     if(Session.get('photo1'))
     {
         Session.set('photo1', null);
+				$("#deletePic1").addClass("disabled");
     }
   },
   'click #deletePic2': function (event,template) {
@@ -83,6 +79,7 @@ Template.newQuestion.events({
     if(Session.get('photo2'))
     {
         Session.set('photo2', null);
+				$("#deletePic2").addClass("disabled");
     }
   },
   'click #deletePic3': function (event,template) {
@@ -90,6 +87,7 @@ Template.newQuestion.events({
     if(Session.get('photo3'))
     {
         Session.set('photo3', null);
+				$("#deletePic3").addClass("disabled");
     }
   },
   'click #deletePic4': function (event,template) {
@@ -97,6 +95,7 @@ Template.newQuestion.events({
     if(Session.get('photo4'))
     {
         Session.set('photo4', null);
+				$("#deletePic4").addClass("disabled");
     }
   },
     "click #btn_goto_home1":function(event, template){

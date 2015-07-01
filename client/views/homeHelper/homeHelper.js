@@ -53,9 +53,9 @@ Template.homeHelper.events({
         button.remove("quesId");
         },
 
-"click .correct":function(event, template) {
+	"click .correct":function(event, template) {
     alert("correct button");
-}
+	}
 }),
 
 Template.homeHelper.rendered=function(){

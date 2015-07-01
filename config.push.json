@@ -1,15 +1,10 @@
 {
-  "apn": {
-    "passphrase": "xxxxxxxxx",
-    "key": "apnProdKey.pem",
-    "cert": "apnProdCert.pem"
-  },
   "gcm": {
     "apiKey": "AIzaSyB3-LYVp6Vo1z_tOi_sav4ZFDp9icpQz7Y",
     "projectNumber": 616718341258
   },
-  "production": true
-   "badge": true, 
+  "production": false
+   "badge": true,
    "sound": true,
    "alert": true,
    "vibrate": true
