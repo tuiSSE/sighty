@@ -3,7 +3,7 @@ Template.confirmLogout.events({
 
 "click #btn_confirmLogout":function(event, template){
   Meteor.logout();
-  Router.go("login")
+  Router.go("/")
 },
 
 "click #btn_abortLogout":function(event, template){

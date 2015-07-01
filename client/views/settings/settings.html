@@ -1,7 +1,7 @@
-<template name="settings">
+<template name="settings" alt="Fenster: Einstellungen">
 
 <nav class="{{#if isInRole "blue"}}indigo darken-4{{/if}}{{#if isInRole "red"}}red darken-4{{/if}}{{#if isInRole "orange"}}orange darken-2{{/if}}{{#if isInRole "green"}}green darken-4{{/if}}">
-		<img src="/Sighty_klein_weiss.png" class="brand-logo">
+		<img alt="Sighty Logo" src="/Sighty_klein_weiss.png" class="brand-logo">
   		<ul class="right hide-on-med-and-down">
   			<li>Herzlich Willkommen {{username}}</li>
         <li><a id="btn_goto_home1">Startseite</a></li>
@@ -13,7 +13,7 @@
   		</ul>
         <div id="{{#if isInRole "blue"}}blau{{/if}}{{#if isInRole "red"}}rot{{/if}}{{#if isInRole "orange"}}orangefarben{{/if}}{{#if isInRole "green"}}gruen{{/if}}">
   		<ul id="slide-out" class="side-nav">
-  			<li><p class="center-align">Herzlich Willkommen</p><p class="center-align"><img src="{{profilbild}}" class="circle" width="64px" height="64px"></p><p class="center-align">{{username}}</p></li>
+  			<li><p class="center-align">Herzlich Willkommen</p><p class="center-align"><img alt="Profilbild" src="{{profilbild}}" class="circle" width="64px" height="64px"></p><p class="center-align">{{username}}</p></li>
   			<li class="divider black"></li>
         <li><a id="btn_goto_home2">Startseite</a></li>
         <li class="divider"></li>
@@ -59,19 +59,19 @@
 				<form action="#">
 	<p>
 		<input name="group1" type="radio" id="test4" class="standard"/>
-		<label for="test4">Standard</label>
+		<label alt="Standarddesign Blau" for="test4">Standard Blau</label>
 	</p>
 	<p>
 		<input name="group1" type="radio" id="test1" class="red"/>
-		<label for="test1">Red</label>
+		<label alt="Design Rot" for="test1">Rot</label>
 	</p>
 	<p>
 		<input name="group1" type="radio" id="test2" class="orange"/>
-		<label for="test2">Orange</label>
+		<label alt="Design Orange" for="test2">Orange</label>
 	</p>
 	<p>
 		<input name="group1" type="radio" id="test3"  class="green" />
-		<label for="test3">Green</label>
+		<label alt="Design Grün" for="test3">Grün</label>
 	</p>
 </form>
 			</td>
@@ -82,7 +82,7 @@
 		</tr>
         <tr>
             <td></td>
-            <td><a class="btn waves-effect waves-light {{#if isInRole "blue"}}blue darken-1{{/if}}{{#if isInRole "red"}}red accent-2{{/if}}{{#if isInRole "orange"}}orange lighten-1{{/if}}{{#if isInRole "green"}}green lighten-1{{/if}}" id="btn_changeSettings">Änderungen übernehmen</a></td>
+            <td><a class="btn waves-effect waves-light {{#if isInRole "blue"}}blue darken-1{{/if}}{{#if isInRole "red"}}red accent-2{{/if}}{{#if isInRole "orange"}}orange lighten-1{{/if}}{{#if isInRole "green"}}green lighten-1{{/if}}" id="btn_changeSettings" alt="Button Änderungen übernehmen">Änderungen übernehmen</a></td>
         </tr>
 	</tbody>
 </table>

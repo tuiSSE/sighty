@@ -6,7 +6,10 @@ h1{
 
 }
 #Ueberschrift_blau{
-  margin: 8% 10% 0% 10%;
+    width: 80%;
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-top: 8%;
   background-color: #1e88e5;
   color:white;
   text-decoration: none;
@@ -15,7 +18,10 @@ h1{
 }
 
 #Ueberschrift_rot{
-  margin: 8% 10% 0% 10%;
+    width: 80%;
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-top: 8%;
   background-color: #ff5252;
   color:white;
   text-decoration: none;
@@ -24,7 +30,10 @@ h1{
 }
 
 #Ueberschrift_orangefarben{
- margin: 8% 10% 0% 10%;
+width: 80%;
+margin-right: 10%;
+margin-left: 10%;
+margin-top: 8%;
  background-color: #f9a825;
  color:white;
  text-decoration: none;
@@ -33,7 +42,10 @@ h1{
 }
 
 #Ueberschrift_gruen{
-    margin: 8% 10% 0% 10%;
+    width: 80%;
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-top: 8%;
     background-color: #66bb6a;
     color:white;
     text-decoration: none;
