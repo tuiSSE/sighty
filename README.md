@@ -10,13 +10,13 @@ Daily activities can make the work day of a blind or visually impaired more diff
 The user has the possibility to post a question with a picture to illustrate his problem. Full-sighted people can help him and give him a short reply. The application requires TalkBack to be turned on. 
 
 #Functions
-Sighty:
-- should be a free application which users can download in the Google PlayStore
-- requires TalkBack to be turned on
-- has the opportunity to log in with social media platforms
-- can take max. 4 pictures
-- has the opportunity to give answers based on the pictures
-- should give push-notifications for users if there is a new question or answer 
-- should have the occasion to delete questions and answers whenever the user wants
-- gives the user an own profil where he or she can change his or her avatar, username and e-mail.
+Sighty should have the opportunity to:
+- be a free application which users can download in the Google PlayStore
+- use TalkBack to be turned on
+- log in with social media platforms
+- take max. 4 pictures
+- give answers based on the pictures
+- give push-notifications for users if there is a new question or answer 
+- delete questions and answers whenever the user wants
+- give the user an own profil where he or she can change his or her avatar, username and e-mail.
 
