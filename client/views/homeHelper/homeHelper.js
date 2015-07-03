@@ -49,9 +49,7 @@ Template.homeHelper.events({
         	answer.remove("quesId");
         	var button= document.getElementById("Löschen");
 	 	button.remove("quesId");
-        	var button= document.getElementById("Haken");
-        	button.remove("quesId");
-        	var button= document.getElementById("Speichern");
+              	var button= document.getElementById("Speichern");
 		button.remove("neu");
         },
 
