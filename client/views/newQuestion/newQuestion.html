@@ -46,33 +46,46 @@
 		</p>
 
 
-    	<div class="card-panel {{#if isInRole "blue"}}indigo darken-4{{/if}}{{#if isInRole "red"}}red darken-4{{/if}}{{#if isInRole "orange"}}orange darken-2{{/if}}{{#if isInRole "green"}}green darken-4{{/if}}">
-          	<div class="card-image card medium">
-              	<div class="valign-wrapper">
-                  	<img alt="Bild 1" src="{{photo1}}" data-src="{{#if isInRole "blue"}}holder.js/300x250?theme=sky{{/if}}{{#if isInRole "red"}}holder.js/300x250?theme=lava{{/if}}{{#if isInRole "orange"}}holder.js/300x250?theme=lava{{/if}}{{#if isInRole "green"}}holder.js/300x250?theme=vine{{/if}}" height="300px" width="250px">
-                    <img alt="Bild 2" src="{{photo2}}" data-src="{{#if isInRole "blue"}}holder.js/300x250?theme=sky{{/if}}{{#if isInRole "red"}}holder.js/300x250?theme=lava{{/if}}{{#if isInRole "orange"}}holder.js/300x250?theme=lava{{/if}}{{#if isInRole "green"}}holder.js/300x250?theme=vine{{/if}}" height="300px" width="250px">
-                  	<img alt="Bild 3" src="{{photo3}}" data-src="{{#if isInRole "blue"}}holder.js/300x250?theme=sky{{/if}}{{#if isInRole "red"}}holder.js/300x250?theme=lava{{/if}}{{#if isInRole "orange"}}holder.js/300x250?theme=lava{{/if}}{{#if isInRole "green"}}holder.js/300x250?theme=vine{{/if}}" height="300px" width="250px">
-                  	<img alt="Bild 4" src="{{photo4}}" data-src="{{#if isInRole "blue"}}holder.js/300x250?theme=sky{{/if}}{{#if isInRole "red"}}holder.js/300x250?theme=lava{{/if}}{{#if isInRole "orange"}}holder.js/300x250?theme=lava{{/if}}{{#if isInRole "green"}}holder.js/300x250?theme=vine{{/if}}" height="300px" width="250px">
-            	</div>
-
-            	<div class="card-content delete-photo">
-              		<div class="valign-wrapper">
-                		<a alt="Button Bild 1 löschen" class="btn disabled waves-effect waves-light {{#if isInRole "blue"}}blue darken-1{{/if}}{{#if isInRole "red"}}red accent-2{{/if}}{{#if isInRole "orange"}}orange lighten-1{{/if}}{{#if isInRole "green"}}green lighten-1{{/if}} deletePicButtom" id="deletePic1">
-                 			<i class="mdi-action-delete"></i>
-                		</a>
-                		<a alt="Button Bild 2 löschen" class="btn disabled waves-effect waves-light {{#if isInRole "blue"}}blue darken-1{{/if}}{{#if isInRole "red"}}red accent-2{{/if}}{{#if isInRole "orange"}}orange lighten-1{{/if}}{{#if isInRole "green"}}green lighten-1{{/if}} deletePicButtom" id="deletePic2">
-                  		<i class="mdi-action-delete"></i>
-                		</a>
+          	<table id="Kasten" class="centered striped">
+              <tbody>
+              <tr>
+                  	<td><img alt="Bild 1" src="{{photo1}}" data-src="{{#if isInRole "blue"}}holder.js/150x150?theme=sky{{/if}}{{#if isInRole "red"}}holder.js/?theme=lava{{/if}}{{#if isInRole "orange"}}holder.js/?theme=lava{{/if}}{{#if isInRole "green"}}holder.js/?theme=vine{{/if}}" height="150px" width="150px"></td>
+                    <td><img alt="Bild 2" src="{{photo2}}" data-src="{{#if isInRole "blue"}}holder.js/150x150?theme=sky{{/if}}{{#if isInRole "red"}}holder.js/300x250?theme=lava{{/if}}{{#if isInRole "orange"}}holder.js/300x250?theme=lava{{/if}}{{#if isInRole "green"}}holder.js/300x250?theme=vine{{/if}}" height="150px" width="150px"></td>
+                </tr>
+                <tr>
+                  <td>
+                    <a alt="Button Bild 1 löschen" class="btn disabled waves-effect waves-light {{#if isInRole "blue"}}blue darken-1{{/if}}{{#if isInRole "red"}}red accent-2{{/if}}{{#if isInRole "orange"}}orange lighten-1{{/if}}{{#if isInRole "green"}}green lighten-1{{/if}} deletePicButtom" id="deletePic1">
+                     <i class="mdi-action-delete"></i>
+                  </a>
+                </td>
+                <td>
+                    <a alt="Button Bild 2 löschen" class="btn disabled waves-effect waves-light {{#if isInRole "blue"}}blue darken-1{{/if}}{{#if isInRole "red"}}red accent-2{{/if}}{{#if isInRole "orange"}}orange lighten-1{{/if}}{{#if isInRole "green"}}green lighten-1{{/if}} deletePicButtom" id="deletePic2">
+                    <i class="mdi-action-delete"></i>
+                  </a>
+                </td>
+                </tr>
+                <tr>
+                    <td>
+                  	<img alt="Bild 3" src="{{photo3}}" data-src="{{#if isInRole "blue"}}holder.js/150x150?theme=sky{{/if}}{{#if isInRole "red"}}holder.js/300x250?theme=lava{{/if}}{{#if isInRole "orange"}}holder.js/300x250?theme=lava{{/if}}{{#if isInRole "green"}}holder.js/300x250?theme=vine{{/if}}" height="150px" width="150px">
+                  </td>
+                    <td>
+                    <img alt="Bild 4" src="{{photo4}}" data-src="{{#if isInRole "blue"}}holder.js/150x150?theme=sky{{/if}}{{#if isInRole "red"}}holder.js/300x250?theme=lava{{/if}}{{#if isInRole "orange"}}holder.js/300x250?theme=lava{{/if}}{{#if isInRole "green"}}holder.js/300x250?theme=vine{{/if}}" height="150px" width="150px">
+            	</td>
+            </tr>
+            <tr>
+                    <td>
                 		<a alt="Button Bild 3 löschen" class="btn disabled waves-effect waves-light {{#if isInRole "blue"}}blue darken-1{{/if}}{{#if isInRole "red"}}red accent-2{{/if}}{{#if isInRole "orange"}}orange lighten-1{{/if}}{{#if isInRole "green"}}green lighten-1{{/if}} deletePicButtom" id="deletePic3">
                   		<i class="mdi-action-delete"></i>
                 		</a>
+                  </td>
+                  <td>
                 		<a alt="Button Bild 4 löschen" class="btn disabled waves-effect waves-light {{#if isInRole "blue"}}blue darken-1{{/if}}{{#if isInRole "red"}}red accent-2{{/if}}{{#if isInRole "orange"}}orange lighten-1{{/if}}{{#if isInRole "green"}}green lighten-1{{/if}}" id="deletePic4">
                   		<i class="mdi-action-delete"></i>
                 		</a>
-            		</div>
-          		</div>
-          	</div>
-        </div>
+                  </td>
+            </tr>
+          </tbody>
+          </table>
 
 				<div class="row">
 			    <form class="col s12">
