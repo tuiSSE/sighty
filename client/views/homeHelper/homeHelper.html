@@ -54,8 +54,10 @@
 								<ul class="collection">
 									{{#each answers _id}}
 									<button class="delete" id="Löschen" qId="quesId">&times;</button>
-                            						<button class="correct" id="Haken" qId="quesId">&radic;</button>
-                        						 <a class="collection-item" id="answersItem" qId="quesId">{{text}}</a>
+                            						<button class="correct" id="Speichern" qId="neu">
+										<input type="button" value="Änderungen speichern" onclick="saveEdits()"/></button>
+                                        					<div id="update"></div>
+									<a class="collection-item" id="edit" qId="quesId" contenteditable="true">{{text}}</a>
 									{{/each}}
 								</ul>
 							</div>
