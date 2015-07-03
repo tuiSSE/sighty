@@ -45,17 +45,26 @@ Template.homeHelper.events({
 			}
 		},
 	"click .delete":function(event, template){
-        var answer = document.getElementById("answersItem");
-        answer.remove("quesId");
-        var button= document.getElementById("Löschen");
-        button.remove("quesId");
-        var button= document.getElementById("Haken");
-        button.remove("quesId");
+        	var answer = document.getElementById("answersItem");
+        	answer.remove("quesId");
+        	var button= document.getElementById("Löschen");
+	 	button.remove("quesId");
+        	var button= document.getElementById("Haken");
+        	button.remove("quesId");
         },
 
-	"click .correct":function(event, template) {
-    alert("correct button");
-	}
+	"click. correct": function saveEdits() {
+            var editElem = document.getElementById('edit'); //Antwort = editElem, innerHTML, editierbar
+            var userVersion = editElem.innerHTML;
+            localStorage.userEdits = userVersion;
+            document.getElementById("update").innerHTML = "Edits saved!";
+            function checkEdits() {
+                if (localStorage.userEdits != null)
+                    document.getElementById('edit').innerHTML = localStorage.userEdits;
+                var editElem = document.getElementById('edit');
+                editElem.contentEditable = "false";
+            }
+        }
 }),
 
 Template.homeHelper.rendered=function(){
