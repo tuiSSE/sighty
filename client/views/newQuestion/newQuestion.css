@@ -16,5 +16,9 @@
 }
 #Kasten{
 	border-color: blue;
-	width:90%;
+	margin: 1	%;
+}
+#Kastenaussen{
+	width:90% !important;
+	background-color: #1e88e5;
 }
