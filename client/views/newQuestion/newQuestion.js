@@ -56,15 +56,18 @@ Template.newQuestion.events({
           if (err) {
             alert("Error " + err.reason);
           }
+					else {
+						Session.set('photo1', null);
+						Session.set('photo2', null);
+						Session.set('photo3', null);
+						Session.set('photo4', null);
+						$('#question').val('');
+						Meteor.call("serverNotification");
+						$('#btn_gobackto_homeBlind').click();
+					}
         }
       );
-			Session.set('photo1', null);
-			Session.set('photo2', null);
-			Session.set('photo3', null);
-			Session.set('photo4', null);
-			$('#question').val('');
-			Meteor.call("serverNotification");
-			$('#btn_gobackto_homeBlind').click();
+
   },
   'click #deletePic1': function (event,template) {
     event.preventDefault();

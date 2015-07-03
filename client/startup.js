@@ -10,14 +10,6 @@ Meteor.startup(function(){
 	Push.addListener('message', function(notification) {
 		// Called on every message
 		console.log(JSON.stringify(notification))
-
-		function alertDismissed() {
-        BlindNotification.update({_id: notification.payload.historyId}, {
-				$set: {
-					"recievedAt": new Date()
-				}
-			});
-		}
-		alert(notification.message, alertDismissed, notification.payload.title, "Ok");
+		alert(notification.message);
 	});
 })

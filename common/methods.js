@@ -30,23 +30,24 @@ Meteor.methods({
                        {pic4Id: question.pic4Id});
     },
     serverNotification: function () {
-      BlindNotification.insert({
-			badge: 1,
-			addedAt: new Date()
-		}, function (error, result) {
-			if (!error) {
-				Push.send({
-					from: 'push',
-					title: 'Hello World',
-					text: 'This notification has been sent from the SERVER',
-					badge: 1,
-          payload: {
-						title: 'Hello World',
-						historyId: result
-					},
-					query: {}
-				});
-			}
-		});
-	}
+      //get only helpers
+        var allUsers = Meteor.users.find().fetch();
+        var helpers = [];
+        var j=0;
+        for (var i = 0; i < allUsers.length; i++) {
+          if (allUsers[i].roles[0] == "helper")
+          {
+            helpers[j] = allUsers[i];
+            j++;
+          }
+        }
+        if(helpers){
+          Push.send({
+            from: Meteor.user().username,
+            title: 'you have unseen notifications',
+            text: 'new Question was asked',
+            query: {}
+          });
+        }
+	  }
 });
