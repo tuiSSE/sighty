@@ -51,6 +51,8 @@ Template.homeHelper.events({
 	 	button.remove("quesId");
         	var button= document.getElementById("Haken");
         	button.remove("quesId");
+        	var button= document.getElementById("Speichern");
+		button.remove("neu");
         },
 
 	"click. correct": function saveEdits() {
