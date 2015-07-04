@@ -95,5 +95,12 @@ Template.homeHelper.helpers({
 	},
 	answers: function(qId){
 		return Answers.find({questionId: qId});
+	},
+	notific: function(){
+		var temp = BlindNotification.find().fetch();
+		if (temp.length > 0) {
+				Materialize.toast('You have '+ temp.length + ' notifications', 3000, 'rounded');
+		}
+		return temp;
 	}
 })
