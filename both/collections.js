@@ -1,7 +1,7 @@
 Questions = new Mongo.Collection("questions");
 Answers = new Mongo.Collection("answers");
 Version = new Meteor.Collection("version");
-//BlindNotification = new Meteor.Collection("blindNotification");
+BlindNotification = new Meteor.Collection("blindNotification");;
 
 Questions.allow({
     remove:function(){
