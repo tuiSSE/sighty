@@ -58,6 +58,10 @@ Meteor.publish('version', function () {
   return Version.find();
 });
 
+Meteor.publish('notFromBlind', function () {
+  return BlindNotification.find();
+});
+
 Meteor.methods({
   serverNotification: function () {
     BlindNotification.insert({
