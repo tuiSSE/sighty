@@ -5,6 +5,12 @@ Meteor.startup(function(){
     Version.insert(JSON.parse(Assets.getText("version.json")));
 })
 
+Push.allow({
+    send: function(userId, notification) {
+      return true; // Allow all users to send
+    }
+});
+
 Meteor.users.allow({
 			remove: function(userId){
 				return true;
@@ -50,4 +56,25 @@ Meteor.publish("images", function() {
 //server: publish githooks version info
 Meteor.publish('version', function () {
   return Version.find();
+});
+
+Meteor.methods({
+  serverNotification: function () {
+    BlindNotification.insert({
+      addedAt: new Date()
+    }, function (error, result) {
+      if (!error) {
+        Push.send({
+          from: Meteor.user().username,
+          title: 'you have unseen notifications',
+          text: 'new Question was asked',
+          payload: {
+            title: 'you have unseen notifications',
+            historyId: result
+          },
+          query: {}
+        });
+      }
+    });
+  }
 });
