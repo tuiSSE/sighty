@@ -43,8 +43,7 @@
 				<li>
 					<div class="container" id="homeBlinderCont">
 					<div class="card-panel {{#if isInRole "blue"}}blue darken-4{{/if}}{{#if isInRole "red"}}red darken-4{{/if}}{{#if isInRole "orange"}}orange darken-2{{/if}}{{#if isInRole "green"}}green darken-4{{/if}}">
-						<button class="action" id="fertig" qId="quesId"  alt="Frage archivieren"></button>
-                        			 <a class="btn waves-effect waves-light blue" alt="Frage archivieren"><i class="material-icons left"></i>Archivieren</a>
+                        			 <a class="btn waves-effect waves-light {{#if isInRole "blue"}}blue darken-1{{/if}}{{#if isInRole "red"}}red accent-2{{/if}}{{#if isInRole "orange"}}orange lighten-1{{/if}}{{#if isInRole "green"}}green lighten-1{{/if}}" alt="Frage archivieren"><i class="material-icons left"></i>Archivieren</a>
 							<div class="card-image card small">
 									<div class="valign-wrapper">
 											<img src="{{pic1Id}}" height="300px" width="250px"  alt="Bild1">
