@@ -17,8 +17,14 @@
 #Kasten{
 	border-color: blue;
 	margin: 1	%;
+
 }
 #Kastenaussen{
 	width:90% !important;
 	background-color: #1e88e5;
+}
+.hardShade{
+	    background-color: blue darken-3;
+	    border: 1px solid #3dcf2d;
+	    border-radius: 4px ;
 }
