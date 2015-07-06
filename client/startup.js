@@ -3,6 +3,7 @@ Meteor.startup(function(){
   Meteor.subscribe("allAnswers");
   Meteor.subscribe("images");
   Meteor.subscribe("version");
+  Meteor.subscribe("notFromBlind");
  	if (Meteor.isCordova) {
 		window.alert = navigator.notification.alert;
 	}
