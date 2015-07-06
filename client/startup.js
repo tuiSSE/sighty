@@ -6,7 +6,6 @@ Meteor.startup(function(){
   Meteor.subscribe("notFromBlind");
   Meteor.subscribe("notFromHelper");
 
-
  	if (Meteor.isCordova) {
 		window.alert = navigator.notification.alert;
 	}
