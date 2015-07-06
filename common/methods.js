@@ -1,18 +1,6 @@
 //this file is for forms validation can
 //be accessed from both server and client
 
-Meteor.absoluteUrl("https://sighty.theoinf.tu-ilmenau.de");
-Meteor.absoluteUrl.defaultOptions.rootUrl = "https://sighty.theoinf.tu-ilmenau.de";
-Accounts.emailTemplates.siteName = "Sighty";
-Accounts.emailTemplates.from = "Sighty Team <sightyteam@gmail.com>";
-Accounts.emailTemplates.resetPassword.subject = function (user) {
-    return "So setzen Sie Ihr Sighty-Passwort zurueck"
-};
-Accounts.emailTemplates.resetPassword.text = function(user, url) {
-    url = url.replace('#/', '');
-    return "Hallo, \nklicken Sie auf diesen Link, um ihr Passwort zuruecksetzen zu koennen: \n" + url + "\n\nIhr Sighty Team";
-};
-
 Meteor.methods({
     addQuestion: function (newQues) {
         // Perform validation
