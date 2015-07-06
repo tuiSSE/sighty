@@ -29,31 +29,36 @@
         </div>
   		<a href="#" data-activates="slide-out" class="button-collapse" alt="Menü"><i class="mdi-navigation-menu" alt="Menü"></i></a>
 	</nav>
-
-	<div class="slider">
   	<div class="fixed-action-btn" style="top: 55px; right: 20px;">
-    	<a class="btn-floating btn-large waves-effect waves-light {{#if isInRole "blue"}}blue darken-1{{/if}}{{#if isInRole "red"}}red accent-2{{/if}}{{#if isInRole "orange"}}orange lighten-1{{/if}}{{#if isInRole "green"}}green lighten-1{{/if}}" id="btn_goto_newQuestion" alt="Button: Gehe zu Frage stellen">
+    	<a class="btn-floating btn-large waves-effect waves-light {{#if isInRole "blue"}}blue darken-1{{/if}}{{#if isInRole "red"}}red accent-2{{/if}}{{#if isInRole "orange"}}orange lighten-1{{/if}}{{#if isInRole "green"}}green lighten-1{{/if}}" id="btn_goto_newQuestion" name="Button: Gehe zu Frage stellen" alt="Button: Gehe zu Frage stellen">
       	<i class="large mdi-content-add" alt="Button: Gehe zu Frage stellen"></i>
     	</a>
   	</div>
-			<ul class="slides">
 				{{#each questions}}
-				<li>
 					<div class="container" id="homeBlinderCont">
-					<div class="card-panel {{#if isInRole "blue"}}blue darken-4{{/if}}{{#if isInRole "red"}}red darken-4{{/if}}{{#if isInRole "orange"}}orange darken-2{{/if}}{{#if isInRole "green"}}green darken-4{{/if}}">
-                        			 <a class="btn waves-effect waves-light {{#if isInRole "blue"}}blue darken-1{{/if}}{{#if isInRole "red"}}red accent-2{{/if}}{{#if isInRole "orange"}}orange lighten-1{{/if}}{{#if isInRole "green"}}green lighten-1{{/if}}" alt="Frage archivieren"><i class="material-icons left"></i>Archivieren</a>
-							<div class="card-image card small">
-									<div class="valign-wrapper">
-											<img src="{{pic1Id}}" height="300px" width="250px"  alt="Bild1">
-											<img src="{{pic2Id}}" height="300px" width="250px"  alt="Bild2">
-											<img src="{{pic3Id}}" height="300px" width="250px"  alt="Bild3">
-											<img src="{{pic4Id}}" height="300px" width="250px"  alt="Bild4">
-									</div>
-							</div>
-							<div class="card-content">
-								{{text}}
-							</div>
-					</div>
+                        			 <a id="Button1" class="btn waves-effect waves-light {{#if isInRole "blue"}}blue darken-1{{/if}}{{#if isInRole "red"}}red accent-2{{/if}}{{#if isInRole "orange"}}orange lighten-1{{/if}}{{#if isInRole "green"}}green lighten-1{{/if}}" alt="Frage archivieren"><i class="material-icons left"></i>Archivieren</a>
+									          	<table id="Kasten" class="centered">
+									              <tbody>
+									              <tr>
+									                  	<td>
+																				<a href="{{pic1Id}}" target=_self><img height="150px" width="150px" src="{{pic1Id}}" alt="Bild1"></a>
+																			</td>
+									                    <td>
+																				<a href="{{pic2Id}}" target=_self><img src="{{pic2Id}}" height="150px" width="150px" alt="Bild2"></a>
+																			</td>
+									                </tr>
+									                <tr>
+									                    <td>
+																				<a href="{{pic3Id}}" target=_self><img src="{{pic3Id}}" height="150px" width="150px"  alt="Bild3"></a>
+									                  </td>
+									                    <td>
+																				<a href="{{pic4Id}}" target=_self><img src="{{pic4Id}}" height="150px" width="150px"  alt="Bild4"></a>
+									            	</td>
+									            </tr>
+									          </tbody>
+									          </table>
+													<div id="Frage">Frage: {{text}}</div>
+
                         <a class="btn waves-effect waves-light {{#if isInRole "blue"}}blue darken-1{{/if}}{{#if isInRole "red"}}red accent-2{{/if}}{{#if isInRole "orange"}}orange lighten-1{{/if}}{{#if isInRole "green"}}green lighten-1{{/if}}" id="removeQuestion"><i class=""></i>Frage Löschen</a>
 					</div>
 					<div class="container" id="answersCont">
@@ -67,9 +72,8 @@
 						</div>
 
 					</div>
-      	</li>
+
 				{{/each}}
-			</ul>
-	</div>
+
 
 </template>

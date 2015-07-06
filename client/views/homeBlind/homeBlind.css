@@ -7,11 +7,23 @@ h3{
 	text-decoration: underline;
 
 }
-
+#Frage{
+	margin: 1%;
+	margin-top: 0%;
+	background-color: #9ccc65;
+	padding:2%;
+}
 #homeBlinderCont {
 	margin-top: 10%;
+	background-color: #aed581;
+	border: 1px solid #3dcf2d;
+	border-radius: 4px ;
+	margin-bottom: 0%;
 }
-
+#removeQuestion{
+	margin:2%;
+	margin-top:0%;
+}
 #answersCont {
 	margin-top: 3%;
 }
@@ -19,7 +31,6 @@ h3{
 .card-content{
 	color: #fff;
 }
-
 ul .action {
 	float: right;
 	font-weight: bold;
@@ -27,4 +38,11 @@ ul .action {
 	font-size: 2.5em;
 	border: none;
 	position: relative;
+}
+#Kastenaussen{
+	margin: 2%;
+}
+#Button1{
+	margin: 2%;
+	margin-bottom: 0%;
 }
