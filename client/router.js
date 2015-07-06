@@ -45,3 +45,7 @@ Router.route("/confirmLogout", function(){
 Router.route("/forgotPassword", function(){
     this.render("forgotPassword")
 })
+
+Router.route("/resetPassword", function(){
+    this.render("resetPassword")
+})
