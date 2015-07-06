@@ -13,7 +13,7 @@ Accounts.emailTemplates.resetPassword.subject = function (user) {
 };
 Accounts.emailTemplates.resetPassword.text = function(user, url) {
   url = url.replace('#/', '');
-  return "Hallo, \n klicken Sie auf diesen Link, um ihr Passwort zuruecksetzen zu koennen: \n" + url + "\n\nIhr Sighty Team";
+  return "Hallo, \nklicken Sie auf diesen Link, um ihr Passwort zuruecksetzen zu koennen: \n" + url + "\n\nIhr Sighty Team";
 };
 
 Push.allow({
