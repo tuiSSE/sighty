@@ -28,27 +28,38 @@
       <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
   </nav>
 
-	<div class="slider standard">
-			<ul class="slides">
+
+
 				{{#each questions}}
-				<li>
-					<div class="container" id="homeHelferCont" quesId="{{_id}}">
-					<div class="card-panel {{#if isInRole "blue"}}indigo darken-4{{/if}}{{#if isInRole "red"}}red darken-4{{/if}}{{#if isInRole "orange"}}orange darken-2{{/if}}{{#if isInRole "green"}}green darken-4{{/if}}">
-							<div class="card-image card small">
-									<div class="valign-wrapper">
-											<img src="{{pic1Id}}" data-src="holder.js/200x300?outline=yes" height="300px" width="200px">
-											<img src="{{pic2Id}}" data-src="holder.js/200x300?outline=yes" height="300px" width="200px">
-											<img src="{{pic3Id}}" data-src="holder.js/200x300?outline=yes" height="300px" width="200px">
-											<img src="{{pic4Id}}" data-src="holder.js/200x300?outline=yes" height="300px" width="200px">
-									</div>
-							</div>
-							<div class="card-content">
-								<p>Verfasser: {{fragesteller}}</p>
-                                <p>Frage: {{text}}</p>
-                                <p>{{createdAt}}</p>
-							</div>
+<div id="homeHelferCont" quesId="{{_id}}">
+					<div class="container" id="homeHelferCont_{{#if isInRole "blue"}}blau{{/if}}{{#if isInRole "red"}}rot{{/if}}{{#if isInRole "orange"}}orangefarben{{/if}}{{#if isInRole "green"}}gruen{{/if}}">
+						<table id="Kasten" class="centered">
+							<tbody>
+							<tr>
+										<td>
+											<a href="{{pic1Id}}" target=_self><img height="150px" width="150px" src="{{pic1Id}}" alt="Bild1"></a>
+										</td>
+										<td>
+											<a href="{{pic2Id}}" target=_self><img src="{{pic2Id}}" height="150px" width="150px" alt="Bild2"></a>
+										</td>
+								</tr>
+								<tr>
+										<td>
+											<a href="{{pic3Id}}" target=_self><img src="{{pic3Id}}" height="150px" width="150px"  alt="Bild3"></a>
+									</td>
+										<td>
+											<a href="{{pic4Id}}" target=_self><img src="{{pic4Id}}" height="150px" width="150px"  alt="Bild4"></a>
+							</td>
+						</tr>
+					</tbody>
+					</table>
+					<div id="Frage2_{{#if isInRole "blue"}}blau{{/if}}{{#if isInRole "red"}}rot{{/if}}{{#if isInRole "orange"}}orangefarben{{/if}}{{#if isInRole "green"}}gruen{{/if}}">
+																				<p>Verfasser: {{fragesteller}}</p>
+																				<p>Frage: {{text}}</p>
+																				<p>{{createdAt}}</p>
+																		</div>
 					</div>
-					</div>
+				</div>
 					<div class="container" id="answersCont" qId="{{qId}}">
 							<div class="col s6">
 								<p id="antwortLabel">Antworten:</p>
@@ -71,8 +82,8 @@
 							<i class="mdi-content-send right"></i>
 					</button>
 					</div>
-				</li>
+
 				{{/each}}
-			</ul>
-	</div>
+
+
 </template>
