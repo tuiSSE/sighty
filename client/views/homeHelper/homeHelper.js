@@ -43,7 +43,9 @@ Template.homeHelper.events({
 							break;
 						}
 					}
+					$('#answer').val('');
 					Meteor.call("serverNotification");
+
 				}
 	   });
 		},
@@ -51,9 +53,9 @@ Template.homeHelper.events({
         	var answer = document.getElementById("answersItem");
         	answer.remove("quesId");
         	var button= document.getElementById("Löschen");
-	 	button.remove("quesId");
-              	var button= document.getElementById("Speichern");
-		button.remove("neu");
+	 				button.remove("quesId");
+          var button= document.getElementById("Speichern");
+					button.remove("neu");
         },
 
 	"click. correct": function saveEdits() {
