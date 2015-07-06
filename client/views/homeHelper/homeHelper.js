@@ -106,6 +106,5 @@ Template.homeHelper.helpers({
 		if (temp.length > 0) {
 				Materialize.toast('You have ' + temp.length + ' unread questions', 3000, 'rounded');
 		}
-		return temp;
 	}
 })

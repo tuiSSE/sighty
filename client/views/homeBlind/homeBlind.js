@@ -65,6 +65,5 @@ Template.homeBlind.helpers({
 		if (temp.length > 0) {
 				Materialize.toast('You have ' + temp.length + ' new comments', 3000, 'rounded');
 		}
-		return temp;
 	}
 });
