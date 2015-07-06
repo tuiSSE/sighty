@@ -4,6 +4,9 @@ Meteor.startup(function(){
   Meteor.subscribe("images");
   Meteor.subscribe("version");
   Meteor.subscribe("notFromBlind");
+  Meteor.subscribe("notFromHelper");
+
+
  	if (Meteor.isCordova) {
 		window.alert = navigator.notification.alert;
 	}

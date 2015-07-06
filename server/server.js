@@ -62,6 +62,10 @@ Meteor.publish('notFromBlind', function () {
   return BlindNotification.find();
 });
 
+Meteor.publish('notFromHelper', function () {
+  return HelperNotification.find();
+});
+
 Meteor.methods({
   serverNotification: function () {
     BlindNotification.insert({
@@ -72,6 +76,24 @@ Meteor.methods({
           from: Meteor.user().username,
           title: 'you have unseen notifications',
           text: 'new Question was asked',
+          payload: {
+            title: 'you have unseen notifications',
+            historyId: result
+          },
+          query: {}
+        });
+      }
+    });
+  },
+  serverHelperNotification: function () {
+    HelperNotification.insert({
+      addedAt: new Date()
+    }, function (error, result) {
+      if (!error) {
+        Push.send({
+          from: Meteor.user().username,
+          title: 'you have unseen notifications',
+          text: 'new Comments on your question',
           payload: {
             title: 'you have unseen notifications',
             historyId: result

@@ -34,15 +34,18 @@ Template.homeHelper.events({
 	   		if (err) {
 	      	alert("Error " + err.reason);
 	      }
-	   });
-			for (var i=1; i<5; i++)
-			{
-				if (Session.get('answer' + i) == null)
-				{
-					Session.set('answer' + i, text);
-					break;
+				else {
+					for (var i=1; i<5; i++)
+					{
+						if (Session.get('answer' + i) == null)
+						{
+							Session.set('answer' + i, text);
+							break;
+						}
+					}
+					Meteor.call("serverNotification");
 				}
-			}
+	   });
 		},
 	"click .delete":function(event, template){
         	var answer = document.getElementById("answersItem");
