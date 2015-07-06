@@ -15,6 +15,9 @@ Template.forgotPassword.events({
         } else {
             alert(unescape('Email wurde gesendet. %DCberpr%FCfen Sie Ihren Posteingang.'));
         }
+        Accounts.urls.resetPassword = function (token) {
+            return Meteor.absoluteUrl('forgotPassword/' + token);
+        };
     });
 
 },
@@ -23,4 +26,6 @@ Template.forgotPassword.events({
         Router.go("/")
 }
 
+
 })
+

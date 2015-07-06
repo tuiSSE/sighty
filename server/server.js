@@ -4,6 +4,8 @@ Meteor.startup(function(){
     }
     Version.insert(JSON.parse(Assets.getText("version.json")));
 })
+Meteor.absoluteUrl("https://sighty.theoinf.tu-ilmenau.de");
+Meteor.absoluteUrl.defaultOptions.rootUrl = "https://sighty.theoinf.tu-ilmenau.de";
 
 Push.allow({
     send: function(userId, notification) {
