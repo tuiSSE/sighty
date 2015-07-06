@@ -35,7 +35,7 @@
     	</a>
   	</div>
 				{{#each questions}}
-					<div class="container" id="homeBlinderCont">
+					<div class="container" id="homeBlinderCont_{{#if isInRole "blue"}}blau{{/if}}{{#if isInRole "red"}}rot{{/if}}{{#if isInRole "orange"}}orangefarben{{/if}}{{#if isInRole "green"}}gruen{{/if}}">
                         			 <a id="Button1" class="btn waves-effect waves-light {{#if isInRole "blue"}}blue darken-1{{/if}}{{#if isInRole "red"}}red accent-2{{/if}}{{#if isInRole "orange"}}orange lighten-1{{/if}}{{#if isInRole "green"}}green lighten-1{{/if}}" alt="Frage archivieren"><i class="material-icons left"></i>Archivieren</a>
 									          	<table id="Kasten" class="centered">
 									              <tbody>
@@ -57,7 +57,7 @@
 									            </tr>
 									          </tbody>
 									          </table>
-													<div id="Frage">Frage: {{text}}</div>
+													<div id="Frage_{{#if isInRole "blue"}}blau{{/if}}{{#if isInRole "red"}}rot{{/if}}{{#if isInRole "orange"}}orangefarben{{/if}}{{#if isInRole "green"}}gruen{{/if}}">Frage: {{text}}</div>
 
                         <a class="btn waves-effect waves-light {{#if isInRole "blue"}}blue darken-1{{/if}}{{#if isInRole "red"}}red accent-2{{/if}}{{#if isInRole "orange"}}orange lighten-1{{/if}}{{#if isInRole "green"}}green lighten-1{{/if}}" id="removeQuestion"><i class=""></i>Frage Löschen</a>
 					</div>

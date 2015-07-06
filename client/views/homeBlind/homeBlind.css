@@ -1,4 +1,4 @@
-#slide-out {
+# -out { slide
 	color: black;
 }
 
@@ -7,13 +7,66 @@ h3{
 	text-decoration: underline;
 
 }
-#Frage{
+#Frage_blau{
 	margin: 1%;
 	margin-top: 0%;
-	background-color: #9ccc65;
+	margin-left: 2%;
+	background-color: #1e88e5;
 	padding:2%;
+	color:#ffffff;
 }
-#homeBlinderCont {
+
+#Frage_rot{
+	margin: 1%;
+	margin-top: 0%;
+	margin-left: 2%;
+	background-color: #ff5252;
+	padding:2%;
+	color:#ffffff;
+}
+
+#Frage_orangefarben{
+	margin: 1%;
+	margin-top: 0%;
+	margin-left: 2%;
+	background-color: #ffa726;
+	padding:2%;
+	color:#ffffff;
+}
+
+#Frage_gruen{
+	margin: 1%;
+	margin-top: 0%;
+	margin-left: 2%;
+	background-color: #66bb6a;
+	padding:2%;
+	color:#ffffff;
+}
+#homeBlinderCont_blau{
+	margin-top: 10%;
+	background-color: #bbdefb;
+	border: 1px solid #90caf9;
+	border-radius: 4px ;
+	margin-bottom: 0%;
+}
+
+#homeBlinderCont_rot{
+	margin-top: 10%;
+	background-color: #ef9a9a;
+	border: 1px solid #e57373;
+	border-radius: 4px ;
+	margin-bottom: 0%;
+}
+
+#homeBlinderCont_orangefarben{
+	margin-top: 10%;
+	background-color: #ffe0b2;
+	border: 1px solid #ffcc80;
+	border-radius: 4px ;
+	margin-bottom: 0%;
+}
+
+#homeBlinderCont_gruen{
 	margin-top: 10%;
 	background-color: #aed581;
 	border: 1px solid #3dcf2d;
