@@ -99,7 +99,7 @@ Template.homeHelper.helpers({
 	notific: function(){
 		var temp = BlindNotification.find().fetch();
 		if (temp.length > 0) {
-				Materialize.toast('You have '+ temp.length + ' notifications', 3000, 'rounded');
+				Materialize.toast('You have ' + temp.length + ' unread questions', 3000, 'rounded');
 		}
 		return temp;
 	}
