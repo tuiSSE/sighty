@@ -45,7 +45,6 @@ Template.homeBlind.rendered=function(){
      	interval: 600000000
       });
     });
-		callNotif();
 }
 
 Template.homeBlind.helpers({
@@ -60,12 +59,11 @@ Template.homeBlind.helpers({
   },
 	answers: function(qId){
 		return Answers.find({questionId: qId});
+	},
+	notific : function() {
+		var temp = HelperNotification.find().fetch();
+		if (temp.length > 0) {
+			Materialize.toast('You have new comments', 3000, 'rounded');
+		}
 	}
 });
-
-function callNotif() {
-	var temp = HelperNotification.find().fetch();
-	if (temp.length > 0) {
-		Materialize.toast('You have ' + temp.length + ' new comments', 3000, 'rounded');
-	}
-}

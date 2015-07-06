@@ -23,5 +23,4 @@ Meteor.startup(function(){
 		}
 		alert(notification.message, alertDismissed, notification.payload.title, "Ok");
 	});
-
 })

@@ -44,7 +44,7 @@ Template.homeHelper.events({
 						}
 					}
 					$('#answer').val('');
-					Meteor.call("serverNotification");
+					Meteor.call("serverHelperNotification");
 
 				}
 	   });
@@ -86,7 +86,6 @@ Template.homeHelper.rendered=function(){
     });
 		$('.materialboxed').materialbox();
     });
-		callNot();
 }
 
 Template.homeHelper.helpers({
@@ -101,12 +100,11 @@ Template.homeHelper.helpers({
 	},
 	answers: function(qId){
 		return Answers.find({questionId: qId});
+	},
+	notific: function(){
+		var temp = BlindNotification.find().fetch();
+		if (temp.length > 0) {
+				Materialize.toast('You have unread questions', 3000, 'rounded');
+		}
 	}
 })
-
-function callNot(){
-	var temp = BlindNotification.find().fetch();
-	if (temp.length > 0) {
-			Materialize.toast('You have ' + temp.length + ' unread questions', 3000, 'rounded');
-	}
-}
