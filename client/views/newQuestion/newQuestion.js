@@ -37,12 +37,14 @@ Template.newQuestion.events({
    },
   'click #submit-question': function (event,template) {
       event.preventDefault();
+      var fragesteller = Meteor.user().username;
       var text = template.find("#question").value;
 			var photo1Id = Session.get('photo1');
 			var photo2Id = Session.get('photo2');
 			var photo3Id = Session.get('photo3');
 			var photo4Id = Session.get('photo4');
       var newQues = {
+        fragesteller: fragesteller,
         text: text,
         createdAt: new Date(),
         userId: Meteor.userId(),
