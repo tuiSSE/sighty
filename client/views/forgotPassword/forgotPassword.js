@@ -17,5 +17,10 @@ Template.forgotPassword.events({
         }
     });
 
+},
+
+"click #btn_gobackto_login2": function(event, template){
+        Router.go("/")
 }
-});
+
+})
