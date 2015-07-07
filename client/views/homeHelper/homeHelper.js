@@ -21,8 +21,10 @@ Template.homeHelper.events({
 	},
 	'click #submit-answer': function (event,template) {
 		event.preventDefault();
+		var antwortverfasser=Meteor.user().username;
 	  var text = template.find("#answer").value;
 	  var newAns = {
+		  antwortverfasser: antwortverfasser,
 	  	text: text,
 	    createdAt: new Date(),
 	    userId: Meteor.userId(),
@@ -50,12 +52,7 @@ Template.homeHelper.events({
 	   });
 		},
 	"click .delete":function(event, template){
-        	var answer = document.getElementById("answersItem");
-        	answer.remove("quesId");
-        	var button= document.getElementById("Löschen");
-	 				button.remove("quesId");
-          var button= document.getElementById("Speichern");
-					button.remove("neu");
+				Answers.remove(this._id);
         },
 
 	"click. correct": function saveEdits() {

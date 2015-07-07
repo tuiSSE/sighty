@@ -66,11 +66,13 @@
 								<p id="antwortLabel">Antworten:</p>
 								<ul class="collection">
 									{{#each answers _id}}
-											<button class="delete" id="Löschen" qId="quesId">&times;</button>
-                  		<button class="correct" id="Speichern" qId="neu">
-											<input type="button" value="Änderungen speichern" onclick="saveEdits()"/></button>
+                                        <button class="delete" id="Löschen" qId="quesId">&times;</button>
                       <div id="update"></div>
-											<a class="collection-item" id="edit" qId="quesId" contenteditable="true">{{text}}</a>
+											<a class="collection-item" id="edit" qId="quesId" contenteditable="true" style="color: #000;">
+                                                <p>Verfasser: {{antwortverfasser}}</p>
+                                                <p>Antwort: {{text}}</p>
+                                                <p>{{createdAt}}</p>
+                                            </a>
 									{{/each}}
 								</ul>
 							</div>

@@ -10,6 +10,12 @@ Questions.allow({
     }
 })
 
+Answers.allow({
+    remove:function(){
+        return true;
+    }
+})
+
 var imageStore = new FS.Store.GridFS("images", { transformWrite: createThumb });
 Images = new FS.Collection("images", {
  stores: [imageStore]
