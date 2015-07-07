@@ -19,16 +19,17 @@ Template.homeHelper.events({
 			Router.go("homeBlind")
 		};
 	},
-	'click #submit-answer': function (event,template) {
+	'click .submit-answer': function (event,template) {
 		event.preventDefault();
 		var antwortverfasser=Meteor.user().username;
-	  var text = template.find("#answer").value;
+	  var text = $(event.target).prev("input").val();
+		console.log(text);
 	  var newAns = {
 		  antwortverfasser: antwortverfasser,
 	  	text: text,
 	    createdAt: new Date(),
 	    userId: Meteor.userId(),
-			questionId: $("#homeHelferCont").attr("quesId"),
+			questionId: $(event.target).closest(".homeHelferCont").attr("quesId"),
 			ratingPoints: 0
 	  };
 	  Meteor.call("addAnswer",newAns,
@@ -45,7 +46,7 @@ Template.homeHelper.events({
 							break;
 						}
 					}
-					$('#answer').val('');
+					$('.answer').val('');
 					Meteor.call("serverHelperNotification");
 
 				}
@@ -76,13 +77,6 @@ Template.homeHelper.rendered=function(){
       closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
     }
   );
-	$(document).ready(function(){
-    $('.slider').slider({
-     	height: 900,
-     	interval: 600000000
-    });
-		$('.materialboxed').materialbox();
-    });
 }
 
 Template.homeHelper.helpers({
