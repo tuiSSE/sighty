@@ -8,7 +8,7 @@ Meteor.startup(function(){
     return "So setzen Sie Ihr Sighty-Passwort zurueck"
   };
   Accounts.emailTemplates.resetPassword.text = function(user, url) {
-    url = url.replace('#/', '');
+    url = url.replace('#/', '#/');
     return "Hallo, \nklicken Sie auf diesen Link, um ihr Passwort zuruecksetzen zu koennen: \n" + url + "\n\nIhr Sighty Team";
   };
 
